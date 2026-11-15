@@ -14,6 +14,8 @@ from PIL import Image, ImageDraw, ImageFont
 SITE = Path(sys.argv[1])
 BASE = (sys.argv[2] if len(sys.argv) > 2 else "https://kumarashwani-law.github.io").rstrip("/")
 TODAY = date.today().isoformat()
+COUNTER = ('\n<!-- counter:start -->\n<script data-goatcounter="https://kumarashwani-law.goatcounter.com/count" '
+           'async src="https://gc.zgo.at/count.js"></script>\n<!-- counter:end -->')
 
 SERIF = "/usr/share/fonts/truetype/google-fonts/Lora-Variable.ttf"
 SANS_SEMI = "/usr/share/fonts/opentype/inter/Inter-SemiBold.otf"
@@ -91,7 +93,7 @@ def get(pattern, text, default=""):
 
 
 pages = []
-for f in sorted(list(SITE.glob("*.html")) + list(SITE.glob("posts/*.html"))):
+for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google")] + list(SITE.glob("posts/*.html"))):
     rel = f.relative_to(SITE).as_posix()
     t = f.read_text(encoding="utf-8")
     t = re.sub(r"\n<!-- seo:start -->.*?<!-- seo:end -->", "", t, flags=re.S)
@@ -142,6 +144,9 @@ for f in sorted(list(SITE.glob("*.html")) + list(SITE.glob("posts/*.html"))):
         t = re.sub(r'(<meta name="description" content=".*?">)', lambda m: m.group(1) + block, t, count=1)
     else:
         t = t.replace("</title>", "</title>" + block, 1)
+    # Privacy-friendly visitor counter (GoatCounter, no cookies)
+    t = re.sub(r"\n<!-- counter:start -->.*?<!-- counter:end -->", "", t, flags=re.S)
+    t = t.replace("</body>", COUNTER + "\n</body>", 1)
     f.write_text(t, encoding="utf-8")
     pages.append((url, published or TODAY, is_post, rel))
 
