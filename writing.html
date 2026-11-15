@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing — Ashwani Kumar</title>
+<meta name="description" content="Blog posts, guest pieces and published research by advocate Ashwani Kumar on privacy, AI and technology law.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="gate.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="index.html"><b>Ashwani Kumar</b><span>Law · Privacy · AI</span></a>
+<nav class="nav" aria-label="Main">
+<a href="writing.html" aria-current="page">Writing</a>
+<a href="index.html#topics">Topics</a>
+<a href="index.html#about">About</a>
+<a href="index.html#follow">Follow</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap">
+<section class="page-head">
+<h1>Writing</h1>
+<p>Blog posts, guest pieces in other publications, and published research, all in one place.</p>
+<div class="filters" role="group" aria-label="Filter by type">
+<button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+<button type="button" class="chip" data-filter="blog" aria-pressed="false">Blog posts</button>
+<button type="button" class="chip" data-filter="guest" aria-pressed="false">Guest posts</button>
+<button type="button" class="chip" data-filter="research" aria-pressed="false">Research</button>
+</div>
+</section>
+
+<section class="groups">
+<div class="group" data-group="blog">
+<h2 class="label">Blog posts</h2>
+<a class="item" href="consent-managers-ai.html"><span class="date">[Date]</span><span class="body"><span class="t">Consent Managers Are Live, but AI Has Already Left the Room</span><span class="s">Why the DPDP consent architecture may never touch the data that trains AI models.</span></span><span class="tag">Data Protection</span></a>
+<a class="item" href="#"><span class="date">[Date]</span><span class="body"><span class="t">[Post title]</span><span class="s">[One-line summary.]</span></span><span class="tag">AI Governance</span></a>
+<a class="item" href="#"><span class="date">[Date]</span><span class="body"><span class="t">[Post title]</span><span class="s">[One-line summary.]</span></span><span class="tag">Platform Law</span></a>
+</div>
+
+<div class="group" data-group="guest">
+<h2 class="label">Guest posts elsewhere</h2>
+<a class="item" href="#"><span class="date">[Date]</span><span class="body"><span class="t">[Guest post title]</span><span class="s">Published in [Publication name]</span></span><span class="tag" style="text-transform:none;letter-spacing:0;font-size:14px">Read on [site] ↗</span></a>
+</div>
+
+<div class="group" data-group="research">
+<h2 class="label">Research &amp; papers</h2>
+<a class="item" href="#"><span class="date">[Year]</span><span class="body"><span class="t">[Paper title — privacy]</span><span class="s">[Journal or volume, citation]</span></span><span class="tag" style="text-transform:none;letter-spacing:0;font-size:14px">Read ↗</span></a>
+<a class="item" href="#"><span class="date">[Year]</span><span class="body"><span class="t">[Paper title — AI and surveillance]</span><span class="s">[Journal or volume, citation]</span></span><span class="tag" style="text-transform:none;letter-spacing:0;font-size:14px">Read ↗</span></a>
+<a class="item" href="#"><span class="date">[Year]</span><span class="body"><span class="t">[Paper title — digital free speech]</span><span class="s">[Journal or volume, citation]</span></span><span class="tag" style="text-transform:none;letter-spacing:0;font-size:14px">Read ↗</span></a>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="wrap">
+<p>This website is for information only. It is not legal advice and is not intended to solicit work, in keeping with the Bar Council of India Rules. <a href="disclaimer.html">Read the full disclaimer</a>.</p>
+<div class="contact"><span style="color:var(--muted)">© 2026 Ashwani Kumar</span></div>
+</div>
+</footer>
+
+<script>
+(function () {
+  var chips = document.querySelectorAll('.chip');
+  var groups = document.querySelectorAll('.group');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var f = chip.getAttribute('data-filter');
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
+      groups.forEach(function (g) { g.hidden = !(f === 'all' || g.getAttribute('data-group') === f); });
+    });
+  });
+})();
+</script>
+</body>
+</html>
