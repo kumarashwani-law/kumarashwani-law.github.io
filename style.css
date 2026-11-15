@@ -124,3 +124,11 @@ img{max-width:100%}
   .follow{padding:28px} .gate-box,.disc-box{padding:24px}
   .item .date{flex-basis:100%}
 }
+
+/* LinkedIn posts */
+.post-body p{white-space:normal}
+.post-body a{word-break:break-word}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag-pill{font-size:13px;color:var(--muted);background:var(--soft);border-radius:999px;padding:6px 12px}
+.origin{margin:0;padding:16px 20px;border-radius:12px;background:var(--soft);font-size:15px;line-height:1.6;color:var(--body)}
+.featured .text{flex-basis:100%}
