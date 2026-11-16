@@ -171,12 +171,12 @@ for k in order:
 
 for i, r in enumerate(records):
     li_btn = (f'<a class="btn btn-ghost btn-sm" href="{esc(r["url"])}">View on LinkedIn</a>\n' if r["url"] else "")
-    origin = (f'{slides_note}<a href="{esc(r["url"])}">See the original post on LinkedIn</a>.' if r["url"]
-              else f'This post also appears on <a href="{LINKEDIN}">LinkedIn</a>.')
     body_html = "\n".join(render_block(b) for b in r["blocks"])
     tags_html = "".join(f'<span class="tag-pill">#{esc(t)}</span>' for t in r["tags"])
     slides_note = ("This post first appeared on LinkedIn with a slide deck. "
                    if r["slides"] else "This post first appeared on LinkedIn. ")
+    origin = (f'{slides_note}<a href="{esc(r["url"])}">See the original post on LinkedIn</a>.' if r["url"]
+              else f'This post also appears on <a href="{LINKEDIN}">LinkedIn</a>.')
     related = [x for x in records if x["topic"] == r["topic"] and x is not r][:3]
     if len(related) < 3:
         related += [x for x in records if x is not r and x not in related][: 3 - len(related)]
