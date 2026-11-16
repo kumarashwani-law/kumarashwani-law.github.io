@@ -18,7 +18,7 @@ TOPIC = {
     "6": "ai-courts", "21": "ai-courts", "22": "ai-courts", "25": "ai-courts", "28": "ai-courts",
     "7": "deepfakes", "8": "deepfakes", "13": "deepfakes", "27": "deepfakes",
     "9": "platforms", "16": "platforms", "18": "platforms", "19": "platforms",
-    "23": "copyright", "30": "copyright",
+    "23": "copyright", "30": "copyright", "31": "copyright",
     "1": "other", "10": "other", "12": "other", "17": "other", "24": "other", "26": "other",
 }
 TOPIC_LABEL = {
@@ -161,7 +161,8 @@ for k in order:
     records.append({
         "k": k, "title": title, "blocks": blocks, "tags": tags, "slug": slug,
         "topic": topic, "kicker": KICKER.get(k, TOPIC_LABEL[topic]),
-        "date": meta[k]["date"], "url": f"https://www.linkedin.com/feed/update/urn:li:activity:{meta[k]['id']}/",
+        "date": meta[k]["date"],
+        "url": (f"https://www.linkedin.com/feed/update/urn:li:activity:{meta[k]['id']}/" if meta[k].get("id") else None),
         "summary": summary(blocks),
         "slides": bool(re.search(r"\bslides?\b", posts[k], re.I)),
     })
@@ -169,6 +170,9 @@ for k in order:
 (OUT / "posts").mkdir(parents=True, exist_ok=True)
 
 for i, r in enumerate(records):
+    li_btn = (f'<a class="btn btn-ghost btn-sm" href="{esc(r["url"])}">View on LinkedIn</a>\n' if r["url"] else "")
+    origin = (f'{slides_note}<a href="{esc(r["url"])}">See the original post on LinkedIn</a>.' if r["url"]
+              else f'This post also appears on <a href="{LINKEDIN}">LinkedIn</a>.')
     body_html = "\n".join(render_block(b) for b in r["blocks"])
     tags_html = "".join(f'<span class="tag-pill">#{esc(t)}</span>' for t in r["tags"])
     slides_note = ("This post first appeared on LinkedIn with a slide deck. "
@@ -190,15 +194,14 @@ for i, r in enumerate(records):
 <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600">Ashwani Kumar</span><span class="meta">Advocate · <time datetime="{r["date"]}">{fmt_date(r["date"])}</time></span></div>
 </div>
 <div class="row" style="gap:8px">
-<a class="btn btn-ghost btn-sm" href="{esc(r["url"])}">View on LinkedIn</a>
-<button type="button" class="btn btn-ghost btn-sm copy-link">Copy link</button>
+{li_btn}<button type="button" class="btn btn-ghost btn-sm copy-link">Copy link</button>
 </div>
 </div>
 <div class="prose post-body">
 {body_html}
 </div>
 <div class="tags">{tags_html}</div>
-<p class="origin">{slides_note}<a href="{esc(r["url"])}">See the original post on LinkedIn</a>.</p>
+<p class="origin">{origin}</p>
 </article>
 <section class="band">
 <div class="wrap" style="padding-top:64px;padding-bottom:64px;gap:24px">
