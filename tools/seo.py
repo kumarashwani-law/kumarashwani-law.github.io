@@ -51,6 +51,7 @@ def wrap(draw, text, font, max_w):
 
 
 def make_image(path, kicker, title):
+    title = title.replace("₹", "Rs ")  # Lora has no rupee glyph
     img = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(img)
     pad = 80
