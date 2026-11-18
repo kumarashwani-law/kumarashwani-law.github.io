@@ -195,9 +195,17 @@ for i, r in enumerate(records):
     slides_html = ""
     if slide_imgs:
         n = len(slide_imgs)
+        tj = slide_dir / "text.json"
+        stexts = json.load(open(tj, encoding="utf-8")) if tj.exists() else []
+
+        def alt(j):
+            t = stexts[j] if j < len(stexts) else ""
+            if len(t) > 220:
+                t = t[:220].rsplit(" ", 1)[0] + "…"
+            return esc(f"Slide {j + 1} of {n}" + (f": {t}" if t else ""))
         figs = "\n".join(
             f'<li class="slide"><img src="../images/slides/{r["slug"]}/{p.name}" width="{Image.open(p).width}" height="{Image.open(p).height}" '
-            f'loading="{"eager" if j == 0 else "lazy"}" alt="Slide {j + 1} of {n}"></li>'
+            f'loading="{"eager" if j == 0 else "lazy"}" alt="{alt(j)}"></li>'
             for j, p in enumerate(slide_imgs))
         slides_html = f'''<section class="slides" aria-roledescription="carousel" aria-label="Slides for this post">
 <div class="slides-head"><h2 class="label" style="margin:0">Slides</h2><span class="slides-count" aria-live="polite">1 / {n}</span></div>
@@ -306,7 +314,12 @@ def plain(r):
     return " ".join([r["title"]] + r["blocks"] + r["tags"])
 
 
-search_index = [{"s": r["slug"], "x": re.sub(r"\s+", " ", plain(r)).lower()} for r in records]
+def slide_text(r):
+    tj = OUT / "images" / "slides" / r["slug"] / "text.json"
+    return " ".join(json.load(open(tj, encoding="utf-8"))) if tj.exists() else ""
+
+
+search_index = [{"s": r["slug"], "x": re.sub(r"\s+", " ", plain(r) + " " + slide_text(r)).lower()} for r in records]
 (OUT / "search-index.json").write_text(json.dumps(search_index, ensure_ascii=False, separators=(",", ":")),
                                        encoding="utf-8")
 
