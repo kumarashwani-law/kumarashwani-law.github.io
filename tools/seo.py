@@ -94,7 +94,7 @@ def get(pattern, text, default=""):
 
 
 pages = []
-for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google")] + list(SITE.glob("posts/*.html"))):
+for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google")] + list(SITE.glob("posts/*.html")) + list(SITE.glob("topics/*.html"))):
     rel = f.relative_to(SITE).as_posix()
     t = f.read_text(encoding="utf-8")
     t = re.sub(r"\n<!-- seo:start -->.*?<!-- seo:end -->", "", t, flags=re.S)
@@ -154,12 +154,12 @@ for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google
 make_image(SITE / "images/og/site.png", "Advocate · Hyderabad", "Writing on privacy, AI and the law in India.")
 
 # sitemap.xml
-prio = {"index.html": "1.0", "writing.html": "0.9"}
+prio = {"index.html": "1.0", "writing.html": "0.9", "cases.html": "0.9", "topics/index.html": "0.6"}
 entries = []
 for url, lastmod, is_post, rel in sorted(pages, key=lambda p: (not p[0].endswith("/"), p[0])):
     entries.append(
         f"  <url>\n    <loc>{url}</loc>\n    <lastmod>{lastmod}</lastmod>\n"
-        f"    <priority>{prio.get(rel, '0.7' if is_post else '0.3')}</priority>\n  </url>")
+        f"    <priority>{prio.get(rel, '0.7' if is_post else ('0.6' if rel.startswith('topics/') else '0.3'))}</priority>\n  </url>")
 (SITE / "sitemap.xml").write_text(
     '<?xml version="1.0" encoding="UTF-8"?>\n'
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(entries) + "\n</urlset>\n",

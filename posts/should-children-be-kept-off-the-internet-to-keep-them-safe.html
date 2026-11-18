@@ -36,7 +36,8 @@
 <a class="brand" href="../index.html"><b>Ashwani Kumar</b><span>Law · Privacy · AI</span></a>
 <nav class="nav" aria-label="Main">
 <a href="../writing.html">Writing</a>
-<a href="../index.html#topics">Topics</a>
+<a href="../topics/index.html">Topics</a>
+<a href="../cases.html">Case tracker</a>
 <a href="../index.html#follow">Follow</a>
 </nav>
 </div>
@@ -81,6 +82,7 @@ Section 9 of the DPDP Act requires verifiable parental consent before processing
 <p>How should platforms verify a child&#x27;s age without collecting more data than they need?</p>
 <p>Views are personal; for general information only.</p>
 </div>
+
 <div class="tags"><span class="tag-pill">#ChildSafety</span><span class="tag-pill">#RightToInternet</span><span class="tag-pill">#SupremeCourtOfIndia</span><span class="tag-pill">#DPDPAct</span><span class="tag-pill">#DataPrivacy</span><span class="tag-pill">#OnlineSafety</span><span class="tag-pill">#TechnologyLaw</span><span class="tag-pill">#ITRules</span><span class="tag-pill">#LegalUpdate</span></div>
 <p class="origin">This post first appeared on LinkedIn with a slide deck. <a href="https://www.linkedin.com/feed/update/urn:li:activity:7518209321663541248/">See the original post on LinkedIn</a>.</p>
 </article>
@@ -114,6 +116,33 @@ Section 9 of the DPDP Act requires verifiable parental consent before processing
       }, function () { btn.textContent = 'Copy failed'; });
     } catch (e) { btn.textContent = 'Copy failed'; }
   });
+})();
+(function () {
+  var track = document.querySelector('.slides-track');
+  if (!track) return;
+  var slides = track.querySelectorAll('.slide');
+  var count = document.querySelector('.slides-count');
+  var prev = document.querySelector('.slides-prev');
+  var next = document.querySelector('.slides-next');
+  function current() { return Math.round(track.scrollLeft / track.clientWidth); }
+  function go(i) {
+    i = Math.max(0, Math.min(slides.length - 1, i));
+    track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+  }
+  function update() {
+    var i = current();
+    count.textContent = (i + 1) + ' / ' + slides.length;
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+  }
+  prev.addEventListener('click', function () { go(current() - 1); });
+  next.addEventListener('click', function () { go(current() + 1); });
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(current() + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(current() - 1); }
+  });
+  var t; track.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(update, 60); });
+  update();
 })();
 </script>
 

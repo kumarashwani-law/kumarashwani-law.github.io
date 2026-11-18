@@ -6,6 +6,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from PIL import Image
+
 SRC = Path(__file__).parent
 OUT = Path(sys.argv[1])
 
@@ -33,6 +35,15 @@ TOPIC_LABEL = {
 KICKER = {
     "1": "Weekly Roundup", "10": "Legal Practice", "12": "Gaming Law", "17": "Cyber Fraud",
     "24": "Cybersecurity", "26": "Child Safety Online",
+}
+TOPIC_PAGE = {
+    "data": ("Data Protection", "The DPDP Act and Rules, the Data Protection Board, consent, and what businesses must do before May 2027."),
+    "surveillance": ("Surveillance & Privacy", "Facial recognition, phone extraction, police AI tools and CCTV, tested against the right to privacy."),
+    "ai-courts": ("AI & the Courts", "AI in courts, tribunals and government offices: fake citations, deepfake evidence and disclosure rules."),
+    "deepfakes": ("Deepfakes & Personality Rights", "Deepfakes, satire and personality rights: how courts and the IT Rules protect faces and voices."),
+    "platforms": ("Platforms & Free Speech", "Account blocks, takedowns, the Grievance Appellate Committee and platform jurisdiction under the IT Act and Rules."),
+    "copyright": ("Copyright & AI", "Can AI train on your work? News publishers, licensing and fair dealing in India and abroad."),
+    "other": ("More Tech Law", "Online gaming, digital arrest scams, children's online safety, cybersecurity and legal practice."),
 }
 FILTERS = ["all", "data", "surveillance", "ai-courts", "deepfakes", "platforms", "copyright", "other"]
 FILTER_LABEL = {"all": "All", "data": "Data protection", "surveillance": "Surveillance & privacy",
@@ -98,16 +109,22 @@ def summary(blocks):
     return first
 
 
+def nav(prefix, current=""):
+    def cur(name):
+        return ' aria-current="page"' if current == name else ""
+    return f'''<nav class="nav" aria-label="Main">
+<a href="{prefix}writing.html"{cur("writing")}>Writing</a>
+<a href="{prefix}topics/index.html"{cur("topics")}>Topics</a>
+<a href="{prefix}cases.html"{cur("cases")}>Case tracker</a>
+<a href="{prefix}index.html#follow">Follow</a>
+</nav>'''
+
+
 def header(prefix, current=""):
-    cur = ' aria-current="page"' if current == "writing" else ""
     return f'''<header class="site-header">
 <div class="wrap">
 <a class="brand" href="{prefix}index.html"><b>Ashwani Kumar</b><span>Law · Privacy · AI</span></a>
-<nav class="nav" aria-label="Main">
-<a href="{prefix}writing.html"{cur}>Writing</a>
-<a href="{prefix}index.html#topics">Topics</a>
-<a href="{prefix}index.html#follow">Follow</a>
-</nav>
+{nav(prefix, current)}
 </div>
 </header>'''
 
@@ -173,8 +190,30 @@ for i, r in enumerate(records):
     li_btn = (f'<a class="btn btn-ghost btn-sm" href="{esc(r["url"])}">View on LinkedIn</a>\n' if r["url"] else "")
     body_html = "\n".join(render_block(b) for b in r["blocks"])
     tags_html = "".join(f'<span class="tag-pill">#{esc(t)}</span>' for t in r["tags"])
-    slides_note = ("This post first appeared on LinkedIn with a slide deck. "
-                   if r["slides"] else "This post first appeared on LinkedIn. ")
+    slide_dir = OUT / "images" / "slides" / r["slug"]
+    slide_imgs = sorted(slide_dir.glob("*.webp")) if slide_dir.exists() else []
+    slides_html = ""
+    if slide_imgs:
+        n = len(slide_imgs)
+        figs = "\n".join(
+            f'<li class="slide"><img src="../images/slides/{r["slug"]}/{p.name}" width="{Image.open(p).width}" height="{Image.open(p).height}" '
+            f'loading="{"eager" if j == 0 else "lazy"}" alt="Slide {j + 1} of {n}"></li>'
+            for j, p in enumerate(slide_imgs))
+        slides_html = f'''<section class="slides" aria-roledescription="carousel" aria-label="Slides for this post">
+<div class="slides-head"><h2 class="label" style="margin:0">Slides</h2><span class="slides-count" aria-live="polite">1 / {n}</span></div>
+<ol class="slides-track" tabindex="0">
+{figs}
+</ol>
+<div class="slides-nav">
+<button type="button" class="btn btn-ghost btn-sm slides-prev" aria-label="Previous slide">← Previous</button>
+<button type="button" class="btn btn-ghost btn-sm slides-next" aria-label="Next slide">Next →</button>
+</div>
+</section>'''
+    if slide_imgs:
+        slides_note = "This post first appeared on LinkedIn with the slides above. "
+    else:
+        slides_note = ("This post first appeared on LinkedIn with a slide deck. "
+                       if r["slides"] else "This post first appeared on LinkedIn. ")
     origin = (f'{slides_note}<a href="{esc(r["url"])}">See the original post on LinkedIn</a>.' if r["url"]
               else f'This post also appears on <a href="{LINKEDIN}">LinkedIn</a>.')
     related = [x for x in records if x["topic"] == r["topic"] and x is not r][:3]
@@ -200,6 +239,7 @@ for i, r in enumerate(records):
 <div class="prose post-body">
 {body_html}
 </div>
+{slides_html}
 <div class="tags">{tags_html}</div>
 <p class="origin">{origin}</p>
 </article>
@@ -227,20 +267,62 @@ for i, r in enumerate(records):
     } catch (e) { btn.textContent = 'Copy failed'; }
   });
 })();
+(function () {
+  var track = document.querySelector('.slides-track');
+  if (!track) return;
+  var slides = track.querySelectorAll('.slide');
+  var count = document.querySelector('.slides-count');
+  var prev = document.querySelector('.slides-prev');
+  var next = document.querySelector('.slides-next');
+  function current() { return Math.round(track.scrollLeft / track.clientWidth); }
+  function go(i) {
+    i = Math.max(0, Math.min(slides.length - 1, i));
+    track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+  }
+  function update() {
+    var i = current();
+    count.textContent = (i + 1) + ' / ' + slides.length;
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+  }
+  prev.addEventListener('click', function () { go(current() - 1); });
+  next.addEventListener('click', function () { go(current() + 1); });
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(current() + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(current() - 1); }
+  });
+  var t; track.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(update, 60); });
+  update();
+})();
 </script>
 </body>
 </html>
 '''
     (OUT / "posts" / f'{r["slug"]}.html').write_text(page, encoding="utf-8")
 
-# Writing archive
+
+# ---------------------------------------------------------------- search index
+def plain(r):
+    return " ".join([r["title"]] + r["blocks"] + r["tags"])
+
+
+search_index = [{"s": r["slug"], "x": re.sub(r"\s+", " ", plain(r)).lower()} for r in records]
+(OUT / "search-index.json").write_text(json.dumps(search_index, ensure_ascii=False, separators=(",", ":")),
+                                       encoding="utf-8")
+
+
+def item_html(r, prefix=""):
+    return (f'<a class="item" data-topic="{r["topic"]}" data-slug="{r["slug"]}" href="{prefix}posts/{r["slug"]}.html">'
+            f'<span class="date">{fmt_date(r["date"])}</span>'
+            f'<span class="body"><span class="t">{esc(r["title"])}</span><span class="s">{esc(r["summary"])}</span></span>'
+            f'<span class="tag">{esc(r["kicker"])}</span></a>')
+
+
+# ---------------------------------------------------------------- Writing archive (search + filters)
 chips = "\n".join(
     f'<button type="button" class="chip" data-filter="{f}" aria-pressed="{"true" if f == "all" else "false"}">{FILTER_LABEL[f]}</button>'
     for f in FILTERS)
-items = "\n".join(
-    f'<a class="item" data-topic="{r["topic"]}" href="posts/{r["slug"]}.html"><span class="date">{fmt_date(r["date"])}</span>'
-    f'<span class="body"><span class="t">{esc(r["title"])}</span><span class="s">{esc(r["summary"])}</span></span>'
-    f'<span class="tag">{esc(r["kicker"])}</span></a>' for r in records)
+items = "\n".join(item_html(r) for r in records)
 writing = head("Writing — Ashwani Kumar",
                "Commentary by advocate Ashwani Kumar on data protection, AI, surveillance, platforms and technology law in India.",
                "") + header("", "writing") + f'''
@@ -248,15 +330,20 @@ writing = head("Writing — Ashwani Kumar",
 <section class="page-head">
 <h1>Writing</h1>
 <p>{len(records)} pieces on privacy, AI and technology law in India, newest first. Each one first appeared on <a href="{LINKEDIN}">LinkedIn</a>.</p>
+<form class="search" role="search" onsubmit="return false">
+<label for="q" class="label">Search all posts</label>
+<input id="q" type="search" placeholder="Try “deepfake”, “DPDP”, “Section 79” or a case name" autocomplete="off">
+</form>
 <div class="filters" role="group" aria-label="Filter by topic">
 {chips}
 </div>
+<p id="result-count" class="small" aria-live="polite"></p>
 </section>
 <section class="groups">
 <div class="group" id="list">
 {items}
 </div>
-<p id="empty" class="small" hidden>No posts on this topic yet.</p>
+<p id="empty" class="small" hidden>No posts match. Try a different word, or choose “All”.</p>
 </section>
 </main>
 ''' + footer("") + '''
@@ -265,18 +352,42 @@ writing = head("Writing — Ashwani Kumar",
   var chips = document.querySelectorAll('.chip');
   var items = document.querySelectorAll('.item');
   var empty = document.getElementById('empty');
-  chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      var f = chip.getAttribute('data-filter');
+  var count = document.getElementById('result-count');
+  var input = document.getElementById('q');
+  var topic = 'all', index = null, timer;
+  function load() {
+    if (index) return Promise.resolve(index);
+    return fetch('search-index.json').then(function (r) { return r.json(); }).then(function (d) {
+      index = {}; d.forEach(function (e) { index[e.s] = e.x; }); return index;
+    }).catch(function () { index = {}; return index; });
+  }
+  function apply() {
+    var q = input.value.trim().toLowerCase();
+    var words = q ? q.split(/\\s+/) : [];
+    var go = function () {
       var shown = 0;
-      chips.forEach(function (c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
       items.forEach(function (it) {
-        var on = f === 'all' || it.getAttribute('data-topic') === f;
+        var okTopic = topic === 'all' || it.getAttribute('data-topic') === topic;
+        var text = (index && index[it.getAttribute('data-slug')]) || it.textContent.toLowerCase();
+        var okText = words.every(function (w) { return text.indexOf(w) !== -1; });
+        var on = okTopic && okText;
         it.hidden = !on; if (on) shown++;
       });
       empty.hidden = shown > 0;
+      count.textContent = (q || topic !== 'all') ? shown + (shown === 1 ? ' post' : ' posts') : '';
+    };
+    if (words.length) load().then(go); else go();
+  }
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      topic = chip.getAttribute('data-filter');
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
+      apply();
     });
   });
+  input.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(apply, 120); });
+  var params = new URLSearchParams(location.search);
+  if (params.get('q')) { input.value = params.get('q'); apply(); }
 })();
 </script>
 </body>
@@ -284,7 +395,125 @@ writing = head("Writing — Ashwani Kumar",
 '''
 (OUT / "writing.html").write_text(writing, encoding="utf-8")
 
-# Home page: replace featured + latest sections
+# ---------------------------------------------------------------- Topic pages
+(OUT / "topics").mkdir(exist_ok=True)
+counts = {t: sum(1 for r in records if r["topic"] == t) for t in TOPIC_PAGE}
+topic_cards = "\n".join(
+    f'<a class="topic" href="{{prefix}}topics/{t}.html"><h3>{esc(label)}</h3><p>{esc(desc)}</p>'
+    f'<span class="meta">{counts[t]} post{"s" if counts[t] != 1 else ""}</span></a>'
+    for t, (label, desc) in TOPIC_PAGE.items() if counts[t])
+
+topics_index = head("Topics — Ashwani Kumar",
+                    "Browse Ashwani Kumar's writing on Indian technology law by topic.", "../") + header("../", "topics") + f'''
+<main class="wrap">
+<section class="page-head">
+<h1>Topics</h1>
+<p>Browse the writing by subject. For pending cases and hearing dates, see the <a href="../cases.html">case tracker</a>.</p>
+</section>
+<section class="grid" style="padding-bottom:96px">
+{topic_cards.replace("{prefix}topics/", "")}
+</section>
+</main>
+''' + footer("../") + "\n</body>\n</html>\n"
+(OUT / "topics" / "index.html").write_text(topics_index, encoding="utf-8")
+
+for t, (label, desc) in TOPIC_PAGE.items():
+    rs = [r for r in records if r["topic"] == t]
+    if not rs:
+        continue
+    others = " · ".join(f'<a href="{o}.html">{esc(TOPIC_PAGE[o][0])}</a>' for o in TOPIC_PAGE if o != t and counts[o])
+    page = head(f"{label} — Ashwani Kumar", f"{desc} Writing by advocate Ashwani Kumar.", "../") + header("../", "topics") + f'''
+<main class="wrap">
+<section class="page-head">
+<a href="index.html" style="font-size:14px;font-weight:500;text-decoration:none">← All topics</a>
+<h1>{esc(label)}</h1>
+<p>{esc(desc)}</p>
+<p class="small">{len(rs)} post{"s" if len(rs) != 1 else ""}, newest first.</p>
+</section>
+<section class="groups">
+<div class="group">
+{chr(10).join(item_html(r, "../") for r in rs)}
+</div>
+<p class="small">Other topics: {others}</p>
+</section>
+</main>
+''' + footer("../") + "\n</body>\n</html>\n"
+    (OUT / "topics" / f"{t}.html").write_text(page, encoding="utf-8")
+
+# ---------------------------------------------------------------- Case tracker
+cases = json.load(open(SRC / "cases.json", encoding="utf-8"))
+slug_title = {r["slug"]: r["title"] for r in records}
+STATUS = {"pending": "Pending", "watch": "To watch", "decided": "Decided"}
+
+
+def case_card(c):
+    posts_html = "".join(
+        f'<li><a href="posts/{p}.html">{esc(slug_title[p])}</a></li>' for p in c.get("posts", []) if p in slug_title)
+    src_html = " · ".join(f'<a href="{esc(u)}" rel="noopener">{esc(n)}</a>' for n, u in c.get("sources", []))
+    if c["status"] == "decided":
+        when = f'<span class="case-when"><span class="label">Decided</span><b>{fmt_date(c["decided"])}</b></span>'
+    else:
+        nd = fmt_date(c["next"]) if c.get("next") and not c.get("next_note") else (c.get("next_note") or "—")
+        when = f'<span class="case-when"><span class="label">Next</span><b>{esc(nd)}</b></span>'
+    return f'''<article class="case" id="{c["id"]}" data-status="{c["status"]}">
+<div class="case-top">
+<span class="pill pill-{c["status"]}">{STATUS[c["status"]]}</span>
+<span class="case-court">{esc(c["court"])}</span>
+</div>
+<h3>{esc(c["name"])}</h3>
+<p class="case-parties">{esc(c["parties"])}</p>
+<p><b>The question:</b> {esc(c["issue"])}</p>
+<p><b>Where it stands:</b> {esc(c["stands"])}</p>
+<div class="case-foot">
+{when}
+{f'<div class="case-links"><span class="label">My analysis</span><ul>{posts_html}</ul></div>' if posts_html else ""}
+{f'<p class="small">Sources: {src_html}</p>' if src_html else ""}
+</div>
+</article>'''
+
+
+def sort_key(c):
+    return (c.get("next") or "9999-12-31", c["name"])
+
+
+pending = sorted([c for c in cases["cases"] if c["status"] in ("pending", "watch")], key=sort_key)
+decided = sorted([c for c in cases["cases"] if c["status"] == "decided"], key=lambda c: c["decided"], reverse=True)
+case_names = {c["id"]: c["name"] for c in cases["cases"]}
+watch = "\n".join(
+    f'<li><time datetime="{w["date"]}">{fmt_date(w["date"])}</time><a href="#{w["case"]}">{esc(w["label"])}</a></li>'
+    for w in sorted(cases["watch"], key=lambda w: w["date"]) if w["date"] >= cases["updated"])
+cases_page = head("Case tracker — Ashwani Kumar",
+                  "Pending Indian court cases on privacy, AI and technology law, with status and next hearing dates, tracked by advocate Ashwani Kumar.",
+                  "") + header("", "cases") + f'''
+<main class="wrap">
+<section class="page-head">
+<h1>Case tracker</h1>
+<p>The technology-law cases I'm following in Indian courts: what each one is about, where it stands, and when it's next listed.</p>
+<p class="small">Updated <time datetime="{cases["updated"]}">{fmt_date(cases["updated"])}</time>. Hearing dates change often, so check the court's cause list before relying on a date. For general information only; not legal advice.</p>
+</section>
+<section class="watch">
+<h2 class="h2" style="font-size:26px">Dates to watch</h2>
+<ol class="watch-list">
+{watch}
+</ol>
+</section>
+<section class="cases-section">
+<h2 class="h2" style="font-size:26px">Pending</h2>
+<div class="cases">
+{chr(10).join(case_card(c) for c in pending)}
+</div>
+</section>
+<section class="cases-section" style="padding-bottom:96px">
+<h2 class="h2" style="font-size:26px">Recently decided</h2>
+<div class="cases">
+{chr(10).join(case_card(c) for c in decided)}
+</div>
+</section>
+</main>
+''' + footer("") + "\n</body>\n</html>\n"
+(OUT / "cases.html").write_text(cases_page, encoding="utf-8")
+
+# ---------------------------------------------------------------- Home page
 index_path = OUT / "index.html"
 idx = index_path.read_text(encoding="utf-8")
 f = records[0]
@@ -311,12 +540,47 @@ latest = f'''<section class="wrap section">
 {cards}
 </div>
 </section>'''
+next_up = [w for w in sorted(cases["watch"], key=lambda w: w["date"]) if w["date"] >= cases["updated"]][:3]
+tracker_teaser = f'''<section class="wrap section">
+<div class="tracker-teaser">
+<div style="flex:1 1 320px;min-width:0">
+<span class="kicker">Case tracker</span>
+<h2 class="h2" style="font-size:28px;margin-top:8px">Coming up in court</h2>
+<p class="small" style="margin-top:8px">Pending tech-law cases, their status and next dates.</p>
+</div>
+<ol class="watch-list" style="flex:2 1 420px;min-width:0">
+{chr(10).join(f'<li><time datetime="{w["date"]}">{fmt_date(w["date"])}</time><a href="cases.html#{w["case"]}">{esc(w["label"])}</a></li>' for w in next_up)}
+</ol>
+<a class="btn btn-ghost" href="cases.html">Open the tracker</a>
+</div>
+</section>'''
+topics_sec = f'''<section id="topics" class="band">
+<div class="wrap">
+<div class="section-head" style="padding-bottom:0">
+<h2 class="h2">What I write about</h2>
+<a href="topics/index.html" style="font-size:15px;font-weight:600;padding:12px 0">All topics</a>
+</div>
+<div class="grid">
+{topic_cards.replace("{prefix}", "")}
+</div>
+</div>
+</section>'''
 start = idx.index('<section class="wrap section">\n<a class="featured"')
 end = idx.index('<section id="topics"')
-idx = idx[:start] + featured + "\n\n" + latest + "\n\n" + idx[end:]
-idx = idx.replace('href="consent-managers-ai.html">Read the latest', f'href="posts/{f["slug"]}.html">Read the latest')
+idx = idx[:start] + featured + "\n\n" + latest + "\n\n" + tracker_teaser + "\n\n" + idx[end:]
+t0 = idx.index('<section id="topics"')
+t1 = idx.index('<section id="follow"')
+idx = idx[:t0] + topics_sec + "\n\n" + idx[t1:]
+idx = re.sub(r'href="[^"]*">Read the latest', f'href="posts/{f["slug"]}.html">Read the latest', idx, count=1)
+idx = re.sub(r'<nav class="nav" aria-label="Main">.*?</nav>', lambda m: nav(""), idx, count=1, flags=re.S)
 index_path.write_text(idx, encoding="utf-8")
 
+# Keep the static pages' menus in step
+for static in ["disclaimer.html"]:
+    p = OUT / static
+    t = p.read_text(encoding="utf-8")
+    t = re.sub(r'<nav class="nav" aria-label="Main">.*?</nav>', lambda m: nav(""), t, count=1, flags=re.S)
+    p.write_text(t, encoding="utf-8")
+
 print(len(records), "posts built; latest:", records[0]["slug"])
-for r in records:
-    print(r["date"], r["topic"], r["slug"])
+print("topics:", {t: counts[t] for t in counts}, "| cases:", len(pending), "pending,", len(decided), "decided")
