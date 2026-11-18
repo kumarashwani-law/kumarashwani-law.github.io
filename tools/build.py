@@ -114,6 +114,7 @@ def nav(prefix, current=""):
         return ' aria-current="page"' if current == name else ""
     return f'''<nav class="nav" aria-label="Main">
 <a href="{prefix}writing.html"{cur("writing")}>Writing</a>
+<a href="{prefix}guides/index.html"{cur("guides")}>Guides</a>
 <a href="{prefix}topics/index.html"{cur("topics")}>Topics</a>
 <a href="{prefix}cases.html"{cur("cases")}>Case tracker</a>
 <a href="{prefix}index.html#follow">Follow</a>
@@ -597,3 +598,140 @@ for static in ["disclaimer.html"]:
 
 print(len(records), "posts built; latest:", records[0]["slug"])
 print("topics:", {t: counts[t] for t in counts}, "| cases:", len(pending), "pending,", len(decided), "decided")
+
+# ---------------------------------------------------------------- Guides
+import markdown as _md
+
+GUIDES_DIR = SRC / "guides"
+
+
+def read_guide(path):
+    text = path.read_text(encoding="utf-8")
+    _, fm, body = text.split("---", 2)
+    meta_g = {}
+    for line in fm.strip().splitlines():
+        k, v = line.split(":", 1)
+        v = v.strip()
+        if v.startswith("[") or v.startswith("{"):
+            v = json.loads(v)
+        elif len(v) >= 2 and v[0] == v[-1] == '"':
+            v = v[1:-1]
+        meta_g[k.strip()] = v
+    meta_g["slug"] = path.stem
+    meta_g["body"] = body.strip()
+    return meta_g
+
+
+def guide_html(body):
+    body = body.replace("- [ ] ", "- ☐ ")
+    md = _md.Markdown(extensions=["tables", "toc", "sane_lists"], extension_configs={"toc": {"toc_depth": "2"}})
+    out = md.convert(body)
+    toc = [(t["id"], t["name"]) for t in md.toc_tokens]
+    out = out.replace("<table>", '<div class="table-wrap"><table>').replace("</table>", "</table></div>")
+    return out, toc
+
+
+guides = [read_guide(p) for p in sorted(GUIDES_DIR.glob("*.md"))] if GUIDES_DIR.exists() else []
+GUIDE_ORDER = ["account-blocked", "digital-arrest", "neighbour-cctv", "dpdp-business-checklist"]
+guides.sort(key=lambda g: GUIDE_ORDER.index(g["slug"]) if g["slug"] in GUIDE_ORDER else 99)
+(OUT / "guides").mkdir(exist_ok=True)
+
+for g in guides:
+    body, toc = guide_html(g["body"])
+    toc_html = "".join(f'<li><a href="#{i}">{esc(html.unescape(n))}</a></li>' for i, n in toc)
+    rel = [r for s in g.get("related", []) for r in records if r["slug"] == s]
+    rel_html = "\n".join(
+        f'<a class="card" href="../posts/{x["slug"]}.html"><span class="kicker">{esc(x["kicker"])}</span>'
+        f'<h3>{esc(x["title"])}</h3><span class="meta">{fmt_date(x["date"])}</span></a>' for x in rel[:3])
+    src_html = "".join(f'<li><a href="{esc(u)}" rel="noopener">{esc(n)}</a></li>' for n, u in g.get("sources", []))
+    others = [o for o in guides if o is not g]
+    other_html = "".join(f'<li><a href="{o["slug"]}.html">{esc(o["short"])}</a></li>' for o in others)
+    page = head(f'{g["title"]} — Ashwani Kumar', g["description"], "../") + header("../", "guides") + f'''
+<main>
+<article class="article guide">
+<a href="index.html" style="font-size:14px;font-weight:500;text-decoration:none">← All guides</a>
+<span class="kicker">Guide · {esc(g["kicker"])}</span>
+<h1>{esc(g["title"])}</h1>
+<p class="dek">{esc(g["description"])}</p>
+<div class="byline">
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600">Ashwani Kumar</span><span class="meta">Advocate · Last reviewed <time datetime="{g["updated"]}">{fmt_date(g["updated"])}</time></span></div>
+<button type="button" class="btn btn-ghost btn-sm copy-link">Copy link</button>
+</div>
+<nav class="toc" aria-label="On this page"><span class="label">On this page</span><ol>{toc_html}</ol></nav>
+<div class="prose guide-body">
+{body}
+</div>
+{f'<div class="sources"><h2 class="label" style="margin:0">Sources and further reading</h2><ul>{src_html}</ul></div>' if src_html else ""}
+<div class="origin"><b>General information, not legal advice.</b> Laws, rules and court decisions change; this guide was last reviewed on {fmt_date(g["updated"])}. For advice on your own situation, speak to a lawyer.</div>
+{f'<div class="other-guides"><span class="label">More guides</span><ul>{other_html}</ul></div>' if other_html else ""}
+</article>
+{f"""<section class="band">
+<div class="wrap" style="padding-top:64px;padding-bottom:64px;gap:24px">
+<h2 class="h2" style="font-size:28px">Related posts</h2>
+<div class="grid">
+{rel_html}
+</div>
+</div>
+</section>""" if rel_html else ""}
+</main>
+''' + footer("../") + '''
+<script>
+(function () {
+  var btn = document.querySelector('.copy-link');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var url = location.href.split('#')[0];
+    try {
+      navigator.clipboard.writeText(url).then(function () {
+        btn.textContent = 'Link copied';
+        setTimeout(function () { btn.textContent = 'Copy link'; }, 2000);
+      }, function () { btn.textContent = 'Copy failed'; });
+    } catch (e) { btn.textContent = 'Copy failed'; }
+  });
+})();
+</script>
+</body>
+</html>
+'''
+    (OUT / "guides" / f'{g["slug"]}.html').write_text(page, encoding="utf-8")
+
+
+def guide_card(g, prefix):
+    return (f'<a class="card guide-card" href="{prefix}{g["slug"]}.html"><span class="kicker">Guide · {esc(g["kicker"])}</span>'
+            f'<h3>{esc(g["short"])}</h3><p>{esc(g["description"])}</p></a>')
+
+
+if guides:
+    gi = head("Guides — Ashwani Kumar",
+              "Plain-language guides to Indian technology law: blocked accounts, digital arrest scams, CCTV and privacy, and the DPDP Act for businesses.",
+              "../") + header("../", "guides") + f'''
+<main class="wrap">
+<section class="page-head">
+<h1>Guides</h1>
+<p>Plain-language, step-by-step guides to common problems in Indian technology law. Each one is kept up to date and links to the posts behind it.</p>
+</section>
+<section class="grid" style="padding-bottom:96px">
+{chr(10).join(guide_card(g, "") for g in guides)}
+</section>
+</main>
+''' + footer("../") + "\n</body>\n</html>\n"
+    (OUT / "guides" / "index.html").write_text(gi, encoding="utf-8")
+
+    # Home: guides section before the case tracker teaser
+    idx = index_path.read_text(encoding="utf-8")
+    idx = re.sub(r'\n<section class="wrap section" id="guides">.*?</section>\n', "\n", idx, flags=re.S)
+    gsec = f'''
+<section class="wrap section" id="guides">
+<div class="section-head">
+<h2 class="h2">Practical guides</h2>
+<a href="guides/index.html" style="font-size:15px;font-weight:600;padding:12px 0">All guides</a>
+</div>
+<div class="grid">
+{chr(10).join(guide_card(g, "guides/") for g in guides)}
+</div>
+</section>
+'''
+    anchor = '<section class="wrap section">\n<div class="tracker-teaser">'
+    idx = idx.replace(anchor, gsec.strip() + "\n\n" + anchor, 1)
+    index_path.write_text(idx, encoding="utf-8")
+    print(len(guides), "guides built")
