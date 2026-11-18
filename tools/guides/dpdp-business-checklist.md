@@ -99,11 +99,13 @@ The Schedule to the Act sets maximum penalties per instance:
 ## A six-month plan
 
 **Now to February 2027**
+
 - Map your data and flag children's data
 - Add data-processing clauses to every vendor contract
 - Draft your new privacy notice and consent text
 
 **March to May 2027**
+
 - Build one-click consent withdrawal
 - Put encryption, access controls and logging in place
 - Set up your 72-hour breach playbook and run a mock drill

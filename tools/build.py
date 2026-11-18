@@ -55,6 +55,8 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;'
          'family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet">')
 LINKEDIN = "https://www.linkedin.com/in/advashwanikumar"
+import hashlib as _hl
+CSS_V = _hl.sha1((OUT / "style.css").read_bytes()).hexdigest()[:8]
 EMAIL = "kumar.ashwani040801@gmail.com"
 
 
@@ -152,7 +154,7 @@ def head(title, desc, prefix):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 {FONTS}
-<link rel="stylesheet" href="{prefix}style.css">
+<link rel="stylesheet" href="{prefix}style.css?v={CSS_V}">
 <script src="{prefix}gate.js"></script>
 </head>
 <body>
@@ -589,10 +591,11 @@ idx = re.sub(r'href="[^"]*">Read the latest', f'href="posts/{f["slug"]}.html">Re
 idx = re.sub(r'<nav class="nav" aria-label="Main">.*?</nav>', lambda m: nav(""), idx, count=1, flags=re.S)
 index_path.write_text(idx, encoding="utf-8")
 
-# Keep the static pages' menus in step
-for static in ["disclaimer.html"]:
+# Keep the static pages' menus and stylesheet version in step
+for static in ["disclaimer.html", "index.html"]:
     p = OUT / static
     t = p.read_text(encoding="utf-8")
+    t = re.sub(r'href="style\.css(\?v=[0-9a-f]+)?"', f'href="style.css?v={CSS_V}"', t)
     t = re.sub(r'<nav class="nav" aria-label="Main">.*?</nav>', lambda m: nav(""), t, count=1, flags=re.S)
     p.write_text(t, encoding="utf-8")
 
