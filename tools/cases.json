@@ -1,9 +1,11 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "watch": [
     {"date": "2026-11-23", "label": "Supreme Court: digital arrest scams (suo motu)", "case": "digital-arrest"},
     {"date": "2026-12-04", "label": "Delhi HC: Rekha Gupta v. AAP (AI deepfakes)", "case": "rekha-gupta"},
     {"date": "2026-12-05", "label": "Delhi HC Division Bench: ANI v. OpenAI appeal (listed early December)", "case": "ani-openai"},
+    {"date": "2026-12-08", "label": "Delhi HC: Kent RO v. Amazon (keyword ads), interim application", "case": "kent-amazon"},
+    {"date": "2026-12-09", "label": "Supreme Court: DPDP Act and RTI amendment challenge", "case": "dpdp-rti"},
     {"date": "2026-12-10", "label": "Supreme Court: children's online safety directions", "case": "child-safety"},
     {"date": "2027-05-13", "label": "Most DPDP Act duties take effect", "case": "dpb"}
   ],
@@ -16,13 +18,13 @@
       "court": "Supreme Court",
       "topic": "data",
       "issue": "Whether s. 44(3), which narrowed the RTI exemption for personal information, and other provisions (ss. 17, 33, 36 and the Board's selection rules) are constitutional, and whether journalism needs an exemption.",
-      "stands": "Notice issued and no interim stay. The RTI petitions were referred to a larger bench in February 2026. On 27 October the Court issued notice on the news publishers' petition and declined an interim stay without hearing the Union. The matter was listed with the connected petitions on 17 November; the outcome of that hearing has not been reported yet.",
-      "next": null,
-      "next_note": "Listed 17 Nov 2026; next date awaited",
+      "stands": "Notice issued and no interim stay. The RTI petitions were referred to a larger bench in February 2026. On 27 October the Court issued notice on the news publishers' petition and declined an interim stay without hearing the Union. The matter was listed with the connected petitions on 17 November but could not be taken up, and was adjourned to 9 December.",
+      "next": "2026-12-09",
       "posts": ["can-a-privacy-law-quietly-weaken-the-right-to-information", "can-a-privacy-law-stop-journalists-from-doing-their-job"],
       "sources": [
         ["SC Observer", "https://www.scobserver.in/reports/dpdp-act-news-publishers-challenge-laws-reach-into-newsrooms/"],
-        ["MediaNama", "https://www.medianama.com/2026/10/223-dnpa-challenge-dpdp-act-supreme-court/"]
+        ["MediaNama", "https://www.medianama.com/2026/10/223-dnpa-challenge-dpdp-act-supreme-court/"],
+        ["exchange4media", "https://www.exchange4media.com/digital-news/sc-adjourns-hearing-on-dpdp-act-rti-amendments-to-december-9-160384.html"]
       ]
     },
     {
@@ -72,6 +74,21 @@
       "sources": [
         ["LiveLaw", "https://www.livelaw.in/high-court/delhi-high-court/notice-ani-appeal-interim-relief-copyright-case-against-chatgpt-550053"],
         ["Bar & Bench", "https://www.barandbench.com/news/litigation/delhi-hc-seeks-openai-reply-on-ani-plea-to-temporarily-restrain-chatgpt-from-using-its-content"]
+      ]
+    },
+    {
+      "id": "kent-amazon",
+      "status": "pending",
+      "name": "Brand names sold as advertising keywords on Amazon",
+      "parties": "Kent RO Systems Ltd. v. Amazon Seller Services Pvt. Ltd. (CS(COMM) 1145/2026)",
+      "court": "Delhi High Court",
+      "topic": "copyright",
+      "issue": "Whether Amazon infringes the well-known mark KENT by letting sellers bid on it as a keyword in its sponsored-products ads, and whether Amazon can claim intermediary safe harbour.",
+      "stands": "On 16 October Justice Tejas Karia issued summons on Kent's application for an ad interim injunction; Amazon accepted notice. No interim relief has been granted. Amazon's reply is due within three weeks and its written statement within 30 days.",
+      "next": "2026-12-08",
+      "posts": ["can-a-rival-buy-your-brand-name-on-amazon"],
+      "sources": [
+        ["LiveLaw Biz", "https://www.livelawbiz.com/trademark/kent-ro-moves-delhi-high-court-against-amazon-over-use-of-kent-as-advertising-keyword-558881"]
       ]
     },
     {
