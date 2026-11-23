@@ -147,7 +147,7 @@ for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google
     else:
         t = t.replace("</title>", "</title>" + block, 1)
     # Privacy-friendly visitor counter (GoatCounter, no cookies)
-    t = re.sub(r"\n<!-- counter:start -->.*?<!-- counter:end -->", "", t, flags=re.S)
+    t = re.sub(r"\s*<!-- counter:start -->.*?<!-- counter:end -->\s*", "\n", t, flags=re.S)
     t = t.replace("</body>", COUNTER + "\n</body>", 1)
     f.write_text(t, encoding="utf-8")
     pages.append((url, published or TODAY, is_post, rel))
