@@ -20,6 +20,7 @@
   var size = get('ak-text');
   if (SIZES.indexOf(size) < 0) size = 'm';
   root.setAttribute('data-text', size);
+  root.classList.add('js');
 
   function ready(fn) {
     if (document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn);
@@ -52,11 +53,46 @@
         sbtn.setAttribute('title', 'Text size: ' + name);
         sbtn.setAttribute('aria-label', 'Text size is ' + name + '. Change text size');
       }
-      paintTheme(); paintSize();
+      function paintBar() {
+        // keep the phone's browser bar in step with the chosen theme
+        var dark = root.getAttribute('data-theme') === 'dark';
+        document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) { m.setAttribute('content', dark ? '#121319' : '#FFFFFF'); });
+      }
+      paintTheme(); paintSize(); paintBar();
       tbtn.addEventListener('click', function () {
         var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', next); set('ak-theme', next); paintTheme();
+        root.setAttribute('data-theme', next); set('ak-theme', next); paintTheme(); paintBar();
       });
+
+      // ---- Phone menu: name, search and a Menu button; links, text size and theme inside the menu
+      var nav = bar.querySelector('.nav');
+      if (nav) {
+        if (!nav.id) nav.id = 'site-nav';
+        var mbtn = document.createElement('button');
+        mbtn.type = 'button'; mbtn.className = 'tool-btn menu-btn'; mbtn.id = 'menu-toggle';
+        mbtn.setAttribute('aria-controls', nav.id); mbtn.setAttribute('aria-expanded', 'false');
+        mbtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path class="l1" d="M4 7h16"/><path class="l2" d="M4 12h16"/><path class="l3" d="M4 17h16"/></svg><span>Menu</span>';
+        tools.appendChild(mbtn);
+        var extra = document.createElement('div'); extra.className = 'nav-extra';
+        var mq = window.matchMedia('(max-width: 900px)');
+        function place() {
+          if (mq.matches) {
+            extra.appendChild(sbtn); extra.appendChild(tbtn);
+            if (!extra.parentNode) nav.appendChild(extra);
+          } else {
+            tools.insertBefore(sbtn, mbtn); tools.insertBefore(tbtn, mbtn);
+            if (extra.parentNode) extra.parentNode.removeChild(extra);
+            close();
+          }
+        }
+        function open() { bar.parentNode.classList.add('nav-open'); mbtn.setAttribute('aria-expanded', 'true'); mbtn.setAttribute('aria-label', 'Close menu'); }
+        function close() { bar.parentNode.classList.remove('nav-open'); mbtn.setAttribute('aria-expanded', 'false'); mbtn.setAttribute('aria-label', 'Open menu'); }
+        mbtn.addEventListener('click', function () { bar.parentNode.classList.contains('nav-open') ? close() : open(); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && bar.parentNode.classList.contains('nav-open')) { close(); mbtn.focus(); } });
+        nav.addEventListener('click', function (e) { if (e.target.closest('a')) close(); });
+        if (mq.addEventListener) mq.addEventListener('change', place); else if (mq.addListener) mq.addListener(place);
+        close(); place();
+      }
       sbtn.addEventListener('click', function () {
         var i = SIZES.indexOf(root.getAttribute('data-text'));
         var next = SIZES[(i + 1) % SIZES.length];
@@ -118,6 +154,7 @@
         if (openTerm && openTerm !== t) openTerm.classList.remove('open');
         t.classList.toggle('open');
         openTerm = t.classList.contains('open') ? t : null;
+        if (!openTerm) t.blur();
       });
       t.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') { t.classList.remove('open'); t.blur(); }
@@ -125,7 +162,7 @@
       });
     });
     document.addEventListener('click', function (e) {
-      if (openTerm && !openTerm.contains(e.target)) { openTerm.classList.remove('open'); openTerm = null; }
+      if (openTerm && !openTerm.contains(e.target)) { openTerm.classList.remove('open'); openTerm.blur(); openTerm = null; }
     });
   });
 })();

@@ -573,3 +573,122 @@ html[data-theme="dark"] .btn-primary:hover{background:#A6E85A;color:var(--char);
 html[data-theme="dark"] .btn-ghost:hover,html[data-theme="dark"] .tool-btn:hover,html[data-theme="dark"] .nav a:last-child:hover{background:#2A2B36;color:var(--ink)}
 html[data-theme="dark"] .follow .btn:hover{background:#A6E85A;color:var(--char)}
 html[data-theme="dark"] a.featured:hover{background:#22232E}
+
+/* =====================================================================
+   PHONES AND TABLETS (iOS Safari, Android Chrome)
+   ===================================================================== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-wrap:break-word;-webkit-tap-highlight-color:rgba(25,26,35,.08)}
+a,button,.chip,.tool-btn,summary{touch-action:manipulation}
+img,svg,video{max-width:100%}
+
+/* notch / home-indicator safe areas (with viewport-fit=cover) */
+.wrap{padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
+.site-footer .wrap{padding-bottom:calc(48px + env(safe-area-inset-bottom))}
+.gate{padding-top:max(32px,env(safe-area-inset-top));padding-bottom:max(32px,env(safe-area-inset-bottom));min-height:100vh;min-height:100dvh}
+
+/* grids never force a column wider than the screen */
+.grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.facts{grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.case-details{grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr))}
+.stats{grid-template-columns:repeat(auto-fit,minmax(min(100%,130px),1fr))}
+
+/* tables and slide images scroll inside their box */
+.table-wrap{-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.table-wrap table{min-width:520px}
+.slides-track{-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.slide img{max-height:min(78svh,860px)}
+
+/* glossary pop-ups: hidden ones take no space */
+.gloss::after{display:none}
+.gloss:hover::after,.gloss:focus::after,.gloss.open::after{display:block}
+
+/* touch screens: no sticky hover effects after a tap; a press state instead */
+@media (hover:none){
+  a.card:hover,a.topic:hover,a.watch-card:hover{transform:none;box-shadow:0 5px 0 var(--edge)}
+  .court-grid a.watch-card:hover{box-shadow:none;border-color:var(--lime)}
+  .btn-primary:hover{background:var(--char);color:#fff;border-color:var(--char)}
+  .btn-ghost:hover,.tool-btn:hover,.nav a:last-child:hover,.chip:hover{background:transparent;color:var(--ink)}
+  a.featured:hover{background:var(--char)}
+  html[data-theme="dark"] .btn-primary:hover{background:var(--lime);color:var(--char)}
+  html[data-theme="dark"] a.featured:hover{background:#1B1C25}
+  a.card:active,a.topic:active,a.watch-card:active{transform:translateY(3px);box-shadow:0 2px 0 var(--edge)}
+  .btn:active,.tool-btn:active,.chip:active{transform:translateY(1px);opacity:.85}
+  .gloss:hover::after,.gloss:focus:not(.open)::after{display:none}
+  .gloss.open::after{display:block}
+}
+
+/* menu button: hidden on wide screens */
+.menu-btn{display:none;gap:6px;padding:0 12px;font-size:15px;font-weight:500}
+.nav-extra{display:none}
+
+@media (max-width:900px){
+  /* header: name + search + Menu; links open below */
+  .site-header .wrap{padding-top:calc(14px + env(safe-area-inset-top));padding-bottom:14px;gap:12px;flex-wrap:wrap}
+  .brand{order:0;flex:1 1 auto;min-width:0}
+  .brand b{font-size:20px;gap:8px}
+  .brand b::before{width:22px;height:22px;flex-basis:22px}
+  .brand span{padding-left:30px;font-size:11px}
+  .reader-tools{order:1;flex:0 0 auto}
+  .js .menu-btn{display:inline-flex}
+  .js .site-header .nav{order:2;flex:1 1 100%;display:none;flex-direction:column;gap:4px;padding:8px 0 4px;border-top:1px solid var(--line)}
+  .js .site-header.nav-open .nav{display:flex}
+  .js .site-header .nav a{padding:14px 12px;font-size:17px;border-radius:12px}
+  .js .site-header .nav a:last-child{margin-left:0;border:1px solid var(--edge);text-align:center}
+  .nav-extra{display:flex;gap:8px;align-items:center;padding:10px 0 4px}
+  .nav-extra::before{content:"Text size and theme";flex:1;font-size:14px;color:var(--muted)}
+  .nav-open .menu-btn{background:var(--char);color:#fff;border-color:var(--char)}
+  html[data-theme="dark"] .nav-open .menu-btn{background:var(--lime);color:var(--char)}
+  .menu-btn svg path{transition:transform .15s,opacity .15s;transform-origin:12px 12px}
+  .nav-open .menu-btn .l1{transform:translateY(5px) rotate(45deg)}
+  .nav-open .menu-btn .l2{opacity:0}
+  .nav-open .menu-btn .l3{transform:translateY(-5px) rotate(-45deg)}
+
+  /* spacing and type */
+  .wrap{padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+  .hero{padding:28px 18px 40px;gap:24px}
+  .hero h1{font-size:clamp(34px,9.5vw,44px)}
+  .hero p{font-size:17px}
+  .hero-art{max-width:220px}
+  .page-head h1,.article h1{font-size:clamp(28px,8vw,36px)}
+  .h2{font-size:clamp(22px,6.4vw,28px)}
+  .section-head{flex-wrap:wrap;gap:4px 16px}
+  .card{padding:24px;border-radius:22px}
+  .featured{padding:28px 24px;border-radius:28px;gap:16px}
+  .featured h2{font-size:clamp(22px,6.4vw,28px)}
+  .follow{padding:28px 22px;border-radius:28px;margin-bottom:56px}
+  .follow .btn{flex:1 1 100%}
+  .court-grid{border-radius:28px;padding:24px 18px}
+  .band{border-radius:28px}
+  .band .wrap{padding-top:48px;padding-bottom:48px}
+  .site-footer{border-radius:28px 28px 0 0}
+  .site-footer .contact a{display:inline-block;padding:6px 0}
+  .article{padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+  .byline{flex-wrap:wrap;gap:12px}
+  .breadcrumbs li[aria-current]{max-width:60vw}
+  .case-details>div{padding:12px 14px}
+  .tool-card{padding:20px 18px}
+  .tool-options .btn{flex:1 1 auto}
+  .cal-list li{gap:14px}
+  .item{gap:6px 16px}
+
+  /* glossary pop-up becomes a card at the bottom of the screen */
+  .gloss.open::after,.gloss:focus::after{position:fixed;left:12px;right:12px;top:auto;bottom:calc(12px + env(safe-area-inset-bottom));width:auto;max-width:none;font-size:16px;padding:14px 16px;border-radius:14px;z-index:60}
+}
+
+/* very narrow (folded phones, iPhone SE 1st gen) */
+@media (max-width:340px){
+  .brand span{display:none}
+  .menu-btn span{display:none}
+  .card{padding:20px}
+  .hero h1{font-size:32px}
+}
+
+/* phones in landscape: keep the hero short */
+@media (max-height:500px) and (orientation:landscape){
+  .hero{padding-top:20px;padding-bottom:24px}
+  .hero h1{font-size:38px}
+  .page-head h1,.article h1{font-size:32px}
+  .hero-art{max-width:200px}
+  .slide img{max-height:82svh}
+}

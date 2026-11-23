@@ -178,6 +178,19 @@ for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google
     if is_post and published:
         tags.append(f'<meta property="article:published_time" content="{published}">')
         tags.append('<meta property="article:author" content="Ashwani Kumar">')
+    tags += [
+        '<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">',
+        '<meta name="theme-color" content="#121319" media="(prefers-color-scheme: dark)">',
+        '<meta name="color-scheme" content="light dark">',
+        '<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">',
+        '<meta name="apple-mobile-web-app-title" content="Ashwani Kumar">',
+        '<link rel="icon" href="/favicon.ico" sizes="any">',
+        '<link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">',
+        '<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">',
+        '<link rel="manifest" href="/site.webmanifest">',
+    ]
+    t = t.replace('<meta name="viewport" content="width=device-width, initial-scale=1">',
+                  '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">')
     block = "\n<!-- seo:start -->\n" + "\n".join(tags) + "\n<!-- seo:end -->"
     t = t.replace(f'<meta name="description" content=', "\x00", 1)
     if "\x00" in t:
