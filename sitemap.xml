@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kumarashwani-law.github.io/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/cases.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/disclaimer.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/guides/index.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
@@ -73,6 +73,11 @@
   <url>
     <loc>https://kumarashwani-law.github.io/posts/ai-training-and-copyright-three-courts-three-answers.html</loc>
     <lastmod>2026-11-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/posts/an-ai-detector-s-score-is-not-proof.html</loc>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -207,47 +212,47 @@
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/topics/ai-courts.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/topics/copyright.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/topics/data.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/topics/deepfakes.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/topics/index.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/topics/other.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/topics/platforms.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/topics/surveillance.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/writing.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.9</priority>
   </url>
 </urlset>
