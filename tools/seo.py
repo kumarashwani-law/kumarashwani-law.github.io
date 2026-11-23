@@ -17,22 +17,33 @@ TODAY = date.today().isoformat()
 COUNTER = ('\n<!-- counter:start -->\n<script data-goatcounter="https://kumarashwani-law.goatcounter.com/count" '
            'async src="https://gc.zgo.at/count.js"></script>\n<!-- counter:end -->')
 
-SERIF = "/usr/share/fonts/truetype/google-fonts/Lora-Variable.ttf"
-SANS_SEMI = "/usr/share/fonts/opentype/inter/Inter-SemiBold.otf"
-SANS_REG = "/usr/share/fonts/opentype/inter/Inter-Regular.otf"
+GROTESK = str(Path(__file__).parent / "fonts" / "SpaceGrotesk.ttf")  # OFL, from Google Fonts
 
 W, H = 1200, 630
-BG = (15, 23, 42)          # navy
-ACCENT = (165, 180, 252)   # light indigo, readable on navy
+BG = (25, 26, 35)          # charcoal #191A23
+LIME = (185, 255, 102)     # #B9FF66
 INK = (255, 255, 255)
-MUTED = (203, 213, 225)
-RULE = (46, 59, 174)
+MUTED = (201, 202, 208)
 
 
-def serif(size, weight="SemiBold"):
-    f = ImageFont.truetype(SERIF, size)
-    f.set_variation_by_name(weight)
+def grotesk(size, weight=500):
+    f = ImageFont.truetype(GROTESK, size)
+    try:
+        f.set_variation_by_axes([weight])
+    except Exception:
+        pass
     return f
+
+
+def star(d, cx, cy, r, fill):
+    """Four-point sparkle, the site's mark."""
+    import math
+    pts = []
+    for i in range(96):
+        t = i / 96 * 2 * math.pi
+        x, y = math.cos(t), math.sin(t)
+        pts.append((cx + r * math.copysign(abs(x) ** 3, x), cy + r * math.copysign(abs(y) ** 3, y)))
+    d.polygon(pts, fill=fill)
 
 
 def wrap(draw, text, font, max_w):
@@ -51,35 +62,49 @@ def wrap(draw, text, font, max_w):
 
 
 def make_image(path, kicker, title):
-    title = title.replace("₹", "Rs ")  # Lora has no rupee glyph
+    title = title.replace("₹", "Rs ")  # the font has no rupee glyph
     img = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(img)
     pad = 80
-    d.rectangle([0, 0, W, 10], fill=RULE)
-    d.text((pad, 72), kicker.upper(), font=ImageFont.truetype(SANS_SEMI, 24), fill=ACCENT)
-    # Fit the title: largest size that fits in 4 lines within the box
-    box_w, box_h = W - 2 * pad, 330
-    for size in range(66, 34, -2):
-        f = serif(size)
+    # decoration: lime orbit and sparkles, top right
+    orbit = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    od = ImageDraw.Draw(orbit)
+    od.ellipse([860, -40, 1260, 170], outline=LIME + (255,), width=3)
+    orbit = orbit.rotate(-12, center=(1060, 65))
+    img.paste(orbit, (0, 0), orbit)
+    star(d, 1080, 70, 46, LIME)
+    star(d, 985, 150, 16, INK)
+    d.ellipse([1150, 160, 1164, 174], fill=LIME)
+    # kicker as a lime tag
+    kf = grotesk(22, 700)
+    k = kicker.upper()
+    tw = d.textlength(k, font=kf)
+    d.rounded_rectangle([pad, 64, pad + tw + 28, 64 + 42], radius=9, fill=LIME)
+    d.text((pad + 14, 73), k, font=kf, fill=BG)
+    # title: largest size that fits in 4 lines
+    box_w, box_h = W - 2 * pad - 120, 340
+    for size in range(68, 34, -2):
+        f = grotesk(size, 500)
         lines = wrap(d, title, f, box_w)
-        lh = int(size * 1.22)
+        lh = int(size * 1.16)
         if len(lines) <= 4 and lh * len(lines) <= box_h:
             break
     else:
         lines = lines[:4]
         lines[-1] = lines[-1].rstrip(".,;:") + "…"
-    y = 130
+    y = 140
     for line in lines:
         d.text((pad, y), line, font=f, fill=INK)
         y += lh
-    # Footer
-    d.line([pad, H - 120, W - pad, H - 120], fill=(51, 65, 85), width=2)
-    d.text((pad, H - 92), "Ashwani Kumar", font=serif(32, "Bold"), fill=INK)
-    d.text((pad + d.textlength("Ashwani Kumar", font=serif(32, "Bold")) + 20, H - 84),
-           "Advocate · Law, Privacy & AI", font=ImageFont.truetype(SANS_REG, 22), fill=MUTED)
+    # footer
+    d.line([pad, H - 118, W - pad, H - 118], fill=(58, 59, 69), width=2)
+    star(d, pad + 14, H - 70, 14, LIME)
+    nf = grotesk(30, 700)
+    d.text((pad + 40, H - 90), "Ashwani Kumar", font=nf, fill=INK)
+    sf = grotesk(22, 400)
+    d.text((pad + 40 + d.textlength("Ashwani Kumar", font=nf) + 18, H - 82), "Advocate · Law, Privacy & AI", font=sf, fill=MUTED)
     host = BASE.split("://", 1)[1]
-    hf = ImageFont.truetype(SANS_REG, 22)
-    d.text((W - pad - d.textlength(host, font=hf), H - 84), host, font=hf, fill=MUTED)
+    d.text((W - pad - d.textlength(host, font=sf), H - 82), host, font=sf, fill=LIME)
     path.parent.mkdir(parents=True, exist_ok=True)
     img.save(path, "PNG", optimize=True)
 
