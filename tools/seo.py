@@ -129,6 +129,7 @@ for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google
         '<meta property="og:image:height" content="630">',
         f'<meta property="og:image:alt" content="{html.escape(img_alt)}">',
         '<meta property="og:locale" content="en_IN">',
+        f'<link rel="alternate" type="application/rss+xml" title="Ashwani Kumar — Law, Privacy & AI" href="{BASE}/feed.xml">',
         '<meta name="twitter:card" content="summary_large_image">',
         f'<meta name="twitter:title" content="{html.escape(og_title)}">',
         f'<meta name="twitter:description" content="{html.escape(desc)}">',

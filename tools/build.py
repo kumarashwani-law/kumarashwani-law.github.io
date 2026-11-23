@@ -599,6 +599,51 @@ for static in ["disclaimer.html", "index.html"]:
     t = re.sub(r'<nav class="nav" aria-label="Main">.*?</nav>', lambda m: nav(""), t, count=1, flags=re.S)
     p.write_text(t, encoding="utf-8")
 
+# ---------------------------------------------------------------- RSS feed
+from email.utils import format_datetime
+from datetime import datetime, timezone, timedelta
+SITE_URL = "https://kumarashwani-law.github.io"
+IST = timezone(timedelta(hours=5, minutes=30))
+
+def rfc822(d):
+    return format_datetime(datetime.strptime(d, "%Y-%m-%d").replace(hour=9, tzinfo=IST))
+
+def cdata(x):
+    return "<![CDATA[" + x.replace("]]>", "]]]]><![CDATA[>") + "]]>"
+
+feed_items = []
+for r in records[:25]:
+    link = f'{SITE_URL}/posts/{r["slug"]}.html'
+    body = "\n".join(render_block(b) for b in r["blocks"])
+    if r["url"]:
+        body += f'\n<p><a href="{esc(r["url"])}">See the original post on LinkedIn</a>.</p>'
+    cats = f'<category>{esc(TOPIC_LABEL[r["topic"]])}</category>'
+    feed_items.append(f"""<item>
+<title>{esc(r["title"])}</title>
+<link>{link}</link>
+<guid isPermaLink="true">{link}</guid>
+<pubDate>{rfc822(r["date"])}</pubDate>
+{cats}
+<description>{esc(r["summary"])}</description>
+<content:encoded>{cdata(body)}</content:encoded>
+</item>""")
+
+feed_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Ashwani Kumar — Law, Privacy &amp; AI</title>
+<link>{SITE_URL}/</link>
+<atom:link href="{SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
+<description>Commentary on data protection, AI governance, platform regulation and digital free speech in India, by Adv. Ashwani Kumar. For information only; not legal advice.</description>
+<language>en-in</language>
+<copyright>© 2026 Ashwani Kumar</copyright>
+<lastBuildDate>{rfc822(records[0]["date"])}</lastBuildDate>
+{chr(10).join(feed_items)}
+</channel>
+</rss>
+"""
+(OUT / "feed.xml").write_text(feed_xml, encoding="utf-8")
+
 print(len(records), "posts built; latest:", records[0]["slug"])
 print("topics:", {t: counts[t] for t in counts}, "| cases:", len(pending), "pending,", len(decided), "decided")
 

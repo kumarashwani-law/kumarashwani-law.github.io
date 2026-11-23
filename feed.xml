@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Ashwani Kumar — Law, Privacy &amp; AI</title>
+<link>https://kumarashwani-law.github.io/</link>
+<atom:link href="https://kumarashwani-law.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+<description>Commentary on data protection, AI governance, platform regulation and digital free speech in India, by Adv. Ashwani Kumar. For information only; not legal advice.</description>
+<language>en-in</language>
+<copyright>© 2026 Ashwani Kumar</copyright>
+<lastBuildDate>Mon, 23 Nov 2026 09:00:00 +0530</lastBuildDate>
+<item>
+<title>An AI detector&#x27;s score is not proof</title>
+<link>https://kumarashwani-law.github.io/posts/an-ai-detector-s-score-is-not-proof.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/an-ai-detector-s-score-is-not-proof.html</guid>
+<pubDate>Mon, 23 Nov 2026 09:00:00 +0530</pubDate>
+<category>AI &amp; the Courts</category>
+<description>Speaking in Hyderabad on 21 November at the Commonwealth Legal Education Association&#x27;s conference, CJI Surya Kant said:</description>
+<content:encoded><![CDATA[<p>Speaking in Hyderabad on 21 November at the Commonwealth Legal Education Association&#x27;s conference, CJI Surya Kant said:</p>
+<p>&quot;No student should therefore be held guilty of misconduct on the word of a machine alone.&quot;</p>
+<p>His concern: where many students write in English as a second or third language, an honest student could be &quot;branded a cheat on the strength of a number that no one can explain.&quot;</p>
+<p>📊 The evidence<br>
+The study he cited (Patterns, 2023) tested seven widely used AI detectors:<br>
+• Essays by native English speakers: under 2% wrongly flagged<br>
+• Essays by non-native speakers: over 61% wrongly flagged<br>
+Simpler vocabulary reads as &quot;machine-like&quot;. In India, that bias falls on most students.</p>
+<p>🎓 Already happening<br>
+• 2024: a Jindal LLM student was failed after a detector rated his answers 88% AI-generated. He denied using AI and said there were no AI rules. The Punjab &amp; Haryana High Court issued notice.<br>
+• November 2026: law students in Nepal filed a writ against penalties based solely on detection software.</p>
+<p>⚖️ The legal lens<br>
+A misconduct finding needs a specific charge, evidence the student can see and answer, a hearing, and a reasoned decision.<br>
+A detector gives a probability, no reasons, and no way to cross-examine the tool. A penalty resting only on that score is open to challenge as based on no real evidence.</p>
+<p>🔐 The data protection gap<br>
+GDPR (Art. 22) gives people a right not to be subject to decisions based solely on automated processing, and a right to human review. India&#x27;s DPDP Act has no equivalent. Students, job applicants and borrowers must rely on natural justice instead.</p>
+<p>✅ What the CJI proposed<br>
+1️⃣ No blanket ban on AI; it is &quot;neither practicable nor wise&quot;.<br>
+2️⃣ Clear rules in advance: what&#x27;s allowed, what must be disclosed, what counts as outsourcing the thinking.<br>
+3️⃣ Better assessment: oral explanations, discussing authorities, spotting errors in AI answers.<br>
+4️⃣ Model AI-disclosure guidelines for law schools and journals.</p>
+<p>My take: treat a detector flag as a tip, not a verdict. A flag can justify a conversation, asking the student to explain their work and sources. It can&#x27;t justify a penalty by itself. Universities, employers and journals should write that rule down before the first student is accused.</p>
+<p>📎 Resources:<br>
+• LiveLaw: <a href="https://www.livelaw.in/top-stories/no-student-should-be-penalised-based-on-ai-detection-tool-alone-cji-surya-kant-559448" rel="noopener">https://www.livelaw.in/top-stories/no-student-should-be-penalised-based-on-ai-detection-tool-alone-cji-surya-kant-559448</a><br>
+• The study: <a href="https://doi.org/10.1016/j.patter.2023.100779" rel="noopener">https://doi.org/10.1016/j.patter.2023.100779</a></p>
+<p>Has your college or employer ever relied on an AI detector? Did anyone check the result?</p>
+<p>Views are personal; for general information only. The CJI&#x27;s remarks were made in a speech, not a judgment.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7530543335342739457/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Can a rival buy your brand name on Amazon?</title>
+<link>https://kumarashwani-law.github.io/posts/can-a-rival-buy-your-brand-name-on-amazon.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/can-a-rival-buy-your-brand-name-on-amazon.html</guid>
+<pubDate>Thu, 19 Nov 2026 09:00:00 +0530</pubDate>
+<category>Copyright &amp; AI</category>
+<description>Kent RO has sued Amazon in the Delhi High Court (CS(COMM) 1145/2026). It alleges that its well-known mark &quot;KENT&quot; is sold as an advertising keyword, so shoppers searching for Kent purifiers…</description>
+<content:encoded><![CDATA[<p>Kent RO has sued Amazon in the Delhi High Court (CS(COMM) 1145/2026). It alleges that its well-known mark &quot;KENT&quot; is sold as an advertising keyword, so shoppers searching for Kent purifiers see competing products first.</p>
+<p>🔎 How keyword ads work<br>
+A seller bids on &quot;KENT&quot;. A shopper searches &quot;KENT&quot;. A rival&#x27;s product appears at the top, marked &quot;Sponsored&quot;. The platform earns on every click. The word &quot;KENT&quot; may never appear in the ad, which courts call &quot;invisible use&quot;.</p>
+<p>📅 Where the case stands<br>
+• Justice Tejas Karia issued summons on 16 October; Amazon has accepted notice.<br>
+• Kent placed a video on record showing the keyword bidding process.<br>
+• No interim relief yet. The application will be heard on 8 December.</p>
+<p>⚖️ The law the court will apply<br>
+1️⃣ Google v. DRS Logistics (Division Bench, 2023): using a mark as a keyword is &quot;use&quot; in advertising even if it&#x27;s never shown, but it isn&#x27;t infringement per se. There must be confusion, unfair advantage or dilution. Google got no safe harbour because it actively promoted trademarks as keywords.<br>
+2️⃣ Hindware v. Grohe (May 2026): invisible keyword use is use; Google &quot;was not neutral but an active commercial participant&quot;. Google has appealed.</p>
+<p>❓ Three questions for a marketplace<br>
+• Who is using the mark: the seller who bids, or the platform that runs the auction and earns from it?<br>
+• Is there confusion? The shopper is already inside the store and the ad says &quot;Sponsored&quot;, but KENT is a well-known mark, which gets wider protection.<br>
+• Is Amazon a passive intermediary? After DRS and Hindware, the search engine that sold keywords didn&#x27;t get safe harbour. Amazon will have to show its role is different.</p>
+<p>✅ What this means now<br>
+• Brands: search your own name on marketplaces and keep a record of what appears.<br>
+• Sellers: bidding on a rival&#x27;s well-known mark is a real litigation risk; generic terms are safer.<br>
+• Platforms: &quot;we&#x27;re just an intermediary&quot; is harder to argue.</p>
+<p>My take: keyword ads aren&#x27;t wrong in themselves. They&#x27;re lawful unless they confuse buyers or take unfair advantage of a mark&#x27;s reputation. For a well-known mark like KENT, on a platform that profits from every click, that line is easier to cross.</p>
+<p>📎 Resources:<br>
+• LiveLaw Biz: <a href="https://www.livelawbiz.com/trademark/kent-ro-moves-delhi-high-court-against-amazon-over-use-of-kent-as-advertising-keyword-558881" rel="noopener">https://www.livelawbiz.com/trademark/kent-ro-moves-delhi-high-court-against-amazon-over-use-of-kent-as-advertising-keyword-558881</a><br>
+• Google v. DRS (judgment): <a href="https://spicyip.com/wp-content/uploads/2023/08/Google-v.-DRS.pdf" rel="noopener">https://spicyip.com/wp-content/uploads/2023/08/Google-v.-DRS.pdf</a><br>
+• Mondaq on Hindware: <a href="https://www.mondaq.com/india/trademark/1822848/when-does-keyword-use-become-trademark-infringement" rel="noopener">https://www.mondaq.com/india/trademark/1822848/when-does-keyword-use-become-trademark-infringement</a></p>
+<p>When you search a brand and see a rival&#x27;s product first, do you feel misled, or is it just shopping?</p>
+<p>Views are personal; for general information only. Suit pending; no interim order yet.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7529169598399782912/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Personality rights aren&#x27;t only for celebrities</title>
+<link>https://kumarashwani-law.github.io/posts/personality-rights-aren-t-only-for-celebrities.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/personality-rights-aren-t-only-for-celebrities.html</guid>
+<pubDate>Wed, 18 Nov 2026 09:00:00 +0530</pubDate>
+<category>Deepfakes &amp; Personality Rights</category>
+<description>On 16 November, the Madras High Court restrained Blinkit from using the persona of Saravanan Hari, the Chennai Super Kings superfan, without his written consent.</description>
+<content:encoded><![CDATA[<p>On 16 November, the Madras High Court restrained Blinkit from using the persona of Saravanan Hari, the Chennai Super Kings superfan, without his written consent.</p>
+<p>📰 The facts<br>
+• Since around 2013, Hari has appeared at CSK matches with a yellow-painted face, curly wig, moustache, Dhoni&#x27;s No. 7 and a thumbs-up pose. It is widely covered on TV.<br>
+• On 23 March 2025, a Blinkit ad on the front page of the Sunday Times showed a cartoon figure with the same look and pose.<br>
+• People he knew asked whether he was endorsing Blinkit. Pre-suit mediation failed, and he sued, claiming ₹1.1 crore.</p>
+<p>⚖️ Blinkit&#x27;s defence: the characters were fictional and didn&#x27;t resemble him.<br>
+The court found a clear resemblance: the same pose was reproduced, and the public was likely to be misled into thinking it was him.</p>
+<p>💬 The key line (Justice P.B. Balaji):<br>
+&quot;The constitution protects the rights of every individual and it need not be restricted or limited to celebrities like actors and sportspersons.&quot;<br>
+Blinkit could not exploit his personality rights, &quot;whatever little it may be&quot;, for commercial gain without consent.</p>
+<p>📌 Relief (interim): no commercial use without written consent; the ad&#x27;s artwork and emails must be preserved. The publisher&#x27;s liability will be decided at trial. Next hearing: 14 December.</p>
+<p>🧭 Where this fits<br>
+In T. Rangaraj (January 2026), the Madras High Court refused takedowns where posts merely circulated, insisting on commercial exploitation. Hari&#x27;s case applies the same test to a non-celebrity. Read together, the test is identifiability plus commercial use without consent, not fame.</p>
+<p>🔐 The privacy-law gap<br>
+Why not the DPDP Act? Section 3(c)(ii) excludes personal data that the person made publicly available, and a fan appearing on TV at matches may fall within that exclusion. Most of the Act also only applies from 13 May 2027. Personality rights and passing off fill that gap.</p>
+<p>✅ For brands and agencies<br>
+1️⃣ Get written consent for any recognisable person, even as a cartoon or look-alike.<br>
+2️⃣ Don&#x27;t recreate a known pose or signature look.<br>
+3️⃣ AI-generated look-alikes carry the same risk.</p>
+<p>My take: if people recognise you, a brand needs your permission. That protects ordinary people without turning the right into a tool to silence fans, critics or the news.</p>
+<p>📎 Resources:<br>
+• LiveLaw Biz: <a href="https://www.livelawbiz.com/personality-rights/madras-high-court-protects-csk-fan-personality-rights-restraining-blinkit-from-using-image-without-consent-558695" rel="noopener">https://www.livelawbiz.com/personality-rights/madras-high-court-protects-csk-fan-personality-rights-restraining-blinkit-from-using-image-without-consent-558695</a><br>
+• SpicyIP on T. Rangaraj: <a href="https://spicyip.com/2026/01/a-course-correction-what-rangaraj-and-kamal-haasan-get-right-about-personality-rights.html" rel="noopener">https://spicyip.com/2026/01/a-course-correction-what-rangaraj-and-kamal-haasan-get-right-about-personality-rights.html</a></p>
+<p>Should a local &quot;famous face&quot; have the same rights as a film star when a brand copies them?</p>
+<p>Views are personal; for general information only. Interim order; the suit is pending.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7528695523395133441/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>₹1 lakh crore that families can&#x27;t trace</title>
+<link>https://kumarashwani-law.github.io/posts/1-lakh-crore-that-families-can-t-trace.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/1-lakh-crore-that-families-can-t-trace.html</guid>
+<pubDate>Tue, 17 Nov 2026 09:00:00 +0530</pubDate>
+<category>Data Protection</category>
+<description>Today (17 November), the Supreme Court reserved its order on Sucheta Dalal&#x27;s PIL (W.P.(C) 185/2022). She is asking for one searchable database so that heirs can find money a deceased person…</description>
+<content:encoded><![CDATA[<p>Today (17 November), the Supreme Court reserved its order on Sucheta Dalal&#x27;s PIL (W.P.(C) 185/2022). She is asking for one searchable database so that heirs can find money a deceased person left behind.</p>
+<p>💰 How much is lying unclaimed?<br>
+About ₹1.04 lakh crore, by figures cited in December 2025:<br>
+• Bank deposits: ~₹78,000 crore (moved to RBI&#x27;s DEAF after 10 years of inactivity)<br>
+• Insurance: ~₹14,000 crore<br>
+• Unpaid dividends: ~₹9,000 crore<br>
+• Mutual funds: ~₹3,000 crore</p>
+<p>🧩 Why heirs give up<br>
+There are five separate portals: UDGAM (banks), MITRA (mutual funds), Bima Bharosa (insurance), IEPF (shares and dividends) and EPFO (PF). Heirs often don&#x27;t know an asset exists, so they don&#x27;t know where to search.</p>
+<p>⏳ A promise three years late<br>
+The government told the Court on affidavit that a centralised database would be ready by July 2023. It still doesn&#x27;t exist.</p>
+<p>⚖️ What each side said today<br>
+Petitioner: one search by the deceased person&#x27;s name should show every account. No effective steps yet on insurance. UDGAM assumes you know which bank held the account.<br>
+Centre, RBI and SEBI: 30 banks are on UDGAM, covering about 90% of unclaimed deposits; users can &quot;select all banks&quot;; banks now allow up to four nominees; no directions are needed.</p>
+<p>🔐 The privacy question<br>
+Who should be able to search a dead person&#x27;s money? A name-searchable list could help impostors, and the Centre has raised privacy and misuse concerns. The answer is careful design: search unlocked by a death certificate plus the claimant&#x27;s KYC, results showing only where an asset is held (not the balance), logged searches, and claims still verified by the institution.</p>
+<p>✅ What families can do now<br>
+1️⃣ Add nominees to every bank account, demat, MF folio, insurance policy and EPF.<br>
+2️⃣ Keep an asset list where your family can find it.<br>
+3️⃣ Searching for a late relative? Use UDGAM with &quot;all banks&quot;, then MITRA and IEPF.<br>
+4️⃣ Section 14 of the DPDP Act will let you nominate someone to exercise your data rights after death once it comes into force on 13 May 2027.</p>
+<p>My take: a deadline the government set for itself should not need a court order. Whatever the Court orders, it should set a timeline.</p>
+<p>📎 Resources:<br>
+• LiveLaw (17 Nov hearing): <a href="https://www.livelaw.in/top-stories/supreme-court-reserves-order-on-sucheta-dalals-plea-seeking-steps-to-help-heirs-claim-unclaimed-financial-assets-558726" rel="noopener">https://www.livelaw.in/top-stories/supreme-court-reserves-order-on-sucheta-dalals-plea-seeking-steps-to-help-heirs-claim-unclaimed-financial-assets-558726</a><br>
+• Moneylife (March hearing): <a href="https://moneylife.in/article/supreme-court-to-govt-and-rbi-why-is-a-promised-central-database-of-unclaimed-financial-assets-still-missing-25-years-after-your-own-deadline/79970.html" rel="noopener">https://moneylife.in/article/supreme-court-to-govt-and-rbi-why-is-a-promised-central-database-of-unclaimed-financial-assets-still-missing-25-years-after-your-own-deadline/79970.html</a><br>
+• RBI UDGAM: <a href="https://udgam.rbi.org.in" rel="noopener">https://udgam.rbi.org.in</a></p>
+<p>Have you or your family tried claiming a deceased relative&#x27;s money? What was the hardest part?</p>
+<p>Views are personal; for general information only. Order reserved; figures are approximate.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7528394526432894977/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>AI training and copyright: three courts, three answers</title>
+<link>https://kumarashwani-law.github.io/posts/ai-training-and-copyright-three-courts-three-answers.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/ai-training-and-copyright-three-courts-three-answers.html</guid>
+<pubDate>Mon, 16 Nov 2026 09:00:00 +0530</pubDate>
+<category>Copyright &amp; AI</category>
+<description>In ten days, courts in Europe, Canada and the US each moved on the same question: can an AI company train on copyrighted work without permission?</description>
+<content:encoded><![CDATA[<p>In ten days, courts in Europe, Canada and the US each moved on the same question: can an AI company train on copyrighted work without permission?</p>
+<p>🇪🇺 European Union (3 November)<br>
+In Like Company v. Google (C-250/25), Advocate General Szpunar said training is &quot;as a rule, freely permitted&quot; under the text-and-data-mining exception, if developers:<br>
+• use only lawfully accessible sources<br>
+• respect machine-readable opt-outs such as robots.txt<br>
+• take steps to stop the model reproducing specific works<br>
+But a chatbot fetching and reusing news in real time may still infringe press publishers&#x27; rights.</p>
+<p>🇨🇦 Canada (13 November)<br>
+The Ontario Court of Appeal unanimously held that OpenAI must defend the Canadian news publishers&#x27; suit in Ontario. OpenAI argued that its training happened outside the province. The Court found &quot;a real and substantial connection&quot;. Canadian fair dealing, not US fair use, will apply, and there is no text-and-data-mining exception. This decides venue only.</p>
+<p>🇺🇸 United States (pending)<br>
+In In re OpenAI Copyright Infringement Litigation, Judge Sidney Stein will decide fair use on cross-motions for summary judgment, without a trial. On 6 November he allowed 56 amicus briefs.</p>
+<p>🇮🇳 And India?<br>
+In ANI v. OpenAI, the Delhi High Court (24 July) kept jurisdiction, held training-related storage prima facie covered by Section 52(1)(a)(i), and refused an interim injunction. ANI&#x27;s appeal is pending. Indonesia is legislating instead, and Google, Meta and TikTok opposed its bill on 11 November.</p>
+<p>Three patterns across the courts:<br>
+1️⃣ Location isn&#x27;t a shield. Delhi and Ontario both rejected &quot;we trained abroad&quot;.<br>
+2️⃣ Opt-outs matter. The EU makes them the line, and the Delhi HC weighed the unused crawler opt-out against ANI.<br>
+3️⃣ Outputs are the weak point. Regurgitation is where liability sits.</p>
+<p>My take: India shouldn&#x27;t leave this to one interim order. Stretching &quot;private use, including research&quot; to cover commercial AI training is a fragile base for a whole industry. A clear statutory rule with opt-outs, transparency and anti-memorisation duties would serve creators and developers better.</p>
+<p>📎 Resources:<br>
+• CJEU press release: <a href="https://curia.europa.eu/site/jcms/p1_1000088855" rel="noopener">https://curia.europa.eu/site/jcms/p1_1000088855</a><br>
+• CTV on Ontario: <a href="https://ctvnews.ca/sci-tech/article/court-allows-news-publishers-copyright-lawsuit-against-openai-to-go-ahead" rel="noopener">https://ctvnews.ca/sci-tech/article/court-allows-news-publishers-copyright-lawsuit-against-openai-to-go-ahead</a><br>
+• IPWatchdog on the US briefs: <a href="https://ipwatchdog.com/2026/11/02/openai-touts-briefs-backing-fair-use-for-ai-training/" rel="noopener">https://ipwatchdog.com/2026/11/02/openai-touts-briefs-backing-fair-use-for-ai-training/</a><br>
+• LiveLaw on ANI: <a href="https://www.livelaw.in/high-court/delhi-high-court/delhi-high-court-rejects-ani-copyright-suit-open-ai-chatgpt-542736" rel="noopener">https://www.livelaw.in/high-court/delhi-high-court/delhi-high-court-rejects-ani-copyright-suit-open-ai-chatgpt-542736</a></p>
+<p>Which approach should India take: fair dealing, an opt-out exception, or licensing?</p>
+<p>Views are personal; for general information only. The AG opinion is non-binding and the other matters are pending.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7528032040869457920/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>&quot;Right to privacy in a public place? What kind of PILs are being filed?&quot;</title>
+<link>https://kumarashwani-law.github.io/posts/right-to-privacy-in-a-public-place-what-kind-of-pils-are.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/right-to-privacy-in-a-public-place-what-kind-of-pils-are.html</guid>
+<pubDate>Sun, 15 Nov 2026 09:00:00 +0530</pubDate>
+<category>Surveillance &amp; Privacy</category>
+<description>That was the Centre&#x27;s response in the Supreme Court on 3 November. Justice Joymalya Bagchi answered with a question of his own: &quot;When I am standing in a public place, what&#x27;s my reasonable…</description>
+<content:encoded><![CDATA[<p>That was the Centre&#x27;s response in the Supreme Court on 3 November. Justice Joymalya Bagchi answered with a question of his own: &quot;When I am standing in a public place, what&#x27;s my reasonable expectation?&quot;</p>
+<p>The case: SFLC.in has challenged facial recognition at protest sites, including the 10 October Jantar Mantar protest. It points to Delhi Police&#x27;s DP-Drishti and Ikshana vans, which allegedly run AI facial recognition on live CCTV feeds. A bench of CJI Surya Kant and Justices Bagchi and V. Mohana issued notice. A similar plea by MP A.A. Rahim on July&#x27;s protests is pending.</p>
+<p>Why the numbers worry (as cited in the petition):<br>
+🔹 Police reportedly claimed to identify 2,873 people at July&#x27;s Jantar Mantar protests<br>
+🔹 Of 205 &quot;matches&quot; examined, 25 were already in jail when flagged as present<br>
+🔹 An RTI reply reportedly confirms no privacy impact assessment was done<br>
+🔹 Organisers&#x27; addresses, phone numbers and social media accounts were allegedly collected</p>
+<p>The Centre argued that CCTV prevents untoward incidents and protects women&#x27;s safety. The bench called that &quot;very simplistic&quot; and drew the key line: seeing a face is different from what is later done with the data.</p>
+<p>Why public doesn&#x27;t mean unprotected:<br>
+1️⃣ Puttaswamy (2017) attached privacy to the person, not the place<br>
+2️⃣ Being seen isn&#x27;t being identified. Technology turns a face in a crowd into a name in a database<br>
+3️⃣ Aggregation matters: the US Supreme Court (Carpenter, 2018) required a warrant for records tracking a person&#x27;s movements, even in public<br>
+4️⃣ Article 19 protects peaceful assembly, and fear of being logged chills it</p>
+<p>The gap: no law authorises facial recognition at protests. The Criminal Procedure (Identification) Act, 2022 covers biometrics of convicts and arrested persons, not people who simply attend a protest. Phone tapping got safeguards in PUCL (1997); face scanning has none. Telangana&#x27;s own challenge, S.Q. Masood&#x27;s PIL, has been pending since notice in 2022.</p>
+<p>My take: a statute first. No face matching at peaceful protests without a specific threat and written authorisation. Delete non-matches within days, audit accuracy, and require independent oversight. All six safeguards are on slide 7.</p>
+<p>A crowd is not a suspect list.</p>
+<p>📎 Resources:<br>
+• LiveLaw: <a href="https://lnkd.in/dm5h7ACP" rel="noopener">https://lnkd.in/dm5h7ACP</a><br>
+• LawChakra: <a href="https://lnkd.in/dJpDSkfn" rel="noopener">https://lnkd.in/dJpDSkfn</a></p>
+<p>Do you think standing in a crowd should mean giving up your privacy?</p>
+<p>Views are personal; for general information only. The case is at the notice stage.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7527620837013659648/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>This week in AI, tech and law (8–14 November), in one place.</title>
+<link>https://kumarashwani-law.github.io/posts/this-week-in-ai-tech-and-law-8-14-november-in-one-place.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/this-week-in-ai-tech-and-law-8-14-november-in-one-place.html</guid>
+<pubDate>Sat, 14 Nov 2026 09:00:00 +0530</pubDate>
+<category>Tech Law</category>
+<description>⚖️ In the courts</description>
+<content:encoded><![CDATA[<p>⚖️ In the courts<br>
+• Madras HC orders a DVAC FIR and account freezes over &quot;AI-generated&quot; books bought for Tamil Nadu&#x27;s public libraries<br>
+• AAP&#x27;s deepfake posts on CM Rekha Gupta, ordered removed on 6 November, were still live on X four days later<br>
+• Supreme Court (order of 29 October, reported this week): banks should compensate digital-arrest victims where they fail in due diligence<br>
+• Delhi HC asks the Centre why a political cartoonist&#x27;s Instagram account was withheld in India</p>
+<p>🔍 Policing and surveillance<br>
+• The Home Minister approved a ₹4.98 crore Cellebrite phone-cracking tool for the NIA, with a &quot;Make in India&quot; waiver<br>
+• Reuters: DoT blocked 129 betting sites on forged Rajasthan and Allahabad High Court orders; police are probing<br>
+• Hyderabad Police launch &quot;Dooradrishti&quot;, an AI tool that profiles accused persons and maps criminal networks</p>
+<p>🔐 Data protection<br>
+• Consent manager registration under the DPDP Rules opens on 13 November, but the Data Protection Board still has no members<br>
+• MeitY questions Pronto and other home-services platforms over in-home footage used to train robots<br>
+• NCPCR plans draft social media guidelines for children, to be finalised in 2027 (report)</p>
+<p>📱 Platforms and consumers<br>
+• CCPA fines Ola ₹10 lakh: advance tips are a &quot;pre-service toll&quot; and a dark pattern<br>
+• The Centre steps back from a &quot;kill switch&quot; for long calls, favouring WhatsApp&#x27;s warnings-first plan against scams<br>
+• The government is likely to push indigenous AI models in critical sectors (report)</p>
+<p>🌍 Around the world<br>
+• EU proposes the Digital Fairness Act: bans on manipulative design and stealth influencer ads, fines up to 6% of turnover<br>
+• Japan flags privacy risks in AI and ad practices at Google, Meta, TikTok and LINE Yahoo</p>
+<p>📅 Dates to watch<br>
+17 Nov: Supreme Court hears the DPDP Act and RTI challenges<br>
+18 Nov: Telangana HC on the Jangaon Collector&#x27;s AI-drafted order<br>
+23 Nov: Supreme Court on digital-arrest scams<br>
+30 Nov: RBI&#x27;s KYC directions due<br>
+13 May 2027: most DPDP duties begin</p>
+<p>The thread this week: powers over our phones, data and feeds are growing faster than the rules. Courts are filling the gaps one case at a time.</p>
+<p>Which of these matters most to you? Links to sources are in the comments.</p>
+<p>For general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7527254826368544768/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Hyderabad Police now has an AI that maps &quot;criminal networks&quot;. Which law tells it where to stop?</title>
+<link>https://kumarashwani-law.github.io/posts/hyderabad-police-now-has-an-ai-that-maps-criminal-networks.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/hyderabad-police-now-has-an-ai-that-maps-criminal-networks.html</guid>
+<pubDate>Sat, 14 Nov 2026 09:00:00 +0530</pubDate>
+<category>Surveillance &amp; Privacy</category>
+<description>On 12 November, Commissioner V.C. Sajjanar launched Dooradrishti, an AI platform built in-house by Hyderabad City Police. It compiles profiles of accused persons, analyses their activities…</description>
+<content:encoded><![CDATA[<p>On 12 November, Commissioner V.C. Sajjanar launched Dooradrishti, an AI platform built in-house by Hyderabad City Police. It compiles profiles of accused persons, analyses their activities and identifies links between individuals and criminal networks, using police databases and data from other departments. The stated aim: faster evidence, faster charge sheets, and a shift &quot;from reactive to proactive policing&quot;.</p>
+<p>Organised crime and cyber fraud do run through networks, so the aim is legitimate. But five questions haven&#x27;t been answered publicly:<br>
+1️⃣ Does it include people never convicted, or acquitted?<br>
+2️⃣ How does it make links, and how are false links caught?<br>
+3️⃣ Does it reach beyond criminal records, to movements or activity?<br>
+4️⃣ Who can access it, for how long, and is it audited?<br>
+5️⃣ Must officers verify its findings before acting?</p>
+<p>The legal frame:<br>
+🔹 Puttaswamy: State intrusion on privacy needs a law, a legitimate aim, proportionality and safeguards<br>
+🔹 DPDP Act s. 17: processing to prevent, detect or investigate offences is largely exempt (from May 2027)<br>
+🔹 Malak Singh (1981): police surveillance registers must be limited to people reasonably suspected<br>
+🔹 Criminal Procedure (Identification) Act, 2022: records of people never convicted must be destroyed on release, discharge or acquittal</p>
+<p>And Telangana has been here before. In 2022, the High Court issued notice in S.Q. Masood&#x27;s PIL, India&#x27;s first court challenge to police facial recognition without a law.</p>
+<p>The risk with network mapping is guilt by link: a relative, neighbour or client flagged by association, old FIRs and acquittals that never leave the system, and no way to know or correct your profile. Being linked to someone isn&#x27;t evidence of a crime.</p>
+<p>My take: six safeguards before scale (slide 7):<br>
+✔ A published legal basis and SOP<br>
+✔ Scope limited to charge-sheeted and convicted persons, for specific cases<br>
+✔ Human verification: AI output is a lead, never evidence on its own<br>
+✔ Deletion for the acquitted and discharged<br>
+✔ Logs and independent audits of every search<br>
+✔ A right to know and correct one&#x27;s profile, with an annual transparency report</p>
+<p>Hyderabad can lead on AI policing. It should also lead on the rules.</p>
+<p>📎 Resources:<br>
+• MediaNama: <a href="https://lnkd.in/d-icHntj" rel="noopener">https://lnkd.in/d-icHntj</a><br>
+• NewsMeter: <a href="https://lnkd.in/dZfXF2UC" rel="noopener">https://lnkd.in/dZfXF2UC</a></p>
+<p>What safeguard would you want first?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7527242206110445568/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>One year ago today, India notified its data protection rules. Today, the next phase begins. But there&#x27;s still no one in charge.</title>
+<link>https://kumarashwani-law.github.io/posts/one-year-ago-today-india-notified-its-data-protection-rules.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/one-year-ago-today-india-notified-its-data-protection-rules.html</guid>
+<pubDate>Fri, 13 Nov 2026 09:00:00 +0530</pubDate>
+<category>Data Protection</category>
+<description>The DPDP Rules were notified on 13 November 2025. That day, the Data Protection Board was established in law, with four Members besides a Chairperson. A year later, as of early November…</description>
+<content:encoded><![CDATA[<p>The DPDP Rules were notified on 13 November 2025. That day, the Data Protection Board was established in law, with four Members besides a Chairperson. A year later, as of early November, none of those posts had been filled.</p>
+<p>What starts today: consent manager registration (s. 6(9) and Rule 4). Consent managers are registered platforms through which you give, manage and withdraw consent across many businesses. To register, a company must be incorporated in India, have a net worth of at least ₹2 crore and run an independently certified platform. Applications go to the Board, which has no members to decide them.</p>
+<p>The gap is already showing:<br>
+🔹 In April, the Madhya Pradesh High Court sent a petitioner to the Board, to be decided within 15 days. There was no one to decide it<br>
+🔹 On 7 October, the Kerala High Court recorded that the Board wasn&#x27;t functional and expected it to be working within eight weeks, roughly by 2 December<br>
+🔹 The Board&#x27;s selection process is itself under challenge in the Supreme Court, listed on 17 November</p>
+<p>What starts on 13 May 2027 (slide 5):<br>
+✔ Security safeguards: penalty up to ₹250 crore<br>
+✔ Breach notice to the Board and users: up to ₹200 crore<br>
+✔ Children&#x27;s data and parental consent: up to ₹200 crore<br>
+✔ Significant data fiduciary duties: up to ₹150 crore<br>
+✔ Notice, consent, erasure and user rights: up to ₹50 crore</p>
+<p>MeitY floated shortening some timelines, but nothing has been notified. In law, 13 May 2027 stands.</p>
+<p>My take: a law without a regulator is a law on hold. No approvals, no standards, and very little time to build capacity before complaints start arriving in May. The government should appoint independent members now, through a published process.</p>
+<p>For businesses, six months to go (slide 7):<br>
+1️⃣ Now to February: map your data, flag children&#x27;s data, add processing clauses to vendor contracts, and draft clear notices<br>
+2️⃣ March to May: make consent easy to withdraw, put in encryption, access controls and logs, and set up a 72-hour breach playbook and a grievance contact</p>
+<p>The duties apply from May 2027 whether or not the regulator is ready.</p>
+<p>📎 Resources:<br>
+• PPC Land on the empty Board: <a href="https://lnkd.in/dBY9-U4b" rel="noopener">https://lnkd.in/dBY9-U4b</a><br>
+• What starts on 13 November: <a href="https://lnkd.in/dBVt8_YR" rel="noopener">https://lnkd.in/dBVt8_YR</a></p>
+<p>Is your organisation on track for May 2027?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7526911672662425600/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Can a privacy law quietly weaken the Right to Information? The Supreme Court hears that question again on 17 November.</title>
+<link>https://kumarashwani-law.github.io/posts/can-a-privacy-law-quietly-weaken-the-right-to-information.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/can-a-privacy-law-quietly-weaken-the-right-to-information.html</guid>
+<pubDate>Thu, 12 Nov 2026 09:00:00 +0530</pubDate>
+<category>Data Protection</category>
+<description>Last month I wrote about the news publishers&#x27; challenge to the DPDP Act. But the larger case, Venkatesh Nayak v. Union of India, goes well beyond journalism. RTI activist Venkatesh Nayak…</description>
+<content:encoded><![CDATA[<p>Last month I wrote about the news publishers&#x27; challenge to the DPDP Act. But the larger case, Venkatesh Nayak v. Union of India, goes well beyond journalism. RTI activist Venkatesh Nayak, NCPRI, The Reporters&#x27; Collective and Nitin Sethi filed in February. The Court issued notice, refused an interim stay and referred the matter to a larger bench. The publishers&#x27; plea (DNPA) joined in October.</p>
+<p>The central challenge is s. 44(3), which rewrote RTI s. 8(1)(j):<br>
+🔹 Before: personal information was exempt only if unrelated to public activity or an unwarranted invasion of privacy, and could be disclosed if a larger public interest justified it<br>
+🔹 After: &quot;information which relates to personal information&quot; is exempt, full stop<br>
+🔹 The clause&#x27;s own public-interest test is gone, and so is the proviso that what can&#x27;t be denied to Parliament can&#x27;t be denied to a citizen</p>
+<p>Why RTI users worry: officials&#x27; assets and qualifications, welfare beneficiary lists used in social audits, contractor payments and recruitment records can all now be refused as &quot;personal information&quot;.</p>
+<p>Five more provisions are under challenge:<br>
+1️⃣ s. 17: wide exemptions for State agencies<br>
+2️⃣ s. 36 with Rule 23(2): the Centre can demand data from any fiduciary, and the person may not be told<br>
+3️⃣ s. 18 with Rule 17: Board members chosen by an executive-led committee<br>
+4️⃣ s. 33(1): penalties for a &quot;significant&quot; breach, a term the Act doesn&#x27;t define<br>
+5️⃣ No journalism exemption (the publishers&#x27; plea)</p>
+<p>Both sides have a case. Petitioners call it a &quot;sledgehammer&quot; where a &quot;chisel&quot; was needed, relying on Subhash Chandra Agarwal (2019). Defenders point to Puttaswamy, to RTI misuse in private disputes, and to s. 8(2), which still allows disclosure where public interest outweighs harm. The CJI said &quot;some ironing out of the creases&quot; might be needed.</p>
+<p>My take: privacy and transparency aren&#x27;t opposites. Restore a public-interest test inside s. 8(1)(j), at least for public functionaries, and bring back the Parliament proviso. Put independent oversight on s. 36 demands, and make the Board truly independent.</p>
+<p>What to watch on 17 November: the Union&#x27;s reply, whether a larger bench is constituted, and a timeline before May 2027, when most of the Act&#x27;s duties begin.</p>
+<p>📎 Resources:<br>
+• Supreme Court Observer case page: <a href="https://lnkd.in/drmvGmED" rel="noopener">https://lnkd.in/drmvGmED</a><br>
+• LiveLaw on the larger-bench reference: <a href="https://lnkd.in/djWAy6eH" rel="noopener">https://lnkd.in/djWAy6eH</a></p>
+<p>Should a privacy law be allowed to limit RTI about public officials?</p>
+<p>Views are personal; for general information only. The case is pending.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7526497103830011904/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Your phone holds your chats, photos, bank apps, health records and contacts. Who can unlock it and copy everything, and under what law?</title>
+<link>https://kumarashwani-law.github.io/posts/your-phone-holds-your-chats-photos-bank-apps-health-records.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/your-phone-holds-your-chats-photos-bank-apps-health-records.html</guid>
+<pubDate>Wed, 11 Nov 2026 09:00:00 +0530</pubDate>
+<category>Surveillance &amp; Privacy</category>
+<description>Documents made public by the Internet Freedom Foundation on 10 November show the Home Minister approved a ₹4.98 crore Cellebrite tool for the NIA in January, with a one-time exemption from…</description>
+<content:encoded><![CDATA[<p>Documents made public by the Internet Freedom Foundation on 10 November show the Home Minister approved a ₹4.98 crore Cellebrite tool for the NIA in January, with a one-time exemption from &quot;Make in India&quot; procurement rules. The specification: full extraction from Android phones and iPhones, including encrypted devices, with brute-force passcode attempts.</p>
+<p>It&#x27;s not just the NIA. IFF counts 15 listings naming Cellebrite products in 2026 government tenders, from SFIO and Kerala&#x27;s Home Department to Karnataka Police. Delhi Police has had such tools since at least 2020. (Purchase records show procurement, not confirmed use on anyone.)</p>
+<p>The legal gap:<br>
+🔹 BNSS ss. 105–106 cover search, seizure and video recording, not unlocking or copying a phone<br>
+🔹 IT Act s. 69 needs a written Home Secretary order to decrypt, and has been under challenge in the Supreme Court since 2019<br>
+🔹 BSA s. 63 certifies electronic records for court; it doesn&#x27;t make the extraction lawful<br>
+🔹 DPDP Act s. 17 exempts processing for investigation (from May 2027)<br>
+🔹 Guidelines on seizing digital devices, promised to the Supreme Court in 2023, still haven&#x27;t been placed before it</p>
+<p>Under Puttaswamy, any intrusion on privacy needs a law, a legitimate aim and proportionality. Investigating crime is a legitimate aim. But there&#x27;s no specific law, and full extraction copies far more than any offence needs.</p>
+<p>If your phone is seized (slide 6):<br>
+✔ Get the seizure memo listing the device<br>
+✔ Ask that the hash value be recorded at seizure<br>
+✔ Take legal advice before giving passwords; the law on compelled passwords is unsettled<br>
+✔ Lawyers and journalists: flag privileged and source material in writing<br>
+✔ Apply for return of the device (BNSS s. 497) and deletion of copied data if you&#x27;re not charged</p>
+<p>My take: investigators need these tools, but the rules should come before the purchase orders. A judicial warrant for extraction, scope limited to the offence, a log of every extraction, deletion when no charge is filed, independent audits, and extra protection for lawyers and journalists.</p>
+<p>📎 Resources:<br>
+• MediaNama: <a href="https://lnkd.in/dMHvsfwf" rel="noopener">https://lnkd.in/dMHvsfwf</a><br>
+• Internet Freedom Foundation: <a href="https://lnkd.in/dAmUxMXY" rel="noopener">https://lnkd.in/dAmUxMXY</a></p>
+<p>Should police need a judge&#x27;s warrant before copying your phone?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7526143405492645889/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>A farmer&#x27;s land dispute. An order he says he was never heard on. And, allegedly, an AI tool doing the drafting.</title>
+<link>https://kumarashwani-law.github.io/posts/a-farmer-s-land-dispute-an-order-he-says-he-was-never-heard.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/a-farmer-s-land-dispute-an-order-he-says-he-was-never-heard.html</guid>
+<pubDate>Tue, 10 Nov 2026 09:00:00 +0530</pubDate>
+<category>AI &amp; the Courts</category>
+<description>On 3 November, Justice N.V. Shravan Kumar of the Telangana High Court suspended the Jangaon District Collector&#x27;s order of 8 September in a land dispute. The farmer says it was passed ex…</description>
+<content:encoded><![CDATA[<p>On 3 November, Justice N.V. Shravan Kumar of the Telangana High Court suspended the Jangaon District Collector&#x27;s order of 8 September in a land dispute. The farmer says it was passed ex parte, without examining land records, and generated with AI tools; reportedly, staff photographed grievance applications and fed them into AI tools.</p>
+<p>What the court did:<br>
+🔹 Took &quot;serious exception&quot; to relying on AI-generated material without verifying facts<br>
+🔹 Noted that negligence over property rights can have severe consequences for farmers and ordinary citizens<br>
+🔹 Questioned how a Collector could act without hearing the parties, relying only on automation tools<br>
+🔹 Issued notice to the Revenue Principal Secretary, the Collector and the Tahsildar, and asked the Advocate-General what action is proposed against officials</p>
+<p>The next hearing is 18 November. These are allegations the authorities are yet to answer.</p>
+<p>It isn&#x27;t a one-off. In September, the Supreme Court set aside a ₹425 crore customs penalty built on non-existent cases, saying AI &quot;may well serve as training wheels&quot; but not the pilot&#x27;s seat. This month, the Bombay High Court quashed a Mumbai customs order citing two untraceable Supreme Court judgments.</p>
+<p>Why an AI-made order can&#x27;t stand:<br>
+✔ Natural justice: the affected person must be heard<br>
+✔ Application of mind: a power given to the Collector can&#x27;t be handed to a tool<br>
+✔ Reasoned orders: invented facts or cases aren&#x27;t reasons<br>
+✔ Articles 14 and 300A: no arbitrary action, no loss of property except by law</p>
+<p>There&#x27;s a privacy problem too. A grievance application carries names, phone numbers, survey numbers and ID documents. Uploading it to a public AI tool may place citizens&#x27; data on a private company&#x27;s servers. Under the DPDP Act the State can be a data fiduciary, and most of its duties apply from May 2027.</p>
+<p>My take: AI can help draft, but only the officer can decide. Revenue offices need a written AI policy (verify, disclose, sign, and no citizens&#x27; data in public chatbots), and quashing orders isn&#x27;t enough without accountability.</p>
+<p>Received such an order? Slide 7 has a checklist.</p>
+<p>📎 Resources:<br>
+• The News Minute: <a href="https://lnkd.in/d_K8v8Dq" rel="noopener">https://lnkd.in/d_K8v8Dq</a><br>
+• Deccan Chronicle: <a href="https://lnkd.in/dfwPJYC5" rel="noopener">https://lnkd.in/dfwPJYC5</a></p>
+<p>Should government offices be allowed to use AI tools at all for orders that affect citizens&#x27; rights?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7525809742640996353/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Three weeks ago I wrote about courts protecting actors from AI deepfakes. Now the Delhi High Court has given &quot;personality rights&quot; a reality check.</title>
+<link>https://kumarashwani-law.github.io/posts/three-weeks-ago-i-wrote-about-courts-protecting-actors-from.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/three-weeks-ago-i-wrote-about-courts-protecting-actors-from.html</guid>
+<pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+<category>Deepfakes &amp; Personality Rights</category>
+<description>In Kriti Sanon v. BBE Marketing Inc &amp; Ors, Justice Purushaindra Kumar Kaurav protected the actor, for now, against AI chatbots and voice models posing as her, sexual deepfakes and…</description>
+<content:encoded><![CDATA[<p>In Kriti Sanon v. BBE Marketing Inc &amp; Ors, Justice Purushaindra Kumar Kaurav protected the actor, for now, against AI chatbots and voice models posing as her, sexual deepfakes and impersonating accounts. Satire, parody, reviews and fan content are expressly carved out.</p>
+<p>The reasoning is what matters:<br>
+🔹 &quot;Personality rights&quot; is an umbrella, not a single cause of action. It covers publicity, passing off, privacy, defamation, and trade mark or copyright rights, including performers&#x27; rights<br>
+🔹 Each claim keeps its own test. Bundling them doesn&#x27;t lower the bar, especially for restraining speech before trial<br>
+🔹 Mere use of someone&#x27;s identity isn&#x27;t unlawful by itself<br>
+🔹 &quot;The rights are available to every individual.&quot; Fame affects only commercial value and loss</p>
+<p>So plaintiffs must now show which claim, against which defendant, for which content, rather than seeking one blanket injunction.</p>
+<p>The same week, the same judge decreed Amitabh Bachchan&#x27;s suit (5 November), extending it to unknown infringers because the plaint proved a continuing pattern of anonymous misuse. Wide relief is still possible when the evidence supports it.</p>
+<p>If it happens to you (slide 6):<br>
+✔ Morphed or sexual deepfake: report to the platform, which must remove it within 2 hours under the IT Rules 2026, and file at cybercrime.gov.in or call 1930<br>
+✔ Fake account posing as you: platform impersonation report; police complaint if money is sought<br>
+✔ Your face or voice selling a product: legal notice, then a suit for passing off and publicity<br>
+✔ Fake content harming your reputation: notice, takedown, defamation suit</p>
+<p>My take: this is a needed correction. A catch-all &quot;right&quot; risked chilling satire, reviews and fan art. But claim-by-claim pleading costs time and money most victims don&#x27;t have. For ordinary people, fast platform remedies matter more than celebrity suits, and Parliament should define these rights clearly.</p>
+<p>📎 Resources:<br>
+• LiveLaw on the reasoning: <a href="https://lnkd.in/ddTBzfJv" rel="noopener">https://lnkd.in/ddTBzfJv</a><br>
+• MediaNama on the order: <a href="https://lnkd.in/d3_nNRQZ" rel="noopener">https://lnkd.in/d3_nNRQZ</a><br>
+• Bar &amp; Bench on the Bachchan decree: <a href="https://lnkd.in/d5NBFCGA" rel="noopener">https://lnkd.in/d5NBFCGA</a></p>
+<p>Should India have a statute on personality rights, or leave it to courts?</p>
+<p>Views are personal; for general information only. This is an interim order; contesting defendants are yet to be heard.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7525426188106915840/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>A cartoon exaggerates. A deepfake convinces. Where does political satire end?</title>
+<link>https://kumarashwani-law.github.io/posts/a-cartoon-exaggerates-a-deepfake-convinces-where-does.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/a-cartoon-exaggerates-a-deepfake-convinces-where-does.html</guid>
+<pubDate>Sat, 07 Nov 2026 09:00:00 +0530</pubDate>
+<category>Deepfakes &amp; Personality Rights</category>
+<description>The Delhi High Court gave an early answer on 6 November in Rekha Gupta v. Aam Aadmi Party &amp; Ors. (Justice Manoj Jain). The Delhi Chief Minister sued over AI-generated videos and images…</description>
+<content:encoded><![CDATA[<p>The Delhi High Court gave an early answer on 6 November in Rekha Gupta v. Aam Aadmi Party &amp; Ors. (Justice Manoj Jain). The Delhi Chief Minister sued over AI-generated videos and images posted from the party&#x27;s verified accounts, allegedly showing her as a liquor vendor serving drinks and as head of a &quot;Ghar Ghar Theka&quot; scheme. The court described the visuals as a &quot;near-perfect imitation.&quot;</p>
+<p>What the court said:<br>
+🔹 Public figures must accept criticism and political humour, and parties remain free to attack government policies<br>
+🔹 But there is a &quot;thin line&quot;: satire &quot;cannot be permitted to create irreparable wound on someone&#x27;s dignity&quot;<br>
+🔹 AI makes realistic fakes easy, but responsibility for making and posting them stays with humans<br>
+🔹 Content that spreads fast on social media risks irreparable harm</p>
+<p>It ordered six URLs taken down immediately and listed the case for 4 December. This is an interim order; the defendants&#x27; case is yet to be heard.</p>
+<p>Why AI changes the satire question: satire works because the audience knows it isn&#x27;t real. A cartoon or mimicry is obviously exaggeration. A realistic AI video can pass as real, and once shared without context, the joke disappears and only the false impression remains.</p>
+<p>The legal frame: Article 19(1)(a) protects satire; Article 19(2) permits restrictions for defamation. Civil suits, criminal defamation (BNS s. 356), the February 2026 IT Rules on labelling synthetic content, and Election Commission advisories on deepfakes all apply.</p>
+<p>My take, a five-question test:<br>
+1️⃣ Would a reasonable viewer know it isn&#x27;t real?<br>
+2️⃣ Is it clearly labelled as AI-generated or parody, on the content itself?<br>
+3️⃣ Does it target a policy, or fabricate conduct by a person?<br>
+4️⃣ Who posted it? An official party account carries more responsibility<br>
+5️⃣ Would it be acceptable as a cartoon? If only the realism makes it hurt, the realism is the problem</p>
+<p>For every party, campaigner and creator (slide 7): label AI content visibly, avoid realistic fabricated acts by real people, aim at policies, and act on takedown requests promptly. If you&#x27;re targeted: save URLs and screenshots, report under the IT Rules, send a legal notice and seek urgent interim relief.</p>
+<p>The same rules apply whichever party is in power.</p>
+<p>📎 Resources:<br>
+• LiveLaw on the order: <a href="https://lnkd.in/dkiGWm2b" rel="noopener">https://lnkd.in/dkiGWm2b</a><br>
+• Bar &amp; Bench: <a href="https://lnkd.in/dqaV-rYd" rel="noopener">https://lnkd.in/dqaV-rYd</a></p>
+<p>Where would you draw the line between AI satire and a deepfake?</p>
+<p>Views are personal; for general information only. This post takes no political side.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7524751934470221824/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Instagram blocked your account. Can you go straight to the High Court? The Delhi High Court says no, at least not by writ.</title>
+<link>https://kumarashwani-law.github.io/posts/instagram-blocked-your-account-can-you-go-straight-to-the.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/instagram-blocked-your-account-can-you-go-straight-to-the.html</guid>
+<pubDate>Fri, 06 Nov 2026 09:00:00 +0530</pubDate>
+<category>Platforms &amp; Free Speech</category>
+<description>In Sarthak Bhagat v. Union of India (order dated 27 October), Justice Amit Mahajan dealt with a user whose Instagram accounts were disabled without notice or specific reasons. The in-app…</description>
+<content:encoded><![CDATA[<p>In Sarthak Bhagat v. Union of India (order dated 27 October), Justice Amit Mahajan dealt with a user whose Instagram accounts were disabled without notice or specific reasons. The in-app review failed, and his appeal to the Grievance Appellate Committee (GAC) went undecided past its 30-day deadline.</p>
+<p>The court held:<br>
+🔹 A writ under Article 226 isn&#x27;t maintainable against Meta. It doesn&#x27;t perform a public function or discharge a public duty<br>
+🔹 Instagram shapes public opinion, but that&#x27;s a consequence of the platform, not a duty it owes. Its operations &quot;remain private in nature&quot;<br>
+🔹 Restoration has to be sought through a civil suit<br>
+🔹 The GAC was directed to decide his appeal quickly</p>
+<p>The catch: the GAC is jammed. As of 22 September, 49,978 of 63,353 appeals were pending, about four in five.</p>
+<p>How it fits with three other High Court rulings in six weeks:<br>
+• MP HC (Anmol Jain, 17 Sept): platforms can act on infringing content; GAC is an adequate safeguard<br>
+• P&amp;H HC (reported 20 Oct): government-ordered blocks can be challenged by writ<br>
+• Bombay HC (Meta v. Blink Digital, 27 Oct): Indian civil courts can hear IT Rules claims, despite Meta&#x27;s California clause<br>
+• Delhi HC (27 Oct): no writ for Meta&#x27;s own decisions</p>
+<p>So the first question is: who blocked you?<br>
+✔ The platform (community standards, copyright, spam): in-app appeal → Grievance Officer → GAC within 30 days → civil suit, relying on Rule 4(8)&#x27;s notice-and-reasons duty<br>
+✔ The government (s. 69A or s. 79(3)(b), including via Sahyog): ask for the order → writ against the State</p>
+<p>The problem: platform notices often don&#x27;t say which kind of block it is, or who ordered it.</p>
+<p>My take: the remedy works on paper only. The GAC needs more benches and an enforced 30-day deadline. Every notice should say whether the platform or the government ordered the block. And small creators need a fast interim route; a full civil suit is too slow and costly for most of them.</p>
+<p>📎 Resources:<br>
+• Bar &amp; Bench on the ruling: <a href="https://lnkd.in/d_uXv48V" rel="noopener">https://lnkd.in/d_uXv48V</a><br>
+• MediaNama on blocking and GAC data: <a href="https://lnkd.in/dHmBRwhr" rel="noopener">https://lnkd.in/dHmBRwhr</a></p>
+<p>Has your account, or a client&#x27;s, ever been blocked without a reason?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7524316892694573056/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Justice is supposed to be blind. So why do so many case papers still begin with a litigant&#x27;s caste?</title>
+<link>https://kumarashwani-law.github.io/posts/justice-is-supposed-to-be-blind-so-why-do-so-many-case.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/justice-is-supposed-to-be-blind-so-why-do-so-many-case.html</guid>
+<pubDate>Thu, 05 Nov 2026 09:00:00 +0530</pubDate>
+<category>Tech Law</category>
+<description>In Shama Sharma v. Kishan Kumar (order dated 10 January 2024), the Supreme Court (Justices Hima Kohli and Ahsanuddin Amanullah) directed that the caste or religion of litigants must not…</description>
+<content:encoded><![CDATA[<p>In Shama Sharma v. Kishan Kumar (order dated 10 January 2024), the Supreme Court (Justices Hima Kohli and Ahsanuddin Amanullah) directed that the caste or religion of litigants must not appear in the memo of parties, in the Supreme Court, in every High Court and in every subordinate court. Even if the lower court&#x27;s papers carried it. In the Court&#x27;s words, the practice &quot;is to be shunned and must be ceased forthwith.&quot;</p>
+<p>High Courts issued circulars to follow it. In 2025, the Allahabad High Court went further and barred caste of accused and witnesses in FIRs and police records, which Uttar Pradesh implemented, except for SC/ST Act cases.</p>
+<p>Yet the habit lingers in filings across the country.</p>
+<p>My take: a caste label on the first page of a case does real damage.<br>
+1️⃣ It erodes the image of an unbiased system. A court that labels litigants by caste signals that identity matters, even when it doesn&#x27;t<br>
+2️⃣ It invites bias. Identity is on the page before the facts are, and prejudice, conscious or not, can follow<br>
+3️⃣ It can be used against marginalised litigants, turning a legal dispute into a social one<br>
+4️⃣ It disrupts the process. Arguments drift from merits to identity</p>
+<p>The balance: where caste is the legal issue, such as offences under the SC/ST (Prevention of Atrocities) Act or reservation and caste-certificate disputes, it belongs in the pleadings as a fact, argued on evidence. The rule is about how a litigant is identified, not about hiding relevant facts.</p>
+<p>For advocates (slide 6):<br>
+✔ Drop caste and religion from the memo of parties, even if the lower court had them<br>
+✔ Name, parentage, age, occupation and address are enough to identify a party<br>
+✔ Plead caste only where it&#x27;s an ingredient of the case<br>
+✔ If the registry objects, cite Shama Sharma and your High Court&#x27;s circular</p>
+<p>A litigant is a party, not a caste. Equality before law under Article 14 starts with the first page of the case.</p>
+<p>📎 Resources:<br>
+• LiveLaw on the judgment: <a href="https://lnkd.in/d5DGisek" rel="noopener">https://lnkd.in/d5DGisek</a><br>
+• Allahabad HC and UP on caste in FIRs: <a href="https://lnkd.in/dvxU3tw3" rel="noopener">https://lnkd.in/dvxU3tw3</a></p>
+<p>Do you still see caste in case papers in your courts?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7524061762057461760/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Can Parliament ban a game of skill just because it&#x27;s played for money? The Supreme Court will decide.</title>
+<link>https://kumarashwani-law.github.io/posts/can-parliament-ban-a-game-of-skill-just-because-it-s-played.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/can-parliament-ban-a-game-of-skill-just-because-it-s-played.html</guid>
+<pubDate>Thu, 05 Nov 2026 09:00:00 +0530</pubDate>
+<category>Tech Law</category>
+<description>India&#x27;s Promotion and Regulation of Online Gaming Act, 2025 bans all online money games, whether of chance, skill or both. With its Rules, it took full effect on 1 May 2026:</description>
+<content:encoded><![CDATA[<p>India&#x27;s Promotion and Regulation of Online Gaming Act, 2025 bans all online money games, whether of chance, skill or both. With its Rules, it took full effect on 1 May 2026:<br>
+🔹 Offering or facilitating money games: up to 3 years and/or ₹1 crore fine (3–5 years and up to ₹2 crore for repeat offences)<br>
+🔹 Advertising them: up to 2 years and/or ₹50 lakh<br>
+🔹 Banks and payment systems can&#x27;t process them; sites can be blocked under the IT Act<br>
+🔹 E-sports and online social games are allowed, and e-sports will be registered<br>
+🔹 A new Online Gaming Authority decides what counts as a money game: stakes, expected winnings, revenue model, and whether rewards can be cashed out</p>
+<p>The government says around 45 crore people were affected by money gaming, with losses above ₹20,000 crore.</p>
+<p>The challenge (Head Digital Works v. Union of India and connected cases): the Supreme Court moved the High Court cases to itself in 2025. On 5 August 2026, a bench led by CJI Surya Kant agreed to a final hearing and asked parties to complete pleadings. There&#x27;s no interim stay, so the law applies.</p>
+<p>Three questions for the Court:<br>
+1️⃣ Competence: is this &quot;betting and gambling&quot;, a State subject, or within Parliament&#x27;s powers?<br>
+2️⃣ Article 19(1)(g): since Chamarbaugwala (1957) and K.R. Lakshmanan (1996), games of substantial skill have been treated as legitimate business. Can Parliament still ban them?<br>
+3️⃣ Proportionality: is a total ban justified when KYC, deposit limits and age checks exist?</p>
+<p>The twist: in DGGI v. Gameskraft (27 May 2026), a two-judge bench held that real-money games are &quot;betting and gambling&quot; for GST, whether skill or chance, and upheld 28% GST on full deposits, including about ₹21,000 crore against Gameskraft. If skill doesn&#x27;t matter for tax, will it matter for the Constitution?</p>
+<p>My take: the harms are real. But the test is whether a total ban is the least restrictive answer, and whether users will simply move to offshore betting apps that pay no tax and protect no one.</p>
+<p>Until the Court rules (slide 7): no stake-based games, even of skill; influencers and media face jail terms for ads; e-sports should watch for registration notices; and free-to-play games with cash-out rewards may count as money games.</p>
+<p>📎 Resources:<br>
+• PIB on the Act and Rules: <a href="https://lnkd.in/dbnfgpiZ" rel="noopener">https://lnkd.in/dbnfgpiZ</a><br>
+• SC Observer case page: <a href="https://lnkd.in/dEkMMXxf" rel="noopener">https://lnkd.in/dEkMMXxf</a><br>
+• Gameskraft GST ruling: <a href="https://lnkd.in/de6sgTWG" rel="noopener">https://lnkd.in/de6sgTWG</a></p>
+<p>Ban or regulate: which would you choose?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7523972161087221761/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>From 2 December, &quot;nudify&quot; AI is banned in the EU. And the ban reaches Indian AI companies with EU users.</title>
+<link>https://kumarashwani-law.github.io/posts/from-2-december-nudify-ai-is-banned-in-the-eu-and-the-ban.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/from-2-december-nudify-ai-is-banned-in-the-eu-and-the-ban.html</guid>
+<pubDate>Wed, 04 Nov 2026 09:00:00 +0530</pubDate>
+<category>Deepfakes &amp; Personality Rights</category>
+<description>The EU&#x27;s &quot;Digital Omnibus&quot; on AI, published in July, delayed the high-risk rules to 2027–28. But it added a new prohibited practice under Article 5 of the AI Act, and it applies in four…</description>
+<content:encoded><![CDATA[<p>The EU&#x27;s &quot;Digital Omnibus&quot; on AI, published in July, delayed the high-risk rules to 2027–28. But it added a new prohibited practice under Article 5 of the AI Act, and it applies in four weeks:<br>
+🔹 AI systems that generate child sexual abuse material or non-consensual intimate content of real people are banned<br>
+🔹 Not only where that&#x27;s the intended purpose (&quot;nudifier&quot; apps), but also where it&#x27;s a reasonably foreseeable, reproducible outcome and the provider lacks adequate safeguards<br>
+🔹 Maximum fine: €35 million or 7% of global turnover</p>
+<p>On the same day, the grace period for marking AI output ends. Generative AI tools on the EU market before 2 August 2026 must now mark their output in a machine-readable way (fines up to €15 million or 3%).</p>
+<p>Who&#x27;s caught: providers anywhere whose systems are placed on the EU market or whose output is used in the EU. That includes general image and video generators, not just apps built for abuse.</p>
+<p>How India compares:<br>
+India&#x27;s IT Rules amendment (in force 20 February 2026) requires visible labels and permanent metadata on synthetic content, user declarations and verification on big platforms, automated filters against CSAM and non-consensual intimate imagery, and 3-hour takedowns on lawful orders. Criminal law adds IT Act ss. 66E, 67A and 67B, BNS s. 77 and POCSO.</p>
+<p>The key difference: India regulates the content and the platforms hosting it. The EU now regulates the tool that creates it.</p>
+<p>My take, for India&#x27;s coming AI law:<br>
+1️⃣ Takedowns come too late; once an intimate deepfake spreads, the harm is done<br>
+2️⃣ Image and video generators should have a duty to block non-consensual intimate content of real people<br>
+3️⃣ Providers should answer for foreseeable misuse they ignored<br>
+4️⃣ Align India&#x27;s labelling with EU marking, so Indian companies don&#x27;t build twice</p>
+<p>For Indian AI companies with EU users (slide 7): map whether your tools can depict real people, red-team for intimate and CSAM outputs, remove &quot;undress&quot; and non-consensual face-swap features, mark output, and document your safeguards.</p>
+<p>📎 Resources:<br>
+• Paul, Weiss on the Digital Omnibus: <a href="https://lnkd.in/dWtseqBT" rel="noopener">https://lnkd.in/dWtseqBT</a><br>
+• LiveLaw on India&#x27;s IT Rules amendment: <a href="https://lnkd.in/dAkHZjze" rel="noopener">https://lnkd.in/dAkHZjze</a></p>
+<p>Should India ban nudify tools outright, as the EU has?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7523609025586819072/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Your neighbour&#x27;s CCTV camera faces your front door. Is that legal?</title>
+<link>https://kumarashwani-law.github.io/posts/your-neighbour-s-cctv-camera-faces-your-front-door-is-that.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/your-neighbour-s-cctv-camera-faces-your-front-door-is-that.html</guid>
+<pubDate>Tue, 03 Nov 2026 09:00:00 +0530</pubDate>
+<category>Surveillance &amp; Privacy</category>
+<description>The Allahabad High Court has given a clear answer in principle. In Yogendra Maurya v. State of U.P. (order dated 26 October, reported 2 November), Justices Ajit Kumar and Garima Prashad…</description>
+<content:encoded><![CDATA[<p>The Allahabad High Court has given a clear answer in principle. In Yogendra Maurya v. State of U.P. (order dated 26 October, reported 2 November), Justices Ajit Kumar and Garima Prashad said &quot;no private CCTV camera can be installed and positioned in such a manner as to interfere with the privacy of a neighbour.&quot;</p>
+<p>The petitioner said his neighbour&#x27;s camera covered his home&#x27;s entrance and exit. The court didn&#x27;t decide whether this camera crossed the line; it directed the District Magistrate to decide his complaint within one month.</p>
+<p>Other courts have drawn similar lines:<br>
+🔹 Kerala HC (2023): security can&#x27;t be a pretext to snoop on neighbours; the court asked the State Police Chief to frame CCTV guidelines<br>
+🔹 Calcutta HC, upheld by the Supreme Court (2025): cameras inside a shared house need the consent of all occupants<br>
+🔹 Kerala HC (2025): a camera protecting an elderly woman facing real threats was allowed to stay</p>
+<p>So it&#x27;s a balance. Courts look at where the camera points, what it records, why it&#x27;s there, and what&#x27;s done with the footage.</p>
+<p>Which law applies?<br>
+• DPDP Act: household CCTV is outside it, since s. 3(c)(i) excludes personal or domestic use. RWAs, shops and offices are a different matter<br>
+• Article 21: privacy is a fundamental right (Puttaswamy), and courts apply it between neighbours<br>
+• IT Act s. 66E: capturing or sharing images of a person&#x27;s private area without consent is an offence<br>
+• BNS ss. 77 and 79: voyeurism, and intruding on a woman&#x27;s privacy<br>
+• Civil courts can order a camera moved or removed</p>
+<p>If a camera faces your home (slide 6): talk first, then write, gather photos of the angle, and approach the District Magistrate, a civil court, or police if private acts are recorded or shared. Don&#x27;t damage the camera yourself.</p>
+<p>If you&#x27;re installing one (slide 7): point it at your own property, use privacy masking, skip audio, secure and auto-delete footage, never post others&#x27; footage online, and in a shared house, get everyone&#x27;s consent.</p>
+<p>My take: as cheap cameras spread, these disputes will multiply. Clear state guidelines on where private CCTV may point, as the Kerala HC urged, would save many neighbours a trip to court.</p>
+<p>📎 Resources:<br>
+• LiveLaw on the ruling: <a href="https://lnkd.in/dt9T5rUN" rel="noopener">https://lnkd.in/dt9T5rUN</a><br>
+• Kerala HC, 2023: <a href="https://lnkd.in/dgC4PPGP" rel="noopener">https://lnkd.in/dgC4PPGP</a><br>
+• Supreme Court on shared homes: <a href="https://lnkd.in/dKgq4Q_H" rel="noopener">https://lnkd.in/dKgq4Q_H</a></p>
+<p>Has a CCTV camera ever caused a dispute in your building or street?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7523241975852982272/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Meta&#x27;s terms said California. The Bombay High Court said Mumbai.</title>
+<link>https://kumarashwani-law.github.io/posts/meta-s-terms-said-california-the-bombay-high-court-said.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/meta-s-terms-said-california-the-bombay-high-court-said.html</guid>
+<pubDate>Mon, 02 Nov 2026 09:00:00 +0530</pubDate>
+<category>Platforms &amp; Free Speech</category>
+<description>In August, Meta disabled Mumbai ad agency Blink Digital&#x27;s 4 business manager accounts and about 9,000 linked ad accounts. Meta says Blink allowed scam and sexual-services ads; Blink denies…</description>
+<content:encoded><![CDATA[<p>In August, Meta disabled Mumbai ad agency Blink Digital&#x27;s 4 business manager accounts and about 9,000 linked ad accounts. Meta says Blink allowed scam and sexual-services ads; Blink denies this and says it got no notice or hearing. Blink sued for restoration and damages of over ₹1,000 crore.</p>
+<p>Meta&#x27;s first move: send the case to California. Its Commercial Terms choose California courts and California law.</p>
+<p>On 27 October, Justice Sandeep V. Marne refused (Meta Platforms v. Blink Digital):<br>
+🔹 A private contract can&#x27;t override Indian law. The suit alleges breaches of the IT Act and IT Rules, 2021, which a California court applying only Meta&#x27;s terms and California law can&#x27;t decide<br>
+🔹 Facebook India, with a Mumbai office, is a defendant and didn&#x27;t object to jurisdiction; Meta couldn&#x27;t object on its behalf<br>
+🔹 The claims are interconnected, so the suit can&#x27;t be split</p>
+<p>Why it matters:<br>
+Meta relies on Rule 3(1)(c), which lets platforms end access for policy breaches. Blink relies on Rule 4(8): when a significant social media intermediary removes content or disables access on its own, it must first notify the user with reasons and allow a fair chance to dispute. If the California clause had won, that right would be close to unenforceable for Indian businesses.</p>
+<p>Read it carefully: this decides only Meta&#x27;s application, and jurisdiction can still be argued at trial. There&#x27;s no finding on whether the ads were unlawful or the shutdown fair. Indian courts generally respect foreign jurisdiction clauses between commercial parties; here, Indian statutory duties and an Indian defendant tipped the balance.</p>
+<p>My take:<br>
+1️⃣ Right result: Indian statutory duties need an Indian forum<br>
+2️⃣ Platforms must still fight scams fast; due process and fraud prevention aren&#x27;t opposites<br>
+3️⃣ Disabling 9,000 accounts at once should need clear reasons and a quick review route</p>
+<p>For agencies, brands and creators (slide 7): read the platform&#x27;s terms (forum, law, termination), vet advertisers and keep records, back up data and access, demand written reasons under Rule 4(8), ask the platform to preserve your data, and appeal to the Grievance Appellate Committee within 30 days.</p>
+<p>📎 Resources:<br>
+• MediaNama on the ruling: <a href="https://lnkd.in/dC4Qn2Jm" rel="noopener">https://lnkd.in/dC4Qn2Jm</a><br>
+• Free Press Journal: <a href="https://lnkd.in/d-SgUDAF" rel="noopener">https://lnkd.in/d-SgUDAF</a><br>
+• MediaNama on Meta&#x27;s allegations: <a href="https://lnkd.in/dnPW3kkn" rel="noopener">https://lnkd.in/dnPW3kkn</a></p>
+<p>Should global platforms be able to send Indian users to foreign courts?</p>
+<p>Allegations by both parties are untested. Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7522901844227076097/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>A &quot;digital arrest&quot; victim sends the money themselves. Until now, that meant the bank could say: not our problem. The Supreme Court has just changed that conversation.</title>
+<link>https://kumarashwani-law.github.io/posts/a-digital-arrest-victim-sends-the-money-themselves-until-now.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/a-digital-arrest-victim-sends-the-money-themselves-until-now.html</guid>
+<pubDate>Sun, 01 Nov 2026 09:00:00 +0530</pubDate>
+<category>Tech Law</category>
+<description>On 29 October, a bench of CJI Surya Kant, Justice Joymalya Bagchi and Justice V. Mohana, hearing the suo motu case on digital arrest scams, told the RBI that its new rules must include a…</description>
+<content:encoded><![CDATA[<p>On 29 October, a bench of CJI Surya Kant, Justice Joymalya Bagchi and Justice V. Mohana, hearing the suo motu case on digital arrest scams, told the RBI that its new rules must include a liability clause:<br>
+🔹 Banks must compensate victims where inadequate safeguards or a failure of due diligence contributed to the fraud<br>
+🔹 Compensation of not less than the amount the customer lost<br>
+🔹 The bank pays, not just the employee involved (&quot;The bank will have to pay,&quot; said the CJI)<br>
+🔹 Safeguards to consider: temporarily holding transactions out of line with an account&#x27;s history, automatic alerts to police, and verification before release</p>
+<p>Why this matters:<br>
+The RBI&#x27;s 2017 circular gives zero liability for &quot;unauthorised&quot; transactions where the bank is at fault. But in a digital arrest, the victim authorises the transfer, under fear and deception. So victims have often fallen outside it, even when the bank let sudden, unusual transfers through without a single check.</p>
+<p>What&#x27;s next: the RBI has proposed notifying its KYC Amendment Directions by 30 November (also the next hearing) and bringing them into force by 31 December. Separately, a draft would let banks flag and hold suspected mule-account transactions, and the government has proposed a one-hour delay on payments of ₹10,000 or more.</p>
+<p>My take: five questions the final rules must answer.<br>
+1️⃣ Who decides that due diligence failed? Not the bank alone; the burden should stay on the bank, as in 2017<br>
+2️⃣ What counts as due diligence? Clear triggers: large first-time transfers, new payees, elderly or dormant accounts<br>
+3️⃣ How fast is the refund? A provisional credit within days, not years of litigation<br>
+4️⃣ Who is covered? NBFCs, wallets and payment apps too<br>
+5️⃣ What about genuine payments? Holds need short time limits and a quick release route</p>
+<p>If you get the call: no Indian agency arrests anyone over a video call, and no genuine officer asks you to transfer money to &quot;verify&quot; it. If you&#x27;ve already paid, call 1930 or report at cybercrime.gov.in immediately, tell your bank in writing, file an FIR, and escalate to the RBI Ombudsman if needed (slide 7).</p>
+<p>Please share this with your parents and grandparents. They&#x27;re the most frequent targets.</p>
+<p>📎 Resources:<br>
+• Business Standard: <a href="https://lnkd.in/dcvh2QJQ" rel="noopener">https://lnkd.in/dcvh2QJQ</a><br>
+• MediaNama: <a href="https://lnkd.in/d7BTEMEA" rel="noopener">https://lnkd.in/d7BTEMEA</a><br>
+• Report cyber fraud: <a href="https://cybercrime.gov.in" rel="noopener">https://cybercrime.gov.in</a></p>
+<p>Should banks bear the loss when their systems miss an obvious red flag?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7522562142915473408/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>A creator&#x27;s posts were taken down over copyright complaints. Then his whole Instagram account was suspended. No notice, no hearing. The High Court says that&#x27;s within the rules.</title>
+<link>https://kumarashwani-law.github.io/posts/a-creator-s-posts-were-taken-down-over-copyright-complaints.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/a-creator-s-posts-were-taken-down-over-copyright-complaints.html</guid>
+<pubDate>Wed, 28 Oct 2026 09:00:00 +0530</pubDate>
+<category>Platforms &amp; Free Speech</category>
+<description>In Anmol Jain v. Union of India (order dated 17 September, reported 27 October), the Madhya Pradesh High Court dismissed a meme creator&#x27;s challenge to Rule 3(1)(b)(iv) of the IT Rules…</description>
+<content:encoded><![CDATA[<p>In Anmol Jain v. Union of India (order dated 17 September, reported 27 October), the Madhya Pradesh High Court dismissed a meme creator&#x27;s challenge to Rule 3(1)(b)(iv) of the IT Rules, 2021. His page had about 39,000 followers and was a source of income. He argued that a private company shouldn&#x27;t decide copyright infringement; only courts should.</p>
+<p>The court held:<br>
+🔹 Instagram is an intermediary under s. 2(w) of the IT Act, with due-diligence duties that include acting against infringing content<br>
+🔹 Once the law lets a private company operate as an intermediary, it may manage and control its platform<br>
+🔹 The grievance officer (Rule 3(2)) and the Grievance Appellate Committee (Rule 3A) are adequate safeguards</p>
+<p>What it means for creators, in order:<br>
+1️⃣ Appeal in-app straight away<br>
+2️⃣ Grievance Officer: must acknowledge in 24 hours and resolve in 15 days<br>
+3️⃣ Grievance Appellate Committee: appeal online at gac.gov.in within 30 days<br>
+4️⃣ Then other legal routes, including action against a bad-faith claimant</p>
+<p>The gap: the Copyright Rules, 2013 (Rule 75) build in a check. The complainant must identify the work and its ownership, and if no court order follows within 21 days, the content may be restored. In practice, platform policy decides, at scale, and creators often never see the complaint. Memes and reviews may be fair dealing under s. 52(1)(a), but a platform team makes that call, not a judge.</p>
+<p>My take: the court is right that platforms must act on infringement. But the process needs:<br>
+✔ Notice to the creator: the complaint, the claimant and the work said to be copied<br>
+✔ Proportionality: remove the post first; suspend accounts only for repeat infringement, after warnings<br>
+✔ Checks on false claims used to silence rivals or critics<br>
+✔ Published GAC decisions, and platform compliance with them</p>
+<p>Checklist for creators and brands (slide 7): use licensed music and clips, keep licences and original files, screenshot every notice, track the 30-day GAC deadline, record lost income, and back up your content.</p>
+<p>On someone else&#x27;s platform, your rights are mostly procedural. Use every step.</p>
+<p>📎 Resources:<br>
+• LiveLaw on the ruling: <a href="https://lnkd.in/dKndVagY" rel="noopener">https://lnkd.in/dKndVagY</a><br>
+• LawBeat on the ruling: <a href="https://lnkd.in/dnq6BuA4" rel="noopener">https://lnkd.in/dnq6BuA4</a><br>
+• Grievance Appellate Committee: <a href="https://gac.gov.in" rel="noopener">https://gac.gov.in</a></p>
+<p>Has a copyright claim ever taken down your content?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7521122120731455488/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Your page is blocked. You don&#x27;t know who ordered it, or why. How do you challenge that?</title>
+<link>https://kumarashwani-law.github.io/posts/your-page-is-blocked-you-don-t-know-who-ordered-it-or-why.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/your-page-is-blocked-you-don-t-know-who-ordered-it-or-why.html</guid>
+<pubDate>Tue, 27 Oct 2026 09:00:00 +0530</pubDate>
+<category>Platforms &amp; Free Speech</category>
+<description>Two High Courts dealt with exactly this in the past week.</description>
+<content:encoded><![CDATA[<p>Two High Courts dealt with exactly this in the past week.</p>
+<p>🔹 Punjab &amp; Haryana HC (Haryana 24 News Network v. Union of India, reported 20 October): a Superintendent of Police sent Meta a notice under Section 79(3)(b) of the IT Act, and a news company&#x27;s Facebook page was blocked. Justice Tribhuvan Dahiya held:<br>
+• The notice was without jurisdiction: Rule 3(1)(d) requires an officer of at least DIG rank, specifically authorised<br>
+• When a notice goes to the platform, a copy must go to the user too<br>
+• The user needn&#x27;t first use Meta&#x27;s grievance process; without the grounds, there&#x27;s nothing to answer<br>
+The page was ordered restored within 24 hours.</p>
+<p>🔹 Kerala HC (Hyder Ali K. v. Union of India, 26 October): Malayalam news outlet NoCap&#x27;s Facebook page was restricted on 28 September after a &quot;government notice&quot; it has never seen. The court asked the Centre and the State whether any order was sent to Meta, and listed the case for 5 November.</p>
+<p>Why this keeps happening:<br>
+Section 69A and the 2009 Blocking Rules give the originator notice and a hearing where possible. That&#x27;s why Shreya Singhal upheld them. But many takedowns now go through Section 79(3)(b): a notice to the platform, which loses safe harbour if it doesn&#x27;t comply. The 2025 amendment to Rule 3(1)(d) added real safeguards (senior officers only, written reasons, exact URLs, monthly review). It still says nothing about telling the user.</p>
+<p>My take: you can&#x27;t challenge an order you can&#x27;t see.<br>
+1️⃣ Write user notice into Rule 3(1)(d), so it applies across India, not just in one High Court&#x27;s territory<br>
+2️⃣ Give the user the reasons, with narrow exceptions recorded in writing<br>
+3️⃣ Where urgency rules out prior notice, give a hearing within a fixed time after the block<br>
+4️⃣ Publish figures from the monthly reviews<br>
+5️⃣ Block the item, not the whole page, wherever possible</p>
+<p>If your page or account is blocked (slide 7): save the platform&#x27;s message, ask for the order (grievance officer, RTI), test it against Rule 3(1)(d), record your losses, and move the High Court early.</p>
+<p>📎 Resources:<br>
+• P&amp;H HC ruling (LiveLaw): <a href="https://lnkd.in/dxeN8VG9" rel="noopener">https://lnkd.in/dxeN8VG9</a><br>
+• Kerala HC on NoCap (LiveLaw): <a href="https://lnkd.in/dBCvN-5E" rel="noopener">https://lnkd.in/dBCvN-5E</a><br>
+• 2025 Rule 3(1)(d) amendment (Nishith Desai Associates): <a href="https://lnkd.in/d5AvjTFs" rel="noopener">https://lnkd.in/d5AvjTFs</a></p>
+<p>Should every user get a copy of the order that blocks their content?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7520732308228689920/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>Can a privacy law stop journalists from doing their job? India&#x27;s biggest media houses have asked the Supreme Court.</title>
+<link>https://kumarashwani-law.github.io/posts/can-a-privacy-law-stop-journalists-from-doing-their-job.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/can-a-privacy-law-stop-journalists-from-doing-their-job.html</guid>
+<pubDate>Mon, 26 Oct 2026 09:00:00 +0530</pubDate>
+<category>Data Protection</category>
+<description>Reuters reported on 26 October that 21 news publishers, acting through the Digital News Publishers Association (DNPA), have challenged the Digital Personal Data Protection Act. DNPA members…</description>
+<content:encoded><![CDATA[<p>Reuters reported on 26 October that 21 news publishers, acting through the Digital News Publishers Association (DNPA), have challenged the Digital Personal Data Protection Act. DNPA members include Network18, NDTV, the Indian Express and Times Internet. The case is listed for hearing on 27 October. They want key provisions struck down before they take effect in May 2027.</p>
+<p>Their four concerns:<br>
+🔹 Notice and consent (ss. 5–6): journalists may need consent from the very people they investigate<br>
+🔹 Erasure (ss. 8(7), 12): withdrawal of consent and erasure with no public-interest safeguard could force stories off the record<br>
+🔹 Information demands (s. 36 with Rule 23): the Centre can call for information from any data fiduciary, risking exposure of sources<br>
+🔹 Blocking (s. 37): access can be blocked &quot;in the interests of the general public&quot;</p>
+<p>Underneath it all: there is no exemption for journalism. The 2018 draft, the 2019 Bill and the 2021 JPC version all had one. It was dropped in 2022. The State gets wide exemptions under s. 17; the press gets none.</p>
+<p>The government&#x27;s position: in July 2025, MeitY told media bodies no exemption was needed, said journalists aren&#x27;t data fiduciaries, and offered FAQs. Separate petitions by Venkatesh Nayak, The Reporters&#x27; Collective and NCPRI (on the RTI amendment and s. 36) were referred to a larger bench in February 2026, without a stay.</p>
+<p>Today, a journalist&#x27;s only clear relief is s. 3(c)(ii): data the person (or a legal duty) made public falls outside the Act. Most investigative material doesn&#x27;t fit.</p>
+<p>My take: fix it, don&#x27;t scrap it.<br>
+1️⃣ Put the exemption in the law; an FAQ can&#x27;t override the text<br>
+2️⃣ Base it on purpose (journalism in the public interest), not status, so freelancers are covered<br>
+3️⃣ Keep security and breach duties; newsrooms hold sensitive data too<br>
+4️⃣ Require independent or judicial approval before s. 36 demands reach journalistic material<br>
+5️⃣ Apply a public-interest test before published reports or archives are erased</p>
+<p>The EU, UK and Singapore all build this balance in (slide 5). Newsroom checklist on slide 7: subscriber and employee data is covered whatever the court decides.</p>
+<p>📎 Resources:<br>
+• Reuters report (via WTVB): <a href="https://lnkd.in/duGFm4Bu" rel="noopener">https://lnkd.in/duGFm4Bu</a><br>
+• SC notice on the earlier petitions (The Wire): <a href="https://lnkd.in/dvqZ9bdR" rel="noopener">https://lnkd.in/dvqZ9bdR</a><br>
+• MeitY–media meeting (The Tech Trace): <a href="https://lnkd.in/djkpitie" rel="noopener">https://lnkd.in/djkpitie</a></p>
+<p>Should India&#x27;s privacy law have a journalism exemption?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7520472392926916609/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+<item>
+<title>A judge&#x27;s order named 11 plaintiffs who were never in the case. A US appeals court has now taken the case away from him.</title>
+<link>https://kumarashwani-law.github.io/posts/a-judge-s-order-named-11-plaintiffs-who-were-never-in-the.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/a-judge-s-order-named-11-plaintiffs-who-were-never-in-the.html</guid>
+<pubDate>Sun, 25 Oct 2026 09:00:00 +0530</pubDate>
+<category>AI &amp; the Courts</category>
+<description>On 22 October, the US Court of Appeals for the Fifth Circuit vacated an injunction against Mississippi&#x27;s anti-DEI law and ordered the case reassigned to another judge (Jackson Federation of…</description>
+<content:encoded><![CDATA[<p>On 22 October, the US Court of Appeals for the Fifth Circuit vacated an injunction against Mississippi&#x27;s anti-DEI law and ordered the case reassigned to another judge (Jackson Federation of Teachers v. Fitch).</p>
+<p>What went wrong:<br>
+🔹 The July 2025 order named parties who were never in the case, quoted words not in the statute and relied on declarants who may not exist<br>
+🔹 Once the State flagged it, the order was replaced with a &quot;corrected&quot; version dated the same day, and the errors called &quot;clerical&quot;<br>
+🔹 The corrected version still cited a case that doesn&#x27;t exist<br>
+🔹 The judge later said a law clerk had used an AI tool on a draft</p>
+<p>Judge Jerry Smith called it &quot;a botch job, to say the least.&quot;</p>
+<p>This isn&#x27;t the first time. A New Jersey federal judge withdrew an opinion after an intern used ChatGPT, and a Georgia appeals court vacated an order built on fake cases from a lawyer&#x27;s draft. Lawyers get sanctioned for fake citations; judges, so far, have only seen their orders set aside.</p>
+<p>Where India stands:<br>
+✔ Kerala High Court policy (July 2025): AI can&#x27;t be used for findings, orders or judgments; every output must be verified and AI use recorded<br>
+✔ Supreme Court&#x27;s draft Regulations for Use of AI in Courts, 2026: no outcome by algorithm alone (Reg. 20), and accountability rests &quot;exclusively&quot; on the officer; hallucinations are no excuse (Reg. 8(1))<br>
+But the draft lets verification be skipped for recorded reasons (Reg. 8(3)), and it still has to be notified.</p>
+<p>My take, five fixes:<br>
+1️⃣ No exceptions: every citation and quotation in an order must be checked<br>
+2️⃣ Disclosure should cover AI help in drafting orders, not just administration<br>
+3️⃣ Chambers protocol: researcher drafts, a second person checks sources, judge signs<br>
+4️⃣ Errors corrected by a recorded order, never a silent or backdated replacement<br>
+5️⃣ Notify the regulations across all High Courts</p>
+<p>If an order you receive looks AI-tainted (slide 7): check every citation and quote against the source, map each error in a table, act before limitation runs out, and attack the error, never the judge. And verify your own drafts; courts sometimes adopt them.</p>
+<p>📎 Resources:<br>
+• JURIST on the ruling: <a href="https://lnkd.in/da8AY6hq" rel="noopener">https://lnkd.in/da8AY6hq</a><br>
+• SC draft AI regulations (SCC Online): <a href="https://lnkd.in/dfV9YyUU" rel="noopener">https://lnkd.in/dfV9YyUU</a><br>
+• Kerala HC AI policy (MediaNama): <a href="https://lnkd.in/dmGmTWXp" rel="noopener">https://lnkd.in/dmGmTWXp</a></p>
+<p>Should Indian judgments disclose when AI helped draft them?</p>
+<p>Views are personal; for general information only.</p>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7520065403025379328/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
+</item>
+</channel>
+</rss>
