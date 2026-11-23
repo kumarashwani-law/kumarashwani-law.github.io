@@ -245,8 +245,8 @@ for i, r in enumerate(records):
     page = head(f'{r["title"]} — Ashwani Kumar', r["summary"], "../") + header("../") + f'''
 <main>
 <article class="article">
-<a href="../writing.html" style="font-size:14px;font-weight:500;text-decoration:none">← All writing</a>
-<span class="kicker">{esc(r["kicker"])}</span>
+{X.crumbs("../", [("Home", "index.html"), ("Writing", "writing.html"), (r["title"], None, "posts/" + r["slug"] + ".html")])}
+<span class="kicker">Analysis · {esc(r["kicker"])}</span>
 <h1>{esc(r["title"])}</h1>
 <div class="byline">
 <div style="display:flex;gap:12px;align-items:center">
@@ -562,12 +562,12 @@ featured = f'''<section class="wrap section">
 </a>
 </section>'''
 cards = "\n".join(
-    f'<a class="card" href="posts/{r["slug"]}.html"><span class="kicker">{esc(r["kicker"])}</span>'
+    f'<a class="card" href="posts/{r["slug"]}.html"><span class="kicker">Analysis · {esc(r["kicker"])}</span>'
     f'<h3>{esc(r["title"])}</h3><p>{esc(r["summary"])}</p><span class="meta">{fmt_date(r["date"])}</span></a>'
     for r in records[1:7])
 latest = f'''<section class="wrap section">
 <div class="section-head">
-<h2 class="h2">Recent writing</h2>
+<h2 class="h2">Recent analysis</h2>
 <a href="writing.html" style="font-size:15px;font-weight:600;padding:12px 0">View all {len(records)}</a>
 </div>
 <div class="grid">
@@ -722,7 +722,7 @@ for g in guides:
     page = head(f'{g["title"]} — Ashwani Kumar', g["description"], "../") + header("../", "guides") + f'''
 <main>
 <article class="article guide">
-<a href="index.html" style="font-size:14px;font-weight:500;text-decoration:none">← All guides</a>
+{X.crumbs("../", [("Home", "index.html"), ("Guides", "guides/index.html"), (g["short"], None, "guides/" + g["slug"] + ".html")])}
 <span class="kicker">Guide · {esc(g["kicker"])}</span>
 <h1>{esc(g["title"])}</h1>
 <p class="dek">{esc(g["description"])}</p>
@@ -820,3 +820,7 @@ if guides:
 X.build_glossary(globals())
 X.build_toolkit(globals())
 X.build_translations(globals())
+
+# ---------------------------------------------------------------- Case pages, updates, calendar, laws, reviews, search, home
+import casepages
+casepages.build(globals())

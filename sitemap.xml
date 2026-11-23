@@ -6,9 +6,94 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://kumarashwani-law.github.io/calendar.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://kumarashwani-law.github.io/cases.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/ani-openai.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/anmol.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/blink.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/child-safety.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/digital-arrest.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/dpb.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/dpdp-rti.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/frt-protests.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/gadiya.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/gaming.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/haryana24.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/jangaon.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/kent-amazon.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/pooja.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/rekha-gupta.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/cases/sarthak.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/disclaimer.html</loc>
@@ -64,6 +149,66 @@
     <loc>https://kumarashwani-law.github.io/guides/te/digital-arrest.html</loc>
     <lastmod>2026-11-18</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/law/article-19-speech.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/law/article-21-privacy.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/law/copyright-act.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/law/dpdp-act.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/law/index.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/law/it-act-section-69a.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/law/it-act-section-79.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/law/it-rules-2021.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/law/online-gaming-act.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/law/rbi-customer-liability.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/law/rti-act.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/law/trade-marks.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/posts/1-lakh-crore-that-families-can-t-trace.html</loc>
@@ -236,6 +381,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kumarashwani-law.github.io/reviews/2026-10.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/reviews/2026-11.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/reviews/index.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/search.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://kumarashwani-law.github.io/toolkit/cyber-fraud.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.3</priority>
@@ -289,6 +454,36 @@
     <loc>https://kumarashwani-law.github.io/topics/surveillance.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/updates/digital-arrest-scams-banks-must-compensate-victims-where-due-diligence-fails.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/updates/dpdp-act-and-rti-challenge-hearing-adjourned-to-9-december.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/updates/index.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/updates/jangaon-ai-drafted-order-high-court-suspends-collector-s-order-said-to-rely-on-a.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/updates/kent-ro-v-amazon-summons-issued-no-interim-relief-yet.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/updates/rekha-gupta-v-aap-six-urls-to-be-taken-down-in-interim-order.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/writing.html</loc>

@@ -2,6 +2,8 @@
 // Loaded in <head> (not deferred) so the saved theme and text size apply before the page paints.
 (function () {
   var root = document.documentElement;
+  var me = document.currentScript && document.currentScript.src;
+  var base = me ? me.replace(/site\.js(\?.*)?$/, '') : '/';
   function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 
@@ -30,6 +32,8 @@
       var tools = document.createElement('div');
       tools.className = 'reader-tools';
       tools.innerHTML =
+        '<a class="tool-btn" id="site-search" href="' + base + 'search.html" aria-label="Search the site">' +
+        '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>' +
         '<button type="button" class="tool-btn" id="text-size" aria-label="Change text size">' +
         '<span aria-hidden="true">A</span><span aria-hidden="true" class="big">A</span></button>' +
         '<button type="button" class="tool-btn" id="theme-toggle"></button>';

@@ -1,0 +1,78 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ashwani Kumar//Case calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Tech-law hearings (Ashwani Kumar)
+X-WR-TIMEZONE:Asia/Kolkata
+BEGIN:VEVENT
+UID:digital-arrest-20261123@kumarashwani-law.github.io
+DTSTAMP:20261123T113839Z
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261124
+SUMMARY:Supreme Court: digital arrest scams (suo motu)
+DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/digital-arrest.html
+URL:https://kumarashwani-law.github.io/cases/digital-arrest.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:rekha-gupta-20261204@kumarashwani-law.github.io
+DTSTAMP:20261123T113839Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+SUMMARY:Delhi HC: Rekha Gupta v. AAP (AI deepfakes)
+DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/rekha-gupta.html
+URL:https://kumarashwani-law.github.io/cases/rekha-gupta.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ani-openai-20261205@kumarashwani-law.github.io
+DTSTAMP:20261123T113839Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Delhi HC Division Bench: ANI v. OpenAI appeal (listed early December)
+DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/ani-openai.html
+URL:https://kumarashwani-law.github.io/cases/ani-openai.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:kent-amazon-20261208@kumarashwani-law.github.io
+DTSTAMP:20261123T113839Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:Delhi HC: Kent RO v. Amazon (keyword ads)\, interim application
+DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/kent-amazon.html
+URL:https://kumarashwani-law.github.io/cases/kent-amazon.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:dpdp-rti-20261209@kumarashwani-law.github.io
+DTSTAMP:20261123T113839Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+SUMMARY:Supreme Court: DPDP Act and RTI amendment challenge
+DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/dpdp-rti.html
+URL:https://kumarashwani-law.github.io/cases/dpdp-rti.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:child-safety-20261210@kumarashwani-law.github.io
+DTSTAMP:20261123T113839Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:Supreme Court: children's online safety directions
+DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/child-safety.html
+URL:https://kumarashwani-law.github.io/cases/child-safety.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:dpb-20270513@kumarashwani-law.github.io
+DTSTAMP:20261123T113839Z
+DTSTART;VALUE=DATE:20270513
+DTEND;VALUE=DATE:20270514
+SUMMARY:Most DPDP Act duties take effect
+DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/dpb.html
+URL:https://kumarashwani-law.github.io/cases/dpb.html
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

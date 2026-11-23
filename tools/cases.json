@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-23",
   "watch": [
     {"date": "2026-11-23", "label": "Supreme Court: digital arrest scams (suo motu)", "case": "digital-arrest"},
     {"date": "2026-12-04", "label": "Delhi HC: Rekha Gupta v. AAP (AI deepfakes)", "case": "rekha-gupta"},
@@ -35,8 +35,9 @@
       "court": "Supreme Court",
       "topic": "other",
       "issue": "What banks, the RBI and platforms such as WhatsApp must do to prevent digital arrest frauds, and who compensates victims.",
-      "stands": "On 29 October the Court said the RBI's new rules must make banks compensate victims where a failure of due diligence enabled the fraud, and that it would examine the draft rules before they are notified. It also asked WhatsApp to propose measures. The order uploaded on 7 November lists the case next on 23 November; some earlier reports gave 30 November.",
+      "stands": "On 29 October the Court said the RBI's new rules must make banks compensate victims where a failure of due diligence enabled the fraud, and that it would examine the draft rules before they are notified. It also asked WhatsApp to propose measures. The order was uploaded on 7 November. The case was listed again on 23 November; the outcome has not been reported yet.",
       "next": "2026-11-23",
+      "next_note": "Listed 23 Nov 2026; next date awaited",
       "posts": ["a-digital-arrest-victim-sends-the-money-themselves-until-now"],
       "sources": [
         ["MediaNama", "https://www.medianama.com/2026/11/223-supreme-court-whatsapp-digital-arrest/"],

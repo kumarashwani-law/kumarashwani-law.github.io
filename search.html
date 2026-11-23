@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search — Ashwani Kumar</title>
+<meta name="description" content="Search posts, cases, case updates, guides, laws and the glossary.">
+<!-- seo:start -->
+<link rel="canonical" href="https://kumarashwani-law.github.io/search.html">
+<meta property="og:site_name" content="Ashwani Kumar">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Search — Ashwani Kumar">
+<meta property="og:description" content="Search posts, cases, case updates, guides, laws and the glossary.">
+<meta property="og:url" content="https://kumarashwani-law.github.io/search.html">
+<meta property="og:image" content="https://kumarashwani-law.github.io/images/og/site.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ashwani Kumar — writing on privacy, AI and the law in India">
+<meta property="og:locale" content="en_IN">
+<link rel="alternate" type="application/rss+xml" title="Ashwani Kumar — Law, Privacy & AI" href="https://kumarashwani-law.github.io/feed.xml">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Search — Ashwani Kumar">
+<meta name="twitter:description" content="Search posts, cases, case updates, guides, laws and the glossary.">
+<meta name="twitter:image" content="https://kumarashwani-law.github.io/images/og/site.png">
+<!-- seo:end -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2f9ab45f">
+<script src="gate.js"></script>
+<script src="site.js?v=f54731e8"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="index.html"><b>Ashwani Kumar</b><span>Law · Privacy · AI</span></a>
+<nav class="nav" aria-label="Main">
+<a href="writing.html">Writing</a>
+<a href="guides/index.html">Guides</a>
+<a href="toolkit/index.html">Tools</a>
+<a href="topics/index.html">Topics</a>
+<a href="cases.html">Case tracker</a>
+<a href="index.html#follow">Follow</a>
+</nav>
+</div>
+</header>
+<main class="wrap" style="max-width:860px">
+<section class="page-head">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Search</li></ol></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kumarashwani-law.github.io/index.html"}, {"@type": "ListItem", "position": 2, "name": "Search", "item": "https://kumarashwani-law.github.io/search.html"}]}</script>
+<h1>Search</h1>
+<form class="search" role="search" onsubmit="return false">
+<label for="sq" class="label">Search the whole site</label>
+<input id="sq" type="search" placeholder="Try “safe harbour”, “1930”, “Amazon” or “Article 21”" autocomplete="off" autofocus>
+</form>
+<div class="filters" role="group" aria-label="Filter by type"><button type="button" class="chip" data-k="All" aria-pressed="true">All</button><button type="button" class="chip" data-k="Analysis" aria-pressed="false">Analysis</button><button type="button" class="chip" data-k="Case" aria-pressed="false">Case</button><button type="button" class="chip" data-k="Case update" aria-pressed="false">Case update</button><button type="button" class="chip" data-k="Guide" aria-pressed="false">Guide</button><button type="button" class="chip" data-k="Law" aria-pressed="false">Law</button><button type="button" class="chip" data-k="Glossary" aria-pressed="false">Glossary</button><button type="button" class="chip" data-k="Tool" aria-pressed="false">Tool</button></div>
+<p id="sc" class="small" aria-live="polite"></p>
+</section>
+<section class="groups" style="padding-bottom:96px"><div class="group" id="sr"></div></section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<p>This website is for information only. It is not legal advice and is not intended to solicit work, in keeping with the Bar Council of India Rules. <a href="disclaimer.html">Read the full disclaimer</a>.</p>
+<div class="contact"><span class="row" style="gap:6px 16px"><a href="glossary.html">Glossary</a><a href="toolkit/index.html">Tools</a><a href="feed.xml">RSS</a></span><span style="color:var(--muted)">© 2026 Ashwani Kumar</span></div>
+</div>
+</footer>
+<script>
+(function () {
+  var input = document.getElementById('sq'), out = document.getElementById('sr'), cnt = document.getElementById('sc');
+  var chips = document.querySelectorAll('.chip'), kind = 'All', data = null, t;
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
+  function fmt(d) { if (!d) return ''; var m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return +d.slice(8) + ' ' + m[+d.slice(5, 7) - 1] + ' ' + d.slice(0, 4); }
+  function run() {
+    if (!data) return;
+    var q = input.value.trim().toLowerCase(), words = q ? q.split(/\s+/) : [];
+    if (!words.length) { out.innerHTML = ''; cnt.textContent = 'Type to search ' + data.length + ' pages.'; return; }
+    var res = data.filter(function (e) {
+      if (kind !== 'All' && e.k !== kind) return false;
+      var hay = e.t.toLowerCase() + ' ' + e.x;
+      return words.every(function (w) { return hay.indexOf(w) !== -1; });
+    }).map(function (e) {
+      var tl = e.t.toLowerCase(), sc = 0;
+      words.forEach(function (w) { if (tl.indexOf(w) !== -1) sc += 5; sc += Math.min(5, e.x.split(w).length - 1); });
+      return [sc, e];
+    }).sort(function (a, b) { return b[0] - a[0] || (b[1].d || '').localeCompare(a[1].d || ''); });
+    cnt.textContent = res.length + (res.length === 1 ? ' result' : ' results');
+    out.innerHTML = res.slice(0, 60).map(function (r) {
+      var e = r[1];
+      return '<a class="item" href="' + esc(e.u) + '"><span class="date">' + (fmt(e.d) || esc(e.k)) + '</span><span class="body"><span class="t">' + esc(e.t) +
+        '</span><span class="s">' + esc(e.s) + '</span></span><span class="tag">' + esc(e.k) + '</span></a>';
+    }).join('');
+    try { history.replaceState(null, '', '?q=' + encodeURIComponent(input.value.trim())); } catch (err) {}
+  }
+  chips.forEach(function (c) { c.addEventListener('click', function () { kind = c.getAttribute('data-k'); chips.forEach(function (x) { x.setAttribute('aria-pressed', x === c ? 'true' : 'false'); }); run(); }); });
+  input.addEventListener('input', function () { clearTimeout(t); t = setTimeout(run, 120); });
+  var q = new URLSearchParams(location.search).get('q'); if (q) input.value = q;
+  fetch('site-search.json').then(function (r) { return r.json(); }).then(function (d) { data = d; run(); }).catch(function () { cnt.textContent = 'Search could not load. Try again later.'; });
+})();
+</script>
+
+<!-- counter:start -->
+<script data-goatcounter="https://kumarashwani-law.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<!-- counter:end -->
+</body>
+</html>

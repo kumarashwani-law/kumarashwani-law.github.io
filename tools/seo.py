@@ -94,7 +94,7 @@ def get(pattern, text, default=""):
 
 
 pages = []
-for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google")] + list(SITE.glob("posts/*.html")) + list(SITE.glob("topics/*.html")) + list(SITE.glob("guides/*.html")) + list(SITE.glob("guides/*/*.html")) + list(SITE.glob("toolkit/*.html"))):
+for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google")] + list(SITE.glob("posts/*.html")) + list(SITE.glob("topics/*.html")) + list(SITE.glob("guides/*.html")) + list(SITE.glob("guides/*/*.html")) + list(SITE.glob("toolkit/*.html")) + list(SITE.glob("cases/*.html")) + list(SITE.glob("updates/*.html")) + list(SITE.glob("law/*.html")) + list(SITE.glob("reviews/*.html"))):
     rel = f.relative_to(SITE).as_posix()
     t = f.read_text(encoding="utf-8")
     t = re.sub(r"\n<!-- seo:start -->.*?<!-- seo:end -->", "", t, flags=re.S)
@@ -102,7 +102,9 @@ for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google
     url = f"{BASE}/" if rel == "index.html" else f"{BASE}/{rel}"
     title = get(r"<title>(.*?)</title>", t)
     desc = get(r'<meta name="description" content="(.*?)">', t)
-    is_post = rel.startswith("posts/") or (rel.startswith("guides/") and rel != "guides/index.html")
+    is_post = rel.startswith(("posts/", "updates/")) or (rel.startswith("guides/") and rel != "guides/index.html")
+    is_post = is_post and not rel.endswith("/index.html")
+    card_page = is_post or (rel.startswith("cases/") and rel.endswith(".html"))
     published = get(r'<time datetime="(.*?)">', t) if is_post else ""
 
     lang_m = re.match(r"guides/(hi|te)/", rel)
@@ -111,10 +113,11 @@ for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google
         h1 = get(r"<h1>(.*?)</h1>", t)
         img_rel = f"images/og/{f.stem}.png"
         og_title, img_alt = h1, h1
-    elif is_post:
-        h1 = get(r"<h1>(.*?)</h1>", t)
-        kicker = get(r'<span class="kicker">(.*?)</span>', t, "Law, Privacy & AI")
-        img_rel = f"images/og/{f.stem}.png"
+    elif card_page:
+        h1 = re.sub(r"<[^>]+>", "", get(r"<h1>(.*?)</h1>", t))
+        kicker = get(r'<span class="kicker">(.*?)</span>', t, "Law, Privacy & AI").replace("Analysis · ", "")
+        folder = rel.split("/")[0]
+        img_rel = f"images/og/{f.stem}.png" if folder in ("posts", "guides") else f"images/og/{folder}-{f.stem}.png"
         make_image(SITE / img_rel, kicker, h1)
         og_title, img_alt = h1, h1
     else:

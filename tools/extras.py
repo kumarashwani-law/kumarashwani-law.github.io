@@ -197,11 +197,11 @@ def build_case_feeds(out, cases):
             f"{SITE_URL}/cases/{c['id']}.xml", [case_item(c, upd)]), encoding="utf-8")
 
 
-def case_follow(c):
+def case_follow(c, prefix=""):
     feed = f"{SITE_URL}/cases/{c['id']}.xml"
     pid = f"cf-{c['id']}"
     return (f'<div class="case-follow"><span class="label">Follow this case</span>'
-            f'<a href="cases/{c["id"]}.xml">RSS</a>'
+            f'<a href="{prefix}cases/{c["id"]}.xml">RSS</a>'
             f'<button type="button" class="btn btn-ghost btn-sm follow-toggle" aria-expanded="false" aria-controls="{pid}">By email</button></div>'
             + follow_panel(pid, feed, "updates on this case"))
 
@@ -224,6 +224,7 @@ def build_glossary(ctx):
                 "") + header("") + f'''
 <main class="wrap" style="max-width:820px">
 <section class="page-head">
+{crumbs("", [("Home", "index.html"), ("Glossary", None, "glossary.html")])}
 <h1>Glossary</h1>
 <p>Short, plain-language definitions of the legal terms that come up in my writing. On articles and guides, terms in this list are underlined with dots: tap or hover to see the definition.</p>
 </section>
@@ -303,7 +304,7 @@ def build_translations(ctx):
             page = head(f'{g["title"]} — Ashwani Kumar', g["description"], "../../", lang=l) + header("../../", "guides") + f'''
 <main>
 <article class="article guide" lang="{l}">
-<a href="../index.html" style="font-size:14px;font-weight:500;text-decoration:none">← {t["all"]}</a>
+{crumbs("../../", [("Home", "index.html"), (t["all"], "guides/index.html"), (g["short"], None, f"guides/{l}/{g['slug']}.html")])}
 <span class="kicker">{t["guide"]} · {esc(g["kicker"])}</span>
 <h1>{esc(g["title"])}</h1>
 <p class="dek">{esc(g["description"])}</p>
@@ -338,6 +339,31 @@ def build_toolkit(ctx):
     head, header, footer, OUT = ctx["head"], ctx["header"], ctx["footer"], ctx["OUT"]
     (OUT / "toolkit").mkdir(exist_ok=True)
     for name, (title, desc, body) in PAGES.items():
+        trail = [("Home", "index.html"), ("Tools", None, "toolkit/index.html")] if name == "index" else [("Home", "index.html"), ("Tools", "toolkit/index.html"), (title, None, f"toolkit/{name}.html")]
+        body = body.replace('<a href="index.html" style="font-size:14px;font-weight:500;text-decoration:none" class="no-print">← All tools</a>', crumbs("../", trail), 1)
+        if name == "index":
+            body = body.replace('<section class="page-head">', '<section class="page-head">\n' + crumbs("../", trail), 1)
         page = head(f"{title} — Ashwani Kumar", desc, "../") + header("../", "tools") + body + footer("../") + "\n</body>\n</html>\n"
         (OUT / "toolkit" / f"{name}.html").write_text(page, encoding="utf-8")
     print(len(PAGES), "toolkit pages built")
+
+
+# ------------------------------------------------------------------ breadcrumbs
+def crumbs(prefix, items):
+    """items: [(label, root-relative path or None for the current page, absolute path for JSON-LD)]"""
+    parts, ld = [], []
+    for i, it in enumerate(items):
+        label, path = it[0], it[1]
+        last = i == len(items) - 1
+        if last:
+            parts.append(f'<li aria-current="page">{esc(label)}</li>')
+        else:
+            parts.append(f'<li><a href="{prefix}{path}">{esc(label)}</a></li>')
+        url = f"{SITE_URL}/{path}" if path is not None else (f"{SITE_URL}/{it[2]}" if len(it) > 2 else None)
+        e = {"@type": "ListItem", "position": i + 1, "name": html.unescape(label)}
+        if url:
+            e["item"] = url.replace("/index.html", "/") if url.endswith("/index.html") and url.count("/") > 3 else url
+        ld.append(e)
+    data = json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": ld}, ensure_ascii=False)
+    return (f'<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>{"".join(parts)}</ol></nav>\n'
+            f'<script type="application/ld+json">{data}</script>')
