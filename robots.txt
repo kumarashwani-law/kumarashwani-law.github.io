@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://kumarashwani-law.github.io/sitemap.xml
+Sitemap: https://kumarashwani-law.github.io/feed.xml

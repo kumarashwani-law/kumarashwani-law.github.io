@@ -165,5 +165,5 @@ for url, lastmod, is_post, rel in sorted(pages, key=lambda p: (not p[0].endswith
     '<?xml version="1.0" encoding="UTF-8"?>\n'
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(entries) + "\n</urlset>\n",
     encoding="utf-8")
-(SITE / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n", encoding="utf-8")
+(SITE / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\nSitemap: {BASE}/feed.xml\n", encoding="utf-8")
 print(f"{len(pages)} pages tagged; sitemap has {len(entries)} URLs")
