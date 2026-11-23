@@ -405,8 +405,7 @@ body{font-family:var(--sans)}
 
 /* links: dark text, visible underline, lime highlight on hover */
 a{color:var(--ink);text-decoration-thickness:1.5px;text-underline-offset:3px}
-a:hover{color:var(--char);background:var(--lime);text-decoration-color:var(--char)}
-.nav a:hover,.brand:hover,a.card:hover,a.topic:hover,a.featured:hover,a.item:hover,a.watch-card:hover,a.btn:hover,a.law-tag:hover,a.tool-btn:hover,.az a:hover{background-color:inherit}
+a:hover{color:var(--char);text-decoration-color:var(--char)}
 
 /* headings */
 .hero h1,.page-head h1,.article h1{font-weight:500;letter-spacing:-.025em}
@@ -531,7 +530,6 @@ html[data-theme="dark"]{
 }
 html[data-theme="dark"] body{background:var(--bg)}
 html[data-theme="dark"] a{color:var(--lime)}
-html[data-theme="dark"] a:hover{color:var(--char);background:var(--lime)}
 html[data-theme="dark"] .nav a,html[data-theme="dark"] .brand{color:var(--ink)}
 html[data-theme="dark"] .nav a[aria-current="page"]{color:var(--char)}
 html[data-theme="dark"] .brand b::before{background:var(--lime)}
@@ -558,3 +556,20 @@ html[data-theme="dark"] .hero-art [fill="#F3F3F3"]{fill:#2A2B36}
 html[data-theme="dark"] .update-card .case-name{color:var(--lime)}
 html[data-theme="dark"] .grid>.card:nth-child(6n+2) .case-name,html[data-theme="dark"] .grid>.card:nth-child(6n+4) .case-name{color:var(--char)}
 html[data-theme="dark"] .grid>.card:nth-child(6n+2) p,html[data-theme="dark"] .grid>.card:nth-child(6n+4) p,html[data-theme="dark"] .grid>.card:nth-child(6n+2) .meta,html[data-theme="dark"] .grid>.card:nth-child(6n+4) .meta{color:#2B2C34}
+
+/* Hover: no lime. Links get a thicker underline; buttons a subtle grey or darker shade. */
+a:hover{text-decoration-thickness:2.5px}
+.btn-primary:hover,.follow .btn:hover{background:#000;color:#fff;border-color:#000}
+.btn-ghost:hover,.follow .btn-ghost:hover{background:var(--grey);color:var(--char)}
+.tool-btn:hover{background:var(--grey);color:var(--char)}
+.nav a:last-child:hover{background:var(--grey);color:var(--char)}
+.site-footer a:hover{background:none;color:var(--lime);text-decoration-thickness:2.5px}
+.court-grid .section-head>a:hover,.court-grid a.small:hover{background:none;color:var(--lime);text-decoration-thickness:2.5px}
+.court-grid .watch-list a:hover{color:var(--lime)}
+.court-grid a.watch-card:hover{box-shadow:none;border-color:#fff}
+a.featured:hover{box-shadow:none;background:#22232E}
+html[data-theme="dark"] a:hover{color:var(--lime)}
+html[data-theme="dark"] .btn-primary:hover{background:#A6E85A;color:var(--char);border-color:#A6E85A}
+html[data-theme="dark"] .btn-ghost:hover,html[data-theme="dark"] .tool-btn:hover,html[data-theme="dark"] .nav a:last-child:hover{background:#2A2B36;color:var(--ink)}
+html[data-theme="dark"] .follow .btn:hover{background:#A6E85A;color:var(--char)}
+html[data-theme="dark"] a.featured:hover{background:#22232E}
