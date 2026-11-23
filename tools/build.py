@@ -8,6 +8,8 @@ from pathlib import Path
 
 from PIL import Image
 
+import extras as X
+
 SRC = Path(__file__).parent
 OUT = Path(sys.argv[1])
 
@@ -57,6 +59,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
 LINKEDIN = "https://www.linkedin.com/in/advashwanikumar"
 import hashlib as _hl
 CSS_V = _hl.sha1((OUT / "style.css").read_bytes()).hexdigest()[:8]
+JS_V = _hl.sha1((OUT / "site.js").read_bytes()).hexdigest()[:8]
 EMAIL = "kumar.ashwani040801@gmail.com"
 
 
@@ -117,6 +120,7 @@ def nav(prefix, current=""):
     return f'''<nav class="nav" aria-label="Main">
 <a href="{prefix}writing.html"{cur("writing")}>Writing</a>
 <a href="{prefix}guides/index.html"{cur("guides")}>Guides</a>
+<a href="{prefix}toolkit/index.html"{cur("tools")}>Tools</a>
 <a href="{prefix}topics/index.html"{cur("topics")}>Topics</a>
 <a href="{prefix}cases.html"{cur("cases")}>Case tracker</a>
 <a href="{prefix}index.html#follow">Follow</a>
@@ -140,14 +144,14 @@ def footer(prefix, contact=False):
     return f'''<footer class="site-footer">
 <div class="wrap">
 <p>This website is for information only. It is not legal advice and is not intended to solicit work, in keeping with the Bar Council of India Rules. <a href="{prefix}disclaimer.html">Read the full disclaimer</a>.</p>
-<div class="contact">{extra}<span style="color:var(--muted)">© 2026 Ashwani Kumar</span></div>
+<div class="contact">{extra}<span class="row" style="gap:6px 16px"><a href="{prefix}glossary.html">Glossary</a><a href="{prefix}toolkit/index.html">Tools</a><a href="{prefix}feed.xml">RSS</a></span><span style="color:var(--muted)">© 2026 Ashwani Kumar</span></div>
 </div>
 </footer>'''
 
 
-def head(title, desc, prefix):
+def head(title, desc, prefix, lang="en"):
     return f'''<!DOCTYPE html>
-<html lang="en">
+<html lang="{lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -156,6 +160,7 @@ def head(title, desc, prefix):
 {FONTS}
 <link rel="stylesheet" href="{prefix}style.css?v={CSS_V}">
 <script src="{prefix}gate.js"></script>
+<script src="{prefix}site.js?v={JS_V}"></script>
 </head>
 <body>
 '''
@@ -191,7 +196,11 @@ for k in order:
 
 for i, r in enumerate(records):
     li_btn = (f'<a class="btn btn-ghost btn-sm" href="{esc(r["url"])}">View on LinkedIn</a>\n' if r["url"] else "")
-    body_html = "\n".join(render_block(b) for b in r["blocks"])
+    body_html = X.add_glossary("\n".join(render_block(b) for b in r["blocks"]))
+    mins = X.reading_minutes(body_html)
+    post_url = f"{X.SITE_URL}/posts/{r['slug']}.html"
+    pdf_rel = X.slides_pdf(OUT, r["slug"])
+    pdf_btn = (f'<a class="btn btn-ghost btn-sm" href="../{pdf_rel}" download>Download slides (PDF)</a>' if pdf_rel else "")
     tags_html = "".join(f'<span class="tag-pill">#{esc(t)}</span>' for t in r["tags"])
     slide_dir = OUT / "images" / "slides" / r["slug"]
     slide_imgs = sorted(slide_dir.glob("*.webp")) if slide_dir.exists() else []
@@ -241,7 +250,7 @@ for i, r in enumerate(records):
 <h1>{esc(r["title"])}</h1>
 <div class="byline">
 <div style="display:flex;gap:12px;align-items:center">
-<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600">Ashwani Kumar</span><span class="meta">Advocate · <time datetime="{r["date"]}">{fmt_date(r["date"])}</time></span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600">Ashwani Kumar</span><span class="meta">Advocate · <time datetime="{r["date"]}">{fmt_date(r["date"])}</time> · <span class="read-time">{mins} min read</span></span></div>
 </div>
 <div class="row" style="gap:8px">
 {li_btn}<button type="button" class="btn btn-ghost btn-sm copy-link">Copy link</button>
@@ -253,6 +262,12 @@ for i, r in enumerate(records):
 {slides_html}
 <div class="tags">{tags_html}</div>
 <p class="origin">{origin}</p>
+<div class="article-actions">
+{X.share_row(post_url, r["title"])}
+<div class="row" style="gap:8px">{pdf_btn}{X.cite_block("cite-" + r["slug"][:20], r["title"], r["date"], post_url)}</div>
+</div>
+{X.subscribe_box("p-follow")}
+{X.comments_html("posts/" + r["slug"])}
 </article>
 <section class="band">
 <div class="wrap" style="padding-top:64px;padding-bottom:64px;gap:24px">
@@ -484,6 +499,7 @@ def case_card(c):
 {when}
 {f'<div class="case-links"><span class="label">My analysis</span><ul>{posts_html}</ul></div>' if posts_html else ""}
 {f'<p class="small">Sources: {src_html}</p>' if src_html else ""}
+{X.case_follow(c)}
 </div>
 </article>'''
 
@@ -505,6 +521,7 @@ cases_page = head("Case tracker — Ashwani Kumar",
 <section class="page-head">
 <h1>Case tracker</h1>
 <p>The technology-law cases I'm following in Indian courts: what each one is about, where it stands, and when it's next listed.</p>
+<p class="small">Follow every case update by <a href="cases/feed.xml">RSS</a>, or follow a single case from its card below.</p>
 <p class="small">Updated <time datetime="{cases["updated"]}">{fmt_date(cases["updated"])}</time>. Hearing dates change often, so check the court's cause list before relying on a date. For general information only; not legal advice.</p>
 </section>
 <section class="watch">
@@ -528,6 +545,7 @@ cases_page = head("Case tracker — Ashwani Kumar",
 </main>
 ''' + footer("") + "\n</body>\n</html>\n"
 (OUT / "cases.html").write_text(cases_page, encoding="utf-8")
+X.build_case_feeds(OUT, cases)
 
 # ---------------------------------------------------------------- Home page
 index_path = OUT / "index.html"
@@ -596,6 +614,8 @@ for static in ["disclaimer.html", "index.html"]:
     p = OUT / static
     t = p.read_text(encoding="utf-8")
     t = re.sub(r'href="style\.css(\?v=[0-9a-f]+)?"', f'href="style.css?v={CSS_V}"', t)
+    t = re.sub(r'\n?<script src="site\.js(\?v=[0-9a-f]+)?"></script>', "", t)
+    t = t.replace('<script src="gate.js"></script>', f'<script src="gate.js"></script>\n<script src="site.js?v={JS_V}"></script>', 1)
     t = re.sub(r'<nav class="nav" aria-label="Main">.*?</nav>', lambda m: nav(""), t, count=1, flags=re.S)
     p.write_text(t, encoding="utf-8")
 
@@ -686,6 +706,11 @@ guides.sort(key=lambda g: GUIDE_ORDER.index(g["slug"]) if g["slug"] in GUIDE_ORD
 
 for g in guides:
     body, toc = guide_html(g["body"])
+    body = X.add_glossary(body)
+    gmins = X.reading_minutes(body)
+    guide_url = f"{X.SITE_URL}/guides/{g['slug']}.html"
+    langs = X.guide_languages(g["slug"])
+    lang_html = X.lang_switch(g["slug"], "en", langs, "")
     toc_html = "".join(f'<li><a href="#{i}">{esc(html.unescape(n))}</a></li>' for i, n in toc)
     rel = [r for s in g.get("related", []) for r in records if r["slug"] == s]
     rel_html = "\n".join(
@@ -702,16 +727,23 @@ for g in guides:
 <h1>{esc(g["title"])}</h1>
 <p class="dek">{esc(g["description"])}</p>
 <div class="byline">
-<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600">Ashwani Kumar</span><span class="meta">Advocate · Last reviewed <time datetime="{g["updated"]}">{fmt_date(g["updated"])}</time></span></div>
-<button type="button" class="btn btn-ghost btn-sm copy-link">Copy link</button>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600">Ashwani Kumar</span><span class="meta">Advocate · Last reviewed <time datetime="{g["updated"]}">{fmt_date(g["updated"])}</time> · <span class="read-time">{gmins} min read</span></span></div>
+<div class="row" style="gap:8px"><button type="button" class="btn btn-ghost btn-sm print-btn">Print / save PDF</button><button type="button" class="btn btn-ghost btn-sm copy-link">Copy link</button></div>
 </div>
+{lang_html}
 <nav class="toc" aria-label="On this page"><span class="label">On this page</span><ol>{toc_html}</ol></nav>
 <div class="prose guide-body">
 {body}
 </div>
 {f'<div class="sources"><h2 class="label" style="margin:0">Sources and further reading</h2><ul>{src_html}</ul></div>' if src_html else ""}
 <div class="origin"><b>General information, not legal advice.</b> Laws, rules and court decisions change; this guide was last reviewed on {fmt_date(g["updated"])}. For advice on your own situation, speak to a lawyer.</div>
+<div class="article-actions">
+{X.share_row(guide_url, g["title"])}
+<div class="row" style="gap:8px">{X.cite_block("cite-" + g["slug"][:20], g["title"], g["updated"], guide_url)}</div>
+</div>
 {f'<div class="other-guides"><span class="label">More guides</span><ul>{other_html}</ul></div>' if other_html else ""}
+{X.subscribe_box("g-follow")}
+{X.comments_html("guides/" + g["slug"])}
 </article>
 {f"""<section class="band">
 <div class="wrap" style="padding-top:64px;padding-bottom:64px;gap:24px">
@@ -783,3 +815,8 @@ if guides:
     idx = idx.replace(anchor, gsec.strip() + "\n\n" + anchor, 1)
     index_path.write_text(idx, encoding="utf-8")
     print(len(guides), "guides built")
+
+# ---------------------------------------------------------------- Glossary, tools, translations
+X.build_glossary(globals())
+X.build_toolkit(globals())
+X.build_translations(globals())

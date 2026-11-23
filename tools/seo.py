@@ -94,7 +94,7 @@ def get(pattern, text, default=""):
 
 
 pages = []
-for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google")] + list(SITE.glob("posts/*.html")) + list(SITE.glob("topics/*.html")) + list(SITE.glob("guides/*.html"))):
+for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google")] + list(SITE.glob("posts/*.html")) + list(SITE.glob("topics/*.html")) + list(SITE.glob("guides/*.html")) + list(SITE.glob("guides/*/*.html")) + list(SITE.glob("toolkit/*.html"))):
     rel = f.relative_to(SITE).as_posix()
     t = f.read_text(encoding="utf-8")
     t = re.sub(r"\n<!-- seo:start -->.*?<!-- seo:end -->", "", t, flags=re.S)
@@ -105,7 +105,13 @@ for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google
     is_post = rel.startswith("posts/") or (rel.startswith("guides/") and rel != "guides/index.html")
     published = get(r'<time datetime="(.*?)">', t) if is_post else ""
 
-    if is_post:
+    lang_m = re.match(r"guides/(hi|te)/", rel)
+    if lang_m:
+        # Translated guide: reuse the English guide's card (the image font has no Devanagari/Telugu glyphs)
+        h1 = get(r"<h1>(.*?)</h1>", t)
+        img_rel = f"images/og/{f.stem}.png"
+        og_title, img_alt = h1, h1
+    elif is_post:
         h1 = get(r"<h1>(.*?)</h1>", t)
         kicker = get(r'<span class="kicker">(.*?)</span>', t, "Law, Privacy & AI")
         img_rel = f"images/og/{f.stem}.png"
@@ -128,13 +134,19 @@ for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google
         '<meta property="og:image:width" content="1200">',
         '<meta property="og:image:height" content="630">',
         f'<meta property="og:image:alt" content="{html.escape(img_alt)}">',
-        '<meta property="og:locale" content="en_IN">',
+        f'<meta property="og:locale" content="{ {"hi": "hi_IN", "te": "te_IN"}.get(lang_m.group(1) if lang_m else "", "en_IN") }">',
         f'<link rel="alternate" type="application/rss+xml" title="Ashwani Kumar — Law, Privacy & AI" href="{BASE}/feed.xml">',
         '<meta name="twitter:card" content="summary_large_image">',
         f'<meta name="twitter:title" content="{html.escape(og_title)}">',
         f'<meta name="twitter:description" content="{html.escape(desc)}">',
         f'<meta name="twitter:image" content="{img_url}">',
     ]
+    gslug = re.match(r"guides/(?:(?:hi|te)/)?([^/]+)\.html$", rel)
+    if gslug and gslug.group(1) != "index":
+        alts = [("en", f"guides/{gslug.group(1)}.html")] + [(l, f"guides/{l}/{gslug.group(1)}.html") for l in ("hi", "te") if (SITE / "guides" / l / f"{gslug.group(1)}.html").exists()]
+        if len(alts) > 1:
+            tags += [f'<link rel="alternate" hreflang="{l}" href="{BASE}/{u}">' for l, u in alts]
+            tags.append(f'<link rel="alternate" hreflang="x-default" href="{BASE}/{alts[0][1]}">')
     if is_post and published:
         tags.append(f'<meta property="article:published_time" content="{published}">')
         tags.append('<meta property="article:author" content="Ashwani Kumar">')

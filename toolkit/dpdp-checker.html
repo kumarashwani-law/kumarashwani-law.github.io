@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DPDP readiness checker — Ashwani Kumar</title>
+<meta name="description" content="Answer a few questions and get a printable checklist of what the DPDP Act, 2023 and DPDP Rules, 2025 expect from your business by 13 May 2027.">
+<!-- seo:start -->
+<link rel="canonical" href="https://kumarashwani-law.github.io/toolkit/dpdp-checker.html">
+<meta property="og:site_name" content="Ashwani Kumar">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DPDP readiness checker — Ashwani Kumar">
+<meta property="og:description" content="Answer a few questions and get a printable checklist of what the DPDP Act, 2023 and DPDP Rules, 2025 expect from your business by 13 May 2027.">
+<meta property="og:url" content="https://kumarashwani-law.github.io/toolkit/dpdp-checker.html">
+<meta property="og:image" content="https://kumarashwani-law.github.io/images/og/site.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ashwani Kumar — writing on privacy, AI and the law in India">
+<meta property="og:locale" content="en_IN">
+<link rel="alternate" type="application/rss+xml" title="Ashwani Kumar — Law, Privacy & AI" href="https://kumarashwani-law.github.io/feed.xml">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DPDP readiness checker — Ashwani Kumar">
+<meta name="twitter:description" content="Answer a few questions and get a printable checklist of what the DPDP Act, 2023 and DPDP Rules, 2025 expect from your business by 13 May 2027.">
+<meta name="twitter:image" content="https://kumarashwani-law.github.io/images/og/site.png">
+<!-- seo:end -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=2e242f43">
+<script src="../gate.js"></script>
+<script src="../site.js?v=b8e22775"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="../index.html"><b>Ashwani Kumar</b><span>Law · Privacy · AI</span></a>
+<nav class="nav" aria-label="Main">
+<a href="../writing.html">Writing</a>
+<a href="../guides/index.html">Guides</a>
+<a href="../toolkit/index.html" aria-current="page">Tools</a>
+<a href="../topics/index.html">Topics</a>
+<a href="../cases.html">Case tracker</a>
+<a href="../index.html#follow">Follow</a>
+</nav>
+</div>
+</header>
+<main>
+<div class="tool" id="dpdp">
+<a href="index.html" style="font-size:14px;font-weight:500;text-decoration:none" class="no-print">← All tools</a>
+<span class="kicker">Tool · Data protection</span>
+<h1>DPDP readiness checker</h1>
+<p class="dek">Answer up to eleven quick questions about how your business handles personal data. You'll get a checklist of what the Digital Personal Data Protection Act, 2023 and the DPDP Rules, 2025 expect from you, most of it by <b>13 May 2027</b>.</p>
+<p class="small" style="margin:0">Your answers stay in your browser. Nothing is sent to me or to anyone else. This is general information, not legal advice.</p>
+<div class="tool-card" id="dpdp-card" aria-live="polite"></div>
+<p class="small no-print">For the reasoning behind each item, read the full guide: <a href="../guides/dpdp-business-checklist.html">DPDP Act: what your business must do by 13 May 2027</a>.</p>
+</div>
+</main>
+<script>
+(function () {
+  var Q = [
+    {id: 'digital', q: 'Do you collect or hold personal data about people in digital form?',
+     help: 'Personal data is anything that identifies a person: names, phone numbers, emails, addresses, photos, ID numbers, health or payment details. "Digital" includes apps, websites, spreadsheets, CRM, email lists, cloud storage and WhatsApp, and paper records you later scan or type in.',
+     stopOn: 'no', stop: 'If you hold no personal data in digital form (and don\'t digitise paper records), the DPDP Act is unlikely to apply. Check again if that changes, for example when you start a website form, an app or a customer spreadsheet.'},
+    {id: 'domestic', q: 'Is the data held only for personal or household purposes?',
+     help: 'For example, a family\'s own phone contacts or home CCTV. A business, school, clinic, NGO or freelancer using data for work is not personal or domestic use.',
+     stopOn: 'yes', stop: 'Processing for purely personal or domestic purposes is outside the Act (section 3(c)(i)). Other laws, such as the IT Act and privacy rights under Article 21, can still apply.'},
+    {id: 'india', q: 'Do you process the data in India, or offer goods or services to people in India?',
+     help: 'The Act covers data processed in India, and data processed abroad in connection with offering goods or services to people in India.',
+     stopOn: 'no', stop: 'If you neither process data in India nor offer goods or services to people in India, the Act is unlikely to apply to you. Data protection laws of the countries you work in may.'},
+    {id: 'children', q: 'Could any of the people whose data you hold be under 18?',
+     help: 'Students, young customers, gamers, app users or patients. If you don\'t check ages, answer "Not sure".'},
+    {id: 'disability', q: 'Do you deal with persons with disability who act through a lawful guardian?',
+     help: 'For example, a special school, a care home, a hospital or an insurer.'},
+    {id: 'vendors', q: 'Do other companies handle personal data for you?',
+     help: 'Cloud hosting, payroll, email marketing, CRM, payment gateways, call centres, IT support, analytics. In the Act\'s terms they are your data processors, and you stay responsible for them.'},
+    {id: 'employees', q: 'Do you have employees, interns or contractors whose data you keep?',
+     help: 'HR files, payroll, attendance, ID copies, bank details for salary.'},
+    {id: 'platform', q: 'Are you a large e-commerce, online gaming or social media platform?',
+     help: 'The Rules set user thresholds in the Third Schedule (2 crore registered users for e-commerce and social media, 50 lakh for online gaming). Answer "Not sure" if you are close.'},
+    {id: 'sdf', q: 'Has the government notified you as a Significant Data Fiduciary, or might it?',
+     help: 'The government can notify businesses as Significant Data Fiduciaries based on the volume and sensitivity of data they process, risk to people\'s rights, and other factors.'},
+    {id: 'abroad', q: 'Does any personal data leave India?',
+     help: 'For example, foreign cloud servers, overseas group companies, or tools like email and CRM hosted abroad.'},
+    {id: 'breach', q: 'Do you already have a written plan for what to do if personal data is leaked or hacked?',
+     help: 'A plan that says who leads, who approves notices, and how you will tell users and the Data Protection Board.'}
+  ];
+  var ANS = {yes: 'Yes', no: 'No', unsure: 'Not sure'};
+  var card = document.getElementById('dpdp-card');
+  var answers = {}, i = 0, started = false;
+
+  function el(html) {
+    card.innerHTML = html;
+    var f = card.querySelector('h2, .tool-q');
+    if (f && started) { f.setAttribute('tabindex', '-1'); f.focus(); }
+    started = true;
+  }
+
+  function ask() {
+    var item = Q[i];
+    var pct = Math.round(i / Q.length * 100);
+    var opts = Object.keys(ANS).map(function (k) {
+      var on = answers[item.id] === k ? ' btn-primary' : ' btn-ghost';
+      return '<button type="button" class="btn' + on + '" data-a="' + k + '">' + ANS[k] + '</button>';
+    }).join('');
+    el('<div class="tool-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '" aria-label="Progress"><span style="width:' + pct + '%"></span></div>' +
+       '<span class="label">Question ' + (i + 1) + ' of ' + Q.length + '</span>' +
+       '<p class="tool-q">' + item.q + '</p><p class="tool-help">' + item.help + '</p>' +
+       '<div class="tool-options">' + opts + '</div>' +
+       '<div class="tool-nav">' + (i > 0 ? '<button type="button" class="btn btn-ghost btn-sm" data-nav="back">← Back</button>' : '<span></span>') + '</div>');
+    card.querySelectorAll('[data-a]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var a = b.getAttribute('data-a');
+        answers[item.id] = a;
+        if (item.stopOn && a === item.stopOn) return stop(item);
+        i++;
+        if (i < Q.length) ask(); else result();
+      });
+    });
+    var back = card.querySelector('[data-nav=back]');
+    if (back) back.addEventListener('click', function () { i--; ask(); });
+  }
+
+  function stop(item) {
+    el('<h2 style="margin:0;font-size:22px">The Act may not apply to you</h2><p style="margin:0">' + item.stop + '</p>' +
+       '<div class="tool-nav"><button type="button" class="btn btn-ghost btn-sm" data-nav="back">← Change my answer</button>' +
+       '<button type="button" class="btn btn-ghost btn-sm" data-nav="restart">Start again</button></div>');
+    card.querySelector('[data-nav=back]').addEventListener('click', ask);
+    card.querySelector('[data-nav=restart]').addEventListener('click', restart);
+  }
+
+  function restart() { answers = {}; i = 0; ask(); }
+  function on(id) { return answers[id] === 'yes' || answers[id] === 'unsure'; }
+
+  function result() {
+    var items = [
+      ['Map your data', 'List every place you collect or hold personal data (forms, apps, CRM, HR, CCTV, email lists, WhatsApp groups, spreadsheets, vendors). For each: what data, why, who can see it, where it is stored, how long you keep it.'],
+      ['Rewrite your privacy notice', 'Itemise the personal data you collect and the purpose for each; explain how to withdraw consent, exercise rights and complain to the Data Protection Board. It must be available in English or any Eighth Schedule language.'],
+      ['Fix consent, and make withdrawal as easy as giving it', 'Consent must be free, specific, informed, unconditional and unambiguous, by a clear action. No pre-ticked boxes. Where you rely on a "legitimate use" instead, write down why.'],
+      ['Put security safeguards in place', 'Encryption or masking, access controls, logs of who accessed what, backups. Keep access logs for at least one year.'],
+      [on('breach') && answers.breach === 'yes' ? 'Test your breach plan against the Rules' : 'Write a breach plan', 'On becoming aware of a personal data breach, tell each affected person and the Data Protection Board without delay, and send the Board a detailed report within 72 hours (Rule 7). Decide in advance who leads, who approves, and how you will reach users. Run a mock drill.'],
+      ['Delete data you no longer need', 'Erase personal data once the purpose is served or consent is withdrawn, unless a law requires you to keep it.'],
+      ['Set up a way to answer users\' requests', 'People can ask to access a summary of their data, correct, complete or erase it, and nominate someone. Publish a contact person and a grievance process with a response timeline.']
+    ];
+    var extra = [];
+    if (on('children')) extra.push(['Children\'s data', 'Get verifiable consent from a parent or lawful guardian before processing data of anyone under 18. Do not track, monitor the behaviour of, or target ads at children. Choose age checks that collect as little data as possible. Penalty for breach of these duties: up to Rs 200 crore.']);
+    if (on('disability')) extra.push(['Persons with disability', 'Where a person with disability has a lawful guardian, get verifiable consent from the guardian, and check the guardian\'s appointment.']);
+    if (on('vendors')) extra.push(['Vendor contracts', 'Add data-processing clauses to every vendor contract: process only on your instructions, keep it secure, report breaches to you at once, delete or return data at the end. You remain responsible for what they do.']);
+    if (on('employees')) extra.push(['Employee data', 'Employment purposes can be a "legitimate use" without consent, but only for what employment actually needs. Cover HR data in your data map, retention rules and security.']);
+    if (on('platform')) extra.push(['Three-year inactivity erasure', 'Platforms above the Third Schedule thresholds must erase a user\'s data after three years of inactivity, telling them at least 48 hours before.']);
+    if (on('sdf')) extra.push(['Significant Data Fiduciary duties', 'If notified: appoint a Data Protection Officer based in India, an independent data auditor, and carry out periodic Data Protection Impact Assessments and audits. Penalty for breach: up to Rs 150 crore.']);
+    if (on('abroad')) extra.push(['Data leaving India', 'Record which countries your data goes to and why. Transfers are allowed unless the government restricts a country (section 16 and Rule 15), so check for any notification before relying on a destination.']);
+
+    var unsure = Object.keys(answers).filter(function (k) { return answers[k] === 'unsure'; }).length;
+    function li(it, n) {
+      return '<li><input type="checkbox" id="dc' + n + '" aria-label="Mark done: ' + it[0] + '"><label for="dc' + n + '"><b>' + it[0] + '.</b> ' + it[1] + '</label></li>';
+    }
+    var n = 0;
+    el('<h2 style="margin:0;font-size:24px">Your DPDP checklist</h2>' +
+       '<div class="tool-result">' +
+       '<p class="must" style="margin:0"><b>The Act applies to you.</b> Most duties take effect on <b>13 May 2027</b>, whether or not the Data Protection Board is fully staffed by then. Penalties go up to <b>Rs 250 crore</b> per instance for failing to keep reasonable security safeguards.</p>' +
+       (unsure ? '<p style="margin:0">You answered "Not sure" ' + unsure + (unsure > 1 ? ' times' : ' time') + '. Those items are included below, to be safe. Find out the answer before deciding they don\'t apply.</p>' : '') +
+       '<h2>Everyone</h2><ul class="checklist">' + items.map(function (it) { return li(it, n++); }).join('') + '</ul>' +
+       (extra.length ? '<h2>Because of your answers</h2><ul class="checklist">' + extra.map(function (it) { return li(it, n++); }).join('') + '</ul>' : '') +
+       '<h2>A six-month plan</h2><ul><li><b>Now to February 2027:</b> data map; vendor clauses; draft notice and consent text.</li><li><b>March to May 2027:</b> one-click withdrawal; security and logging; 72-hour breach drill; publish a contact person and grievance process.</li></ul>' +
+       '<p class="small" style="margin:0">Based on the DPDP Act, 2023 and the DPDP Rules, 2025 as of November 2026. General information, not legal advice; for your business\'s position, speak to a lawyer.</p>' +
+       '</div>' +
+       '<div class="tool-nav"><button type="button" class="btn btn-ghost btn-sm" data-nav="back">← Change answers</button>' +
+       '<span class="row" style="gap:8px"><button type="button" class="btn btn-primary btn-sm" data-nav="print">Print / save PDF</button><button type="button" class="btn btn-ghost btn-sm" data-nav="restart">Start again</button></span></div>');
+    card.querySelector('[data-nav=back]').addEventListener('click', function () { i = Q.length - 1; ask(); });
+    card.querySelector('[data-nav=restart]').addEventListener('click', restart);
+    card.querySelector('[data-nav=print]').addEventListener('click', function () { window.print(); });
+  }
+
+  ask();
+})();
+</script>
+<footer class="site-footer">
+<div class="wrap">
+<p>This website is for information only. It is not legal advice and is not intended to solicit work, in keeping with the Bar Council of India Rules. <a href="../disclaimer.html">Read the full disclaimer</a>.</p>
+<div class="contact"><span class="row" style="gap:6px 16px"><a href="../glossary.html">Glossary</a><a href="../toolkit/index.html">Tools</a><a href="../feed.xml">RSS</a></span><span style="color:var(--muted)">© 2026 Ashwani Kumar</span></div>
+</div>
+</footer>
+
+<!-- counter:start -->
+<script data-goatcounter="https://kumarashwani-law.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<!-- counter:end -->
+</body>
+</html>

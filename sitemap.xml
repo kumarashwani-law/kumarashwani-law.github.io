@@ -16,6 +16,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://kumarashwani-law.github.io/glossary.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://kumarashwani-law.github.io/guides/account-blocked.html</loc>
     <lastmod>2026-11-18</lastmod>
     <priority>0.9</priority>
@@ -31,12 +36,32 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://kumarashwani-law.github.io/guides/hi/account-blocked.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/guides/hi/digital-arrest.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://kumarashwani-law.github.io/guides/index.html</loc>
     <lastmod>2026-11-23</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/guides/neighbour-cctv.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/guides/te/account-blocked.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/guides/te/digital-arrest.html</loc>
     <lastmod>2026-11-18</lastmod>
     <priority>0.9</priority>
   </url>
@@ -209,6 +234,21 @@
     <loc>https://kumarashwani-law.github.io/posts/your-phone-holds-your-chats-photos-bank-apps-health-records.html</loc>
     <lastmod>2026-11-11</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/toolkit/cyber-fraud.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/toolkit/dpdp-checker.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kumarashwani-law.github.io/toolkit/index.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://kumarashwani-law.github.io/topics/ai-courts.html</loc>
