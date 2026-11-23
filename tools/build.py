@@ -143,7 +143,7 @@ def footer(prefix, contact=False):
     return f'''<footer class="site-footer">
 <div class="wrap">
 <p>This website is for information only. It is not legal advice and is not intended to solicit work, in keeping with the Bar Council of India Rules. <a href="{prefix}disclaimer.html">Read the full disclaimer</a>.</p>
-<div class="contact">{extra}<span class="row" style="gap:6px 16px"><a href="{prefix}glossary.html">Glossary</a><a href="{prefix}toolkit/index.html">Tools</a><a href="{prefix}feed.xml">RSS</a></span><span style="color:var(--muted)">© 2026 Ashwani Kumar</span></div>
+<div class="contact">{extra}<span class="row" style="gap:6px 16px"><a href="{prefix}glossary.html">Glossary</a><a href="{prefix}toolkit/index.html">Tools</a><a href="{prefix}feed.xml">RSS</a><a href="{prefix}app.html" class="get-app">Get the app</a></span><span style="color:var(--muted)">© 2026 Ashwani Kumar</span></div>
 </div>
 </footer>'''
 
@@ -613,6 +613,8 @@ for static in ["disclaimer.html", "index.html"]:
     p = OUT / static
     t = p.read_text(encoding="utf-8")
     t = re.sub(r'href="style\.css(\?v=[0-9a-f]+)?"', f'href="style.css?v={CSS_V}"', t)
+    if 'class="get-app"' not in t:
+        t = t.replace('<a href="feed.xml">RSS</a></span>', '<a href="feed.xml">RSS</a><a href="app.html" class="get-app">Get the app</a></span>', 1)
     t = re.sub(r'\n?<script src="site\.js(\?v=[0-9a-f]+)?"></script>', "", t)
     t = t.replace('<script src="gate.js"></script>', f'<script src="gate.js"></script>\n<script src="site.js?v={JS_V}"></script>', 1)
     t = re.sub(r'<nav class="nav" aria-label="Main">.*?</nav>', lambda m: nav(""), t, count=1, flags=re.S)
@@ -823,3 +825,83 @@ X.build_translations(globals())
 # ---------------------------------------------------------------- Case pages, updates, calendar, laws, reviews, search, home
 import casepages
 casepages.build(globals())
+
+
+# ---------------------------------------------------------------- App page and offline page
+app_page = head("Get the app — Ashwani Kumar",
+                "Install Ashwani Kumar's writing, guides and case tracker as an app on your phone or computer. Free, no app store needed.",
+                "") + header("", "") + """
+<main class="wrap">
+<section class="page-head">
+<h1>Get the app</h1>
+<p>Install this website as an app on your phone or computer. It opens full screen from its own icon, keeps pages you've read available offline, and updates itself whenever new writing is published. It's free, and there's no app store involved.</p>
+<div class="row" style="padding-top:8px"><button type="button" class="btn btn-primary install-btn" hidden>Install the app</button></div>
+<p class="small install-done" hidden>The app is installed on this device. Open it from your home screen or app list.</p>
+</section>
+<section class="groups app-steps" style="padding-bottom:96px">
+<div class="cases">
+<article class="case">
+<h3>Android phone (Chrome)</h3>
+<ol class="steps-list">
+<li>Open this page in Chrome.</li>
+<li>Tap <b>Install the app</b> above, or tap the <b>⋮</b> menu and choose <b>Install app</b> or <b>Add to Home screen</b>.</li>
+<li>Confirm. The AK icon appears on your home screen.</li>
+</ol>
+</article>
+<article class="case">
+<h3>iPhone or iPad (Safari)</h3>
+<ol class="steps-list">
+<li>Open this page in Safari.</li>
+<li>Tap the <b>Share</b> button (the square with an arrow).</li>
+<li>Scroll down and tap <b>Add to Home Screen</b>, then <b>Add</b>.</li>
+</ol>
+</article>
+<article class="case">
+<h3>Computer (Chrome or Edge)</h3>
+<ol class="steps-list">
+<li>Click <b>Install the app</b> above, or the install icon at the right of the address bar.</li>
+<li>Confirm. The app opens in its own window and appears with your other apps.</li>
+</ol>
+</article>
+<article class="case">
+<h3>Good to know</h3>
+<ul class="steps-list">
+<li>Pages you've opened before can be read without internet.</li>
+<li>The app has no ads and doesn't need any permissions.</li>
+<li>To remove it, uninstall it like any other app.</li>
+</ul>
+</article>
+</div>
+</section>
+</main>
+""" + footer("") + "\n</body>\n</html>\n"
+(OUT / "app.html").write_text(app_page, encoding="utf-8")
+
+offline_page = head("You're offline — Ashwani Kumar", "This page isn't available offline yet.", "") + header("", "") + """
+<main class="wrap">
+<section class="page-head" style="padding-bottom:96px">
+<h1>You're offline</h1>
+<p>This page hasn't been saved on this device yet. Pages you've opened before are still available. Try one of these, or reconnect and refresh.</p>
+<div class="row" style="padding-top:8px">
+<a class="btn btn-primary" href="index.html">Home</a>
+<a class="btn btn-ghost" href="writing.html">Writing</a>
+<a class="btn btn-ghost" href="guides/index.html">Guides</a>
+</div>
+</section>
+</main>
+""" + footer("") + "\n</body>\n</html>\n"
+(OUT / "offline.html").write_text(offline_page, encoding="utf-8")
+print("app and offline pages built")
+
+# ---------------------------------------------------------------- Service worker version: bump when shared assets change
+_h = _hl.sha1()
+for _f in ["style.css", "site.js", "gate.js", "site.webmanifest", "icons/icon-512.png", "app.html", "offline.html"]:
+    _p = OUT / _f
+    if _p.exists():
+        _h.update(_p.read_bytes())
+_sw = OUT / "sw.js"
+if _sw.exists():
+    _t = _sw.read_text(encoding="utf-8")
+    _t = re.sub(r"const VERSION = '[^']*';", f"const VERSION = '{_h.hexdigest()[:10]}';", _t, count=1)
+    _sw.write_text(_t, encoding="utf-8")
+    print("service worker version", _h.hexdigest()[:10])

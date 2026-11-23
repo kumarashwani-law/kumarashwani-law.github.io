@@ -692,3 +692,7 @@ img,svg,video{max-width:100%}
   .hero-art{max-width:200px}
   .slide img{max-height:82svh}
 }
+
+/* App page */
+.steps-list{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:1.6;color:var(--body)}
+.app-steps .case h3{font-size:20px}

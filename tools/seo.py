@@ -119,7 +119,7 @@ def get(pattern, text, default=""):
 
 
 pages = []
-for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google")] + list(SITE.glob("posts/*.html")) + list(SITE.glob("topics/*.html")) + list(SITE.glob("guides/*.html")) + list(SITE.glob("guides/*/*.html")) + list(SITE.glob("toolkit/*.html")) + list(SITE.glob("cases/*.html")) + list(SITE.glob("updates/*.html")) + list(SITE.glob("law/*.html")) + list(SITE.glob("reviews/*.html"))):
+for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google") and p.name != "offline.html"] + list(SITE.glob("posts/*.html")) + list(SITE.glob("topics/*.html")) + list(SITE.glob("guides/*.html")) + list(SITE.glob("guides/*/*.html")) + list(SITE.glob("toolkit/*.html")) + list(SITE.glob("cases/*.html")) + list(SITE.glob("updates/*.html")) + list(SITE.glob("law/*.html")) + list(SITE.glob("reviews/*.html"))):
     rel = f.relative_to(SITE).as_posix()
     t = f.read_text(encoding="utf-8")
     t = re.sub(r"\n<!-- seo:start -->.*?<!-- seo:end -->", "", t, flags=re.S)

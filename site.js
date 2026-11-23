@@ -166,3 +166,48 @@
     });
   });
 })();
+
+// ---- App: offline support (service worker) and "Install the app"
+(function () {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/sw.js').catch(function () {});
+    });
+  }
+  var standalone = false;
+  try {
+    standalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  } catch (e) {}
+  var deferred = null;
+  function ready(fn) { if (document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
+  ready(function () {
+    if (standalone) {
+      document.querySelectorAll('.get-app').forEach(function (a) { a.hidden = true; });
+      document.querySelectorAll('.install-done').forEach(function (p) { p.hidden = false; });
+    }
+  });
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault();
+    deferred = e;
+    ready(function () {
+      document.querySelectorAll('.install-btn').forEach(function (b) { b.hidden = false; });
+    });
+  });
+  function promptInstall(ev) {
+    if (!deferred) return;
+    if (ev) ev.preventDefault();
+    deferred.prompt();
+    deferred.userChoice.then(function () {
+      deferred = null;
+      document.querySelectorAll('.install-btn').forEach(function (b) { b.hidden = true; });
+    });
+  }
+  ready(function () {
+    document.querySelectorAll('.install-btn').forEach(function (b) { b.addEventListener('click', promptInstall); });
+  });
+  window.addEventListener('appinstalled', function () {
+    deferred = null;
+    document.querySelectorAll('.install-btn').forEach(function (b) { b.hidden = true; });
+    document.querySelectorAll('.install-done').forEach(function (p) { p.hidden = false; });
+  });
+})();
