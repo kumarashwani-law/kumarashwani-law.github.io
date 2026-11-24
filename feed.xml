@@ -7,7 +7,36 @@
 <description>Commentary on data protection, AI governance, platform regulation and digital free speech in India, by Adv. Ashwani Kumar. For information only; not legal advice.</description>
 <language>en-in</language>
 <copyright>© 2026 Ashwani Kumar</copyright>
-<lastBuildDate>Mon, 23 Nov 2026 09:00:00 +0530</lastBuildDate>
+<lastBuildDate>Tue, 24 Nov 2026 09:00:00 +0530</lastBuildDate>
+<item>
+<title>Human in the loop, or human rubber stamp?</title>
+<link>https://kumarashwani-law.github.io/posts/human-in-the-loop-or-human-rubber-stamp.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/human-in-the-loop-or-human-rubber-stamp.html</guid>
+<pubDate>Tue, 24 Nov 2026 09:00:00 +0530</pubDate>
+<category>AI &amp; the Courts</category>
+<description>Last week, Lord Sales, Deputy President of the UK Supreme Court, said something most judges avoid saying out loud: AI could one day decide some court cases.</description>
+<content:encoded><![CDATA[<p>Last week, Lord Sales, Deputy President of the UK Supreme Court, said something most judges avoid saying out loud: AI could one day decide some court cases.</p>
+<p>&quot;For low-value civil disputes, we may eventually accept forms of automated determination, particularly where parties agree.&quot;</p>
+<p>His reason is practical. Courts are facing a &quot;tsunami&quot; of claims written and filed with AI, and he thinks courts may have to use AI to cope.</p>
+<p>But the more important part of his speech was a warning:</p>
+<p>&quot;The &#x27;human in the loop&#x27; can gradually become the human rubber stamp.&quot;</p>
+<p>He calls it automation bias: &quot;the tendency to accept the machine&#x27;s answer precisely because the machine usually gets things right.&quot; The long-term danger, he said, is that people &quot;gradually lose the ability to know whether it has got the answer wrong.&quot;</p>
+<p>He also asked a question every law firm should answer. If AI does the research and first drafts that juniors used to do, &quot;Where does the experienced senior lawyer come from?&quot; In his words, the slower human process was producing &quot;today&#x27;s legal work and tomorrow&#x27;s lawyer.&quot;</p>
+<p>India has drawn a harder line:<br>
+→ July 2025: the Kerala High Court&#x27;s AI policy bars district courts from using AI to arrive at findings, reliefs, orders or judgments.<br>
+→ June 2026: the Supreme Court&#x27;s AI Committee published draft Regulations for Use of AI in Courts, 2026, proposing a complete ban on AI deciding judicial outcomes, built on &quot;human primacy&quot;. Lawyers would have to disclose AI-assisted filings.<br>
+→ The CJI has said AI can help with research and managing work, but judgment must stay with judges.</p>
+<p>I think India is right to keep AI out of deciding cases for now. But a ban on AI verdicts does not solve the quieter problem Lord Sales describes. That problem sits with us: lawyers who accept a polished draft because it is usually right.</p>
+<p>For young lawyers like me, a few habits help:<br>
+1. Do some work the slow way. Draft a few pleadings and research notes yourself.<br>
+2. Read AI output like the other side&#x27;s draft. Look for what is wrong, missing or invented.<br>
+3. Verify every citation and quotation against the official report.<br>
+4. Expect to disclose AI use. The draft rules would require it.</p>
+<p>Speed is useful. Judgment is the job.</p>
+<p>Would you accept an AI decision in a small claim if both sides agreed? I&#x27;d like to hear from lawyers and non-lawyers.</p>
+<p>The full breakdown is in the slides.</p>
+<p>Views are personal and for general information only; not legal advice.</p>]]></content:encoded>
+</item>
 <item>
 <title>An AI detector&#x27;s score is not proof</title>
 <link>https://kumarashwani-law.github.io/posts/an-ai-detector-s-score-is-not-proof.html</link>
@@ -772,40 +801,6 @@ Section 69A and the 2009 Blocking Rules give the originator notice and a hearing
 <p>Should India&#x27;s privacy law have a journalism exemption?</p>
 <p>Views are personal; for general information only.</p>
 <p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7520472392926916609/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
-</item>
-<item>
-<title>A judge&#x27;s order named 11 plaintiffs who were never in the case. A US appeals court has now taken the case away from him.</title>
-<link>https://kumarashwani-law.github.io/posts/a-judge-s-order-named-11-plaintiffs-who-were-never-in-the.html</link>
-<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/a-judge-s-order-named-11-plaintiffs-who-were-never-in-the.html</guid>
-<pubDate>Sun, 25 Oct 2026 09:00:00 +0530</pubDate>
-<category>AI &amp; the Courts</category>
-<description>On 22 October, the US Court of Appeals for the Fifth Circuit vacated an injunction against Mississippi&#x27;s anti-DEI law and ordered the case reassigned to another judge (Jackson Federation of…</description>
-<content:encoded><![CDATA[<p>On 22 October, the US Court of Appeals for the Fifth Circuit vacated an injunction against Mississippi&#x27;s anti-DEI law and ordered the case reassigned to another judge (Jackson Federation of Teachers v. Fitch).</p>
-<p>What went wrong:<br>
-🔹 The July 2025 order named parties who were never in the case, quoted words not in the statute and relied on declarants who may not exist<br>
-🔹 Once the State flagged it, the order was replaced with a &quot;corrected&quot; version dated the same day, and the errors called &quot;clerical&quot;<br>
-🔹 The corrected version still cited a case that doesn&#x27;t exist<br>
-🔹 The judge later said a law clerk had used an AI tool on a draft</p>
-<p>Judge Jerry Smith called it &quot;a botch job, to say the least.&quot;</p>
-<p>This isn&#x27;t the first time. A New Jersey federal judge withdrew an opinion after an intern used ChatGPT, and a Georgia appeals court vacated an order built on fake cases from a lawyer&#x27;s draft. Lawyers get sanctioned for fake citations; judges, so far, have only seen their orders set aside.</p>
-<p>Where India stands:<br>
-✔ Kerala High Court policy (July 2025): AI can&#x27;t be used for findings, orders or judgments; every output must be verified and AI use recorded<br>
-✔ Supreme Court&#x27;s draft Regulations for Use of AI in Courts, 2026: no outcome by algorithm alone (Reg. 20), and accountability rests &quot;exclusively&quot; on the officer; hallucinations are no excuse (Reg. 8(1))<br>
-But the draft lets verification be skipped for recorded reasons (Reg. 8(3)), and it still has to be notified.</p>
-<p>My take, five fixes:<br>
-1️⃣ No exceptions: every citation and quotation in an order must be checked<br>
-2️⃣ Disclosure should cover AI help in drafting orders, not just administration<br>
-3️⃣ Chambers protocol: researcher drafts, a second person checks sources, judge signs<br>
-4️⃣ Errors corrected by a recorded order, never a silent or backdated replacement<br>
-5️⃣ Notify the regulations across all High Courts</p>
-<p>If an order you receive looks AI-tainted (slide 7): check every citation and quote against the source, map each error in a table, act before limitation runs out, and attack the error, never the judge. And verify your own drafts; courts sometimes adopt them.</p>
-<p>📎 Resources:<br>
-• JURIST on the ruling: <a href="https://lnkd.in/da8AY6hq" rel="noopener">https://lnkd.in/da8AY6hq</a><br>
-• SC draft AI regulations (SCC Online): <a href="https://lnkd.in/dfV9YyUU" rel="noopener">https://lnkd.in/dfV9YyUU</a><br>
-• Kerala HC AI policy (MediaNama): <a href="https://lnkd.in/dmGmTWXp" rel="noopener">https://lnkd.in/dmGmTWXp</a></p>
-<p>Should Indian judgments disclose when AI helped draft them?</p>
-<p>Views are personal; for general information only.</p>
-<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7520065403025379328/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
 </item>
 </channel>
 </rss>
