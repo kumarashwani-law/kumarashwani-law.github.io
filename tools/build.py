@@ -193,6 +193,20 @@ for k in order:
 
 (OUT / "posts").mkdir(parents=True, exist_ok=True)
 
+# Short links for LinkedIn: kumarashwani-law.github.io/p/<post number> -> the post, tagged as a LinkedIn visit
+(OUT / "p").mkdir(exist_ok=True)
+for r in records:
+    dest = f"../posts/{r['slug']}.html?utm_source=linkedin&utm_medium=short-link"
+    (OUT / "p" / f"{r['k']}.html").write_text(f'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>{esc(r["title"])}</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{X.SITE_URL}/posts/{r["slug"]}.html">
+<meta http-equiv="refresh" content="0; url={dest}">
+<script>location.replace({json.dumps(dest)});</script>
+</head><body><p><a href="{dest}">{esc(r["title"])}</a></p></body></html>
+''', encoding="utf-8")
+
 for i, r in enumerate(records):
     li_btn = (f'<a class="btn btn-ghost btn-sm" href="{esc(r["url"])}">View on LinkedIn</a>\n' if r["url"] else "")
     body_html = X.add_glossary("\n".join(render_block(b) for b in r["blocks"]))

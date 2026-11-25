@@ -11,6 +11,7 @@ Spec (all text plain; keep each slide short; 6-9 slides is the sweet spot):
   "kicker": "LORD SALES · UK SUPREME COURT · NOV 2026",
   "dek": "One or two sentences under the title.",
   "tags": ["AI in courts", "Automation bias"],            # up to 3
+  "key": "38",                                            # post number in posts.json -> short link on the last slide
   "slides": [
     {"type": "points",  "kicker": "WHAT HAPPENED", "heading": "...", "points": ["...", "..."], "numbered": false},
     {"type": "quote",   "kicker": "...", "heading": "...", "quote": "...", "by": "...", "note": "optional line under"},
@@ -21,7 +22,9 @@ Spec (all text plain; keep each slide short; 6-9 slides is the sweet spot):
     {"type": "end",     "heading": "...", "text": "...", "points": ["optional takeaways"]}
   ]
 }
-The cover slide is made from title/kicker/dek/tags. The "end" slide adds the
+The cover slide is made from title/kicker/dek/tags. Every slide after the cover
+shows the website address in its footer. The "end" slide adds a "read the full
+article" box with the post's short link (kumarashwani-law.github.io/p/<key>), the
 "not legal advice" line and a follow line automatically (no calls to hire,
 in keeping with BCI Rule 36).
 """
@@ -37,6 +40,7 @@ LIME, INK, PAPER = "#B9FF66", "#191A23", "#F3F3F3"
 NAME = "Adv. Ashwani Kumar"
 ROLE = "Advocate | Data Privacy &amp; Technology Law"
 HANDLE = "linkedin.com/in/advashwanikumar"
+SITE = "kumarashwani-law.github.io"
 
 
 def slugify(title):
@@ -63,7 +67,7 @@ STAR = f'''<svg class="orbit" viewBox="0 0 420 300" aria-hidden="true">
 
 
 def foot(i, n, dark):
-    who = f"<b>{NAME}</b> · {ROLE}" if i == 1 else f"<b>{NAME}</b>"
+    who = f"<b>{NAME}</b> · {ROLE}" if i == 1 else f"<b>{NAME}</b> · {SITE}"
     return f'<footer class="{"d" if dark else "l"}"><span>{who}</span><span class="num">{i:02d} / {n:02d}</span></footer>'
 
 
@@ -100,8 +104,9 @@ def slide_html(s, i, n):
         pts = ul(s["points"], numbered=True) if s.get("points") else ""
         txt = f'<p class="dek">{e(s.get("text"))}</p>' if s.get("text") else ""
         body = f'''<div class="kicker">{e(s.get("kicker") or "THE TAKEAWAY")}</div>{h}{txt}{pts}
+{f'<div class="web-cta"><span>Full article, sources and case updates</span><b>{SITE}/p/{e(s["key"])}</b></div>' if s.get("key") else f'<div class="web-cta"><span>Full article, sources and case updates</span><b>{SITE}</b></div>'}
 <div class="sign"><div class="follow">Follow for daily notes on AI, privacy and Indian tech law</div>
-<div class="handle">{HANDLE} · kumarashwani-law.github.io</div>
+<div class="handle">{HANDLE} · {SITE}</div>
 <div class="nla">General information, not legal advice.</div></div>'''
     else:
         raise SystemExit(f"Unknown slide type: {t}")
@@ -155,6 +160,11 @@ figcaption {{ color: {LIME}; font-size: 25px; margin-top: 22px; }}
 .follow {{ font-size: 32px; font-weight: 600; color: {LIME}; }}
 .handle {{ font-size: 25px; opacity: .85; margin-top: 10px; }}
 .nla {{ font-size: 22px; opacity: .6; margin-top: 14px; }}
+.web-cta {{ margin-top: auto; display: flex; flex-direction: column; gap: 6px; background: {LIME}; color: {INK};
+  border-radius: 22px; padding: 26px 30px; box-shadow: 0 8px 0 #fff; }}
+.web-cta span {{ font-size: 24px; font-weight: 600; letter-spacing: .02em; }}
+.web-cta b {{ font-size: 38px; font-weight: 700; letter-spacing: -.01em; }}
+.web-cta + .sign {{ margin-top: 0; }}
 footer {{ position: absolute; left: 90px; right: 90px; bottom: 56px; height: 90px; display: flex; align-items: flex-end;
   justify-content: space-between; font-size: 24px; padding-top: 26px; }}
 footer.d {{ border-top: 2px solid rgba(255,255,255,.25); }} footer.l {{ border-top: 2px solid {INK}; }}
@@ -177,7 +187,7 @@ FIT = """() => {
 
 def build(spec, out):
     cover = {"type": "cover", **{k: spec.get(k) for k in ("title", "kicker", "dek", "tags")}}
-    slides = [cover] + spec["slides"]
+    slides = [cover] + [dict(x, key=spec.get("key")) if x.get("type") == "end" else x for x in spec["slides"]]
     n = len(slides)
     page = (f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body>'
             + "".join(slide_html(s, i, n) for i, s in enumerate(slides, 1)) + "</body></html>")
