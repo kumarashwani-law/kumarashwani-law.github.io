@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-25",
   "watch": [
     {"date": "2026-11-23", "label": "Supreme Court: digital arrest scams (suo motu)", "case": "digital-arrest"},
     {"date": "2026-12-04", "label": "Delhi HC: Rekha Gupta v. AAP (AI deepfakes)", "case": "rekha-gupta"},
@@ -7,6 +7,7 @@
     {"date": "2026-12-08", "label": "Delhi HC: Kent RO v. Amazon (keyword ads), interim application", "case": "kent-amazon"},
     {"date": "2026-12-09", "label": "Supreme Court: DPDP Act and RTI amendment challenge", "case": "dpdp-rti"},
     {"date": "2026-12-10", "label": "Supreme Court: children's online safety directions", "case": "child-safety"},
+    {"date": "2027-01-18", "label": "Delhi HC: LiveLaw's challenge to automated blocking (Rule 4(4), IT Rules)", "case": "livelaw-rule-4-4"},
     {"date": "2027-05-13", "label": "Most DPDP Act duties take effect", "case": "dpb"}
   ],
   "cases": [
@@ -120,6 +121,22 @@
       "sources": [
         ["The News Minute", "https://www.thenewsminute.com/telangana/telangana-hc-slams-janagaon-collector-for-using-ai-in-a-land-dispute"],
         ["Deccan Chronicle", "https://www.deccanchronicle.com/southern-states/telangana/telangana-high-court-pulls-up-jangaon-collector-over-use-of-ai-to-decide-land-disputes-2001478"]
+      ]
+    },
+    {
+      "id": "livelaw-rule-4-4",
+      "status": "pending",
+      "name": "Automated blocking of news reports (Rule 4(4), IT Rules)",
+      "parties": "Live Law Media Pvt. Ltd. & Anr. v. Union of India & Ors.",
+      "court": "Delhi High Court",
+      "topic": "platforms",
+      "issue": "Whether the mandatory automated filtering duty in Rule 4(4) of the IT Rules, 2021 (as amended in February 2026) can be used to restrict news and court reporting without an order, notice or reasons to the publisher.",
+      "stands": "LiveLaw's Instagram reels reporting Supreme Court hearings were restricted in India, two of them within about 15 minutes of posting. On 19 November 2026 a Bench of Acting Chief Justice Nitin Wasudeo Sambre and Justice Sanjay Sharma issued notice to the Union and Meta, with four weeks to reply. Interim relief was not pressed.",
+      "next": "2027-01-18",
+      "posts": ["blocked-in-15-minutes-no-order-no-reasons"],
+      "sources": [
+        ["Internet Freedom Foundation", "https://internetfreedom.in/delhi-hc-issues-notice-on-livelaws-constitutional-challenge-to-metas-automated-filter-and-rule-4-4-of-the-it-rules/"],
+        ["MediaNama", "https://www.medianama.com/2026/11/223-delhi-hc-livelaws-content-blocking-it-rules/"]
       ]
     },
     {

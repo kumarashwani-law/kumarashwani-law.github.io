@@ -8,9 +8,18 @@
       "Does the Act need an exemption for journalism?"
     ],
     "timeline": [
-      ["2026-02", "The RTI petitions are referred to a larger bench."],
-      ["2026-10-27", "Notice issued on the Digital News Publishers Association's petition; interim stay declined without hearing the Union."],
-      ["2026-11-17", "Listed with the connected petitions but not taken up; adjourned to 9 December."]
+      [
+        "2026-02",
+        "The RTI petitions are referred to a larger bench."
+      ],
+      [
+        "2026-10-27",
+        "Notice issued on the Digital News Publishers Association's petition; interim stay declined without hearing the Union."
+      ],
+      [
+        "2026-11-17",
+        "Listed with the connected petitions but not taken up; adjourned to 9 December."
+      ]
     ]
   },
   "digital-arrest": {
@@ -23,19 +32,52 @@
       "What must WhatsApp and other platforms do to prevent these scams?"
     ],
     "timeline": [
-      ["2025-10-17", "The Supreme Court takes suo motu cognisance on a complaint by a senior-citizen couple from Ambala, Haryana."],
-      ["2025-12-01", "The Court orders a pan-India CBI probe, including into the alleged role of bank officials."],
-      ["2026-02-09", "The Court calls the frauds \"robbery or dacoity\" and asks the Centre to draft SOPs with the RBI and others, and to work out a compensation framework."],
-      ["2026-08-04", "The RBI is directed to adopt, within four weeks, an SOP for banks to place temporary debit holds on accounts linked to cyber fraud."],
-      ["2026-10-29", "The Court says the RBI's new rules must make banks compensate victims where a failure of due diligence enabled the fraud, and asks WhatsApp and other intermediaries for their prevention plans."],
-      ["2026-11-23", "Listed again; the outcome has not been reported yet."]
+      [
+        "2025-10-17",
+        "The Supreme Court takes suo motu cognisance on a complaint by a senior-citizen couple from Ambala, Haryana."
+      ],
+      [
+        "2025-12-01",
+        "The Court orders a pan-India CBI probe, including into the alleged role of bank officials."
+      ],
+      [
+        "2026-02-09",
+        "The Court calls the frauds \"robbery or dacoity\" and asks the Centre to draft SOPs with the RBI and others, and to work out a compensation framework."
+      ],
+      [
+        "2026-08-04",
+        "The RBI is directed to adopt, within four weeks, an SOP for banks to place temporary debit holds on accounts linked to cyber fraud."
+      ],
+      [
+        "2026-10-29",
+        "The Court says the RBI's new rules must make banks compensate victims where a failure of due diligence enabled the fraud, and asks WhatsApp and other intermediaries for their prevention plans."
+      ],
+      [
+        "2026-11-23",
+        "Listed again; the outcome has not been reported yet."
+      ]
     ],
     "extra_sources": [
-      ["Bar & Bench (29 Oct)", "https://www.barandbench.com/news/litigation/supreme-court-to-vet-rbis-digital-fraud-regulations-before-notification-says-banks-must-compensate-victims"],
-      ["LiveLaw (10 Nov)", "https://www.livelaw.in/top-stories/supreme-court-directs-whatsapp-apprise-court-measures-prevent-digital-arrest-scam-cybercrimes-557976"],
-      ["Fox Mandal note on the 29 Oct order", "https://foxmandal.in/?p=62412"],
-      ["LiveLaw (4 Aug)", "https://www.livelaw.in/top-stories/digital-arrest-scams-supreme-court-issues-directions-for-prevention-compensation-greivance-redressal-544292"],
-      ["Business Standard (9 Feb)", "https://www.business-standard.com/india-news/supreme-court-rbi-banks-sop-digital-arrest-cyber-fraud-scams-126020900931_1.html"]
+      [
+        "Bar & Bench (29 Oct)",
+        "https://www.barandbench.com/news/litigation/supreme-court-to-vet-rbis-digital-fraud-regulations-before-notification-says-banks-must-compensate-victims"
+      ],
+      [
+        "LiveLaw (10 Nov)",
+        "https://www.livelaw.in/top-stories/supreme-court-directs-whatsapp-apprise-court-measures-prevent-digital-arrest-scam-cybercrimes-557976"
+      ],
+      [
+        "Fox Mandal note on the 29 Oct order",
+        "https://foxmandal.in/?p=62412"
+      ],
+      [
+        "LiveLaw (4 Aug)",
+        "https://www.livelaw.in/top-stories/digital-arrest-scams-supreme-court-issues-directions-for-prevention-compensation-greivance-redressal-544292"
+      ],
+      [
+        "Business Standard (9 Feb)",
+        "https://www.business-standard.com/india-news/supreme-court-rbi-banks-sop-digital-arrest-cyber-fraud-scams-126020900931_1.html"
+      ]
     ]
   },
   "rekha-gupta": {
@@ -46,7 +88,10 @@
       "Should the posts stay down until the suit is decided?"
     ],
     "timeline": [
-      ["2026-11-06", "Interim order: six URLs directed to be taken down; summons issued."]
+      [
+        "2026-11-06",
+        "Interim order: six URLs directed to be taken down; summons issued."
+      ]
     ]
   },
   "ani-openai": {
@@ -57,8 +102,14 @@
       "Was the single judge right to refuse ANI an interim injunction?"
     ],
     "timeline": [
-      ["2026-07-24", "The single judge refuses ANI an interim injunction."],
-      ["2026-09-15", "A Division Bench issues notice on ANI's appeal; no interim direction."]
+      [
+        "2026-07-24",
+        "The single judge refuses ANI an interim injunction."
+      ],
+      [
+        "2026-09-15",
+        "A Division Bench issues notice on ANI's appeal; no interim direction."
+      ]
     ]
   },
   "kent-amazon": {
@@ -70,7 +121,10 @@
       "Can Amazon claim intermediary safe harbour for keyword advertising?"
     ],
     "timeline": [
-      ["2026-10-16", "Summons issued on Kent's application for an ad interim injunction; Amazon accepts notice. No interim relief granted."]
+      [
+        "2026-10-16",
+        "Summons issued on Kent's application for an ad interim injunction; Amazon accepts notice. No interim relief granted."
+      ]
     ]
   },
   "child-safety": {
@@ -80,7 +134,10 @@
       "Are the Centre and platforms carrying out the Court's 15 October directions?"
     ],
     "timeline": [
-      ["2026-10-15", "Order: internet access is a fundamental right for children too; blanket age-based bans are disproportionate. Directions on a child mode, a national hash database, faster takedowns and fines scaled to platform size."]
+      [
+        "2026-10-15",
+        "Order: internet access is a fundamental right for children too; blanket age-based bans are disproportionate. Directions on a child mode, a national hash database, faster takedowns and fines scaled to platform size."
+      ]
     ]
   },
   "jangaon": {
@@ -91,9 +148,18 @@
       "What action does the State propose to take?"
     ],
     "timeline": [
-      ["2026-09-08", "The Jangaon Collector passes the order under challenge."],
-      ["2026-11-03", "The High Court suspends the order and issues notice to the Revenue Principal Secretary, the Collector and the Tahsildar."],
-      ["2026-11-18", "Listed; the outcome has not been reported yet."]
+      [
+        "2026-09-08",
+        "The Jangaon Collector passes the order under challenge."
+      ],
+      [
+        "2026-11-03",
+        "The High Court suspends the order and issues notice to the Revenue Principal Secretary, the Collector and the Tahsildar."
+      ],
+      [
+        "2026-11-18",
+        "Listed; the outcome has not been reported yet."
+      ]
     ]
   },
   "frt-protests": {
@@ -102,7 +168,10 @@
       "May police use facial recognition on people at designated protest sites without a law authorising it?"
     ],
     "timeline": [
-      ["2026-11-03", "Notice issued on SFLC.in's petition, tagged with A.A. Rahim's earlier plea on the July Jantar Mantar protests."]
+      [
+        "2026-11-03",
+        "Notice issued on SFLC.in's petition, tagged with A.A. Rahim's earlier plea on the July Jantar Mantar protests."
+      ]
     ]
   },
   "gaming": {
@@ -112,8 +181,14 @@
       "Can Parliament ban all online money games, including games of skill, under the Online Gaming Act, 2025?"
     ],
     "timeline": [
-      ["2026-05-01", "The Promotion and Regulation of Online Gaming Act, 2025 comes into force."],
-      ["2026-08-05", "The Court agrees to a final hearing; no interim stay."]
+      [
+        "2026-05-01",
+        "The Promotion and Regulation of Online Gaming Act, 2025 comes into force."
+      ],
+      [
+        "2026-08-05",
+        "The Court agrees to a final hearing; no interim stay."
+      ]
     ]
   },
   "blink": {
@@ -122,7 +197,10 @@
       "Must an Indian advertiser's suit over disabled ad accounts be heard in California under Meta's terms?"
     ],
     "timeline": [
-      ["2026-10-27", "The court refuses Meta's application: claims under the IT Act and IT Rules need an Indian forum."]
+      [
+        "2026-10-27",
+        "The court refuses Meta's application: claims under the IT Act and IT Rules need an Indian forum."
+      ]
     ]
   },
   "dpb": {
@@ -131,15 +209,100 @@
       "When will the Data Protection Board's Chairperson and Members be appointed?"
     ],
     "timeline": [
-      ["2025-11-13", "The Board is established in law."],
-      ["2026-10-07", "The Kerala High Court records that the Board is not functional."],
-      ["2026-11-13", "Consent manager registration opens."],
-      ["2027-05-13", "Most DPDP Act duties take effect."]
+      [
+        "2025-11-13",
+        "The Board is established in law."
+      ],
+      [
+        "2026-10-07",
+        "The Kerala High Court records that the Board is not functional."
+      ],
+      [
+        "2026-11-13",
+        "Consent manager registration opens."
+      ],
+      [
+        "2027-05-13",
+        "Most DPDP Act duties take effect."
+      ]
     ]
   },
-  "sarthak": {"short": "Sarthak Bhagat v. Union of India", "timeline": [["2026-10-27", "Writ held not maintainable against Meta; the GAC directed to decide the appeal quickly."]]},
-  "haryana24": {"short": "Haryana 24 News Network", "timeline": [["2026-10-20", "SP's notice held to be without jurisdiction; the page ordered restored (date reported)."]]},
-  "anmol": {"short": "Anmol Jain v. Union of India", "timeline": [["2026-09-17", "Challenge to Rule 3(1)(b)(iv) dismissed."]]},
-  "gadiya": {"short": "Gadiya v. Union of India", "timeline": [["2026-09-02", "₹425 crore penalty set aside and sent back to a different officer."]]},
-  "pooja": {"short": "Pooja Ramesh Singh v. J&K Bank", "case_no": "2026 INSC 668", "timeline": [["2026-07-02", "NCLT and NCLAT orders set aside; citing unverified AI-generated precedents held to be professional misconduct."]]}
+  "sarthak": {
+    "short": "Sarthak Bhagat v. Union of India",
+    "timeline": [
+      [
+        "2026-10-27",
+        "Writ held not maintainable against Meta; the GAC directed to decide the appeal quickly."
+      ]
+    ]
+  },
+  "haryana24": {
+    "short": "Haryana 24 News Network",
+    "timeline": [
+      [
+        "2026-10-20",
+        "SP's notice held to be without jurisdiction; the page ordered restored (date reported)."
+      ]
+    ]
+  },
+  "anmol": {
+    "short": "Anmol Jain v. Union of India",
+    "timeline": [
+      [
+        "2026-09-17",
+        "Challenge to Rule 3(1)(b)(iv) dismissed."
+      ]
+    ]
+  },
+  "gadiya": {
+    "short": "Gadiya v. Union of India",
+    "timeline": [
+      [
+        "2026-09-02",
+        "₹425 crore penalty set aside and sent back to a different officer."
+      ]
+    ]
+  },
+  "pooja": {
+    "short": "Pooja Ramesh Singh v. J&K Bank",
+    "case_no": "2026 INSC 668",
+    "timeline": [
+      [
+        "2026-07-02",
+        "NCLT and NCLAT orders set aside; citing unverified AI-generated precedents held to be professional misconduct."
+      ]
+    ]
+  },
+  "livelaw-rule-4-4": {
+    "short": "LiveLaw v. Union of India",
+    "case_no": "Writ petition dated 4 November 2026",
+    "bench": "Nitin Wasudeo Sambre ACJ, Sanjay Sharma J",
+    "issues": [
+      "Is the requirement in Rule 4(4) to automatically restrict content \"exactly identical\" to content already removed within the IT Act's rule-making power and consistent with Articles 14, 19 and 21?",
+      "Can platforms use automated blocking against news and court reporting without a court order, a reasoned intimation or a Section 69A direction given to the publisher?",
+      "Are the unpublished MeitY advisories of 8 and 10 October 2026 a valid basis for restricting content?"
+    ],
+    "timeline": [
+      [
+        "2026-02-10",
+        "IT Rules amendment (G.S.R. 120(E)) makes automated filtering under Rule 4(4) mandatory and cuts takedown time from 36 hours to 3; in force 20 February 2026."
+      ],
+      [
+        "2026-10-27",
+        "LiveLaw's reel on the Election Commission's SIR affidavit is restricted within about 15 minutes; restored that night."
+      ],
+      [
+        "2026-10-29",
+        "A second reel, on the SIR challenges, is restricted within about 15 minutes and not restored."
+      ],
+      [
+        "2026-10-30",
+        "A third reel, on a hearing about the Transgender Persons Amendment Act, 2026, is restricted on publication."
+      ],
+      [
+        "2026-11-19",
+        "Notice issued to the Union and Meta; four weeks to reply; listed on 18 January 2027."
+      ]
+    ]
+  }
 }

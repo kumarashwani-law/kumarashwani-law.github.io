@@ -21,7 +21,7 @@ TOPIC = {
     "3": "data", "4": "data", "20": "data", "29": "data", "32": "data",
     "6": "ai-courts", "21": "ai-courts", "22": "ai-courts", "25": "ai-courts", "28": "ai-courts", "35": "ai-courts", "36": "ai-courts",
     "7": "deepfakes", "8": "deepfakes", "13": "deepfakes", "27": "deepfakes", "33": "deepfakes",
-    "9": "platforms", "16": "platforms", "18": "platforms", "19": "platforms",
+    "9": "platforms", "16": "platforms", "18": "platforms", "19": "platforms", "37": "platforms",
     "23": "copyright", "30": "copyright", "31": "copyright", "34": "copyright",
     "1": "other", "10": "other", "12": "other", "17": "other", "24": "other", "26": "other",
 }

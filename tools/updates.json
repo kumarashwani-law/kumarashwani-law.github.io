@@ -1,5 +1,25 @@
 [
   {
+    "case": "livelaw-rule-4-4",
+    "date": "2026-11-19",
+    "headline": "Notice issued on challenge to automated blocking",
+    "body": [
+      "On 19 November, a Delhi High Court Bench of Acting Chief Justice Nitin Wasudeo Sambre and Justice Sanjay Sharma issued notice to the Union of India and Meta on LiveLaw's petition challenging Rule 4(4) of the IT Rules, 2021, which requires large platforms to use automated tools to restrict content exactly identical to content already removed.",
+      "LiveLaw says three Instagram reels reporting Supreme Court hearings were restricted in India, two within about 15 minutes of posting, without any order, notice or reasons. The Additional Solicitor General suggested treating the petition as a representation and passing a reasoned order; LiveLaw's counsel called that a mere formality.",
+      "The Union and Meta have four weeks to file replies. Interim relief was not pressed. The matter is listed next on 18 January 2027, and similar challenges on 9 February 2027."
+    ],
+    "sources": [
+      [
+        "Internet Freedom Foundation",
+        "https://internetfreedom.in/delhi-hc-issues-notice-on-livelaws-constitutional-challenge-to-metas-automated-filter-and-rule-4-4-of-the-it-rules/"
+      ],
+      [
+        "MediaNama",
+        "https://www.medianama.com/2026/11/223-delhi-hc-livelaws-content-blocking-it-rules/"
+      ]
+    ]
+  },
+  {
     "case": "dpdp-rti",
     "date": "2026-11-17",
     "headline": "Hearing adjourned to 9 December",
@@ -7,7 +27,12 @@
       "On 17 November, the Supreme Court listed the challenge to the DPDP Act's amendment of the RTI Act together with the connected petitions, including the Digital News Publishers Association's. The matter could not be taken up and was adjourned to 9 December.",
       "On 27 October, the Court had issued notice on the news publishers' petition and declined an interim stay without hearing the Union. The RTI petitions were referred to a larger bench in February 2026."
     ],
-    "sources": [["exchange4media", "https://www.exchange4media.com/digital-news/sc-adjourns-hearing-on-dpdp-act-rti-amendments-to-december-9-160384.html"]]
+    "sources": [
+      [
+        "exchange4media",
+        "https://www.exchange4media.com/digital-news/sc-adjourns-hearing-on-dpdp-act-rti-amendments-to-december-9-160384.html"
+      ]
+    ]
   },
   {
     "case": "rekha-gupta",
@@ -18,8 +43,14 @@
       "The Court issued summons. The defendants are yet to be heard. The suit is listed next on 4 December."
     ],
     "sources": [
-      ["LawBeat", "https://lawbeat.in/amp/news-updates/breaches-line-of-political-satire-delhi-hc-orders-takedown-of-ai-videos-depicting-cm-rekha-gupta-as-liquor-vendor-1651074"],
-      ["Bar & Bench", "https://www.barandbench.com/news/delhi-high-court-orders-removal-of-aaps-ai-generated-posts-showing-delhi-cm-rekha-gupta-as-liquor-vendor"]
+      [
+        "LawBeat",
+        "https://lawbeat.in/amp/news-updates/breaches-line-of-political-satire-delhi-hc-orders-takedown-of-ai-videos-depicting-cm-rekha-gupta-as-liquor-vendor-1651074"
+      ],
+      [
+        "Bar & Bench",
+        "https://www.barandbench.com/news/delhi-high-court-orders-removal-of-aaps-ai-generated-posts-showing-delhi-cm-rekha-gupta-as-liquor-vendor"
+      ]
     ]
   },
   {
@@ -31,8 +62,14 @@
       "The Court issued notice to the Revenue Principal Secretary, the Collector and the Tahsildar, and asked the Advocate-General what action is proposed. The matter was listed on 18 November; the outcome has not been reported yet."
     ],
     "sources": [
-      ["The News Minute", "https://www.thenewsminute.com/telangana/telangana-hc-slams-janagaon-collector-for-using-ai-in-a-land-dispute"],
-      ["Deccan Chronicle", "https://www.deccanchronicle.com/southern-states/telangana/telangana-high-court-pulls-up-jangaon-collector-over-use-of-ai-to-decide-land-disputes-2001478"]
+      [
+        "The News Minute",
+        "https://www.thenewsminute.com/telangana/telangana-hc-slams-janagaon-collector-for-using-ai-in-a-land-dispute"
+      ],
+      [
+        "Deccan Chronicle",
+        "https://www.deccanchronicle.com/southern-states/telangana/telangana-high-court-pulls-up-jangaon-collector-over-use-of-ai-to-decide-land-disputes-2001478"
+      ]
     ]
   },
   {
@@ -46,9 +83,18 @@
       "The RBI was directed to file a list of all authorised financial institutions, and law enforcement agencies to report the status of digital arrest FIRs. The order was uploaded on 7 November, and the case was listed next on 23 November."
     ],
     "sources": [
-      ["Bar & Bench", "https://www.barandbench.com/news/litigation/supreme-court-to-vet-rbis-digital-fraud-regulations-before-notification-says-banks-must-compensate-victims"],
-      ["LiveLaw", "https://www.livelaw.in/top-stories/supreme-court-directs-whatsapp-apprise-court-measures-prevent-digital-arrest-scam-cybercrimes-557976"],
-      ["MediaNama", "https://www.medianama.com/2026/11/223-supreme-court-whatsapp-digital-arrest/"]
+      [
+        "Bar & Bench",
+        "https://www.barandbench.com/news/litigation/supreme-court-to-vet-rbis-digital-fraud-regulations-before-notification-says-banks-must-compensate-victims"
+      ],
+      [
+        "LiveLaw",
+        "https://www.livelaw.in/top-stories/supreme-court-directs-whatsapp-apprise-court-measures-prevent-digital-arrest-scam-cybercrimes-557976"
+      ],
+      [
+        "MediaNama",
+        "https://www.medianama.com/2026/11/223-supreme-court-whatsapp-digital-arrest/"
+      ]
     ]
   },
   {
@@ -59,6 +105,11 @@
       "On 16 October, Justice Tejas Karia of the Delhi High Court issued summons in Kent RO Systems' suit against Amazon over the use of KENT as a sponsored-ads keyword, and on Kent's application for an ad interim injunction. Amazon accepted notice.",
       "No interim relief has been granted. Amazon's reply to the application is due within three weeks and its written statement within 30 days. The application is listed next on 8 December."
     ],
-    "sources": [["LiveLaw Biz", "https://www.livelawbiz.com/trademark/kent-ro-moves-delhi-high-court-against-amazon-over-use-of-kent-as-advertising-keyword-558881"]]
+    "sources": [
+      [
+        "LiveLaw Biz",
+        "https://www.livelawbiz.com/trademark/kent-ro-moves-delhi-high-court-against-amazon-over-use-of-kent-as-advertising-keyword-558881"
+      ]
+    ]
   }
 ]

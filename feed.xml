@@ -7,7 +7,35 @@
 <description>Commentary on data protection, AI governance, platform regulation and digital free speech in India, by Adv. Ashwani Kumar. For information only; not legal advice.</description>
 <language>en-in</language>
 <copyright>© 2026 Ashwani Kumar</copyright>
-<lastBuildDate>Tue, 24 Nov 2026 09:00:00 +0530</lastBuildDate>
+<lastBuildDate>Wed, 25 Nov 2026 09:00:00 +0530</lastBuildDate>
+<item>
+<title>Blocked in 15 minutes. No order. No reasons.</title>
+<link>https://kumarashwani-law.github.io/posts/blocked-in-15-minutes-no-order-no-reasons.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/blocked-in-15-minutes-no-order-no-reasons.html</guid>
+<pubDate>Wed, 25 Nov 2026 09:00:00 +0530</pubDate>
+<category>Platforms &amp; Free Speech</category>
+<description>That is what LiveLaw says happened to its Instagram reels reporting Supreme Court hearings. A reel on the Election Commission&#x27;s affidavit on the electoral roll revision was restricted in…</description>
+<content:encoded><![CDATA[<p>That is what LiveLaw says happened to its Instagram reels reporting Supreme Court hearings. A reel on the Election Commission&#x27;s affidavit on the electoral roll revision was restricted in India within about 15 minutes of posting. Two more court reports followed in the next three days. Another was taken down the night before LiveLaw&#x27;s case was heard.</p>
+<p>LiveLaw says it received no blocking order, no notice and no reasons. Meta said the content &quot;went against local law&quot;.</p>
+<p>On 19 November, the Delhi High Court issued notice on LiveLaw&#x27;s challenge to Rule 4(4) of the IT Rules, 2021.</p>
+<p>What the rule says:<br>
+→ 2021: large platforms had to &quot;endeavour&quot; to use automated tools.<br>
+→ February 2026 amendment: they &quot;shall deploy&quot; automated tools against rape and child sexual abuse material, and against content &quot;exactly identical&quot; to content already removed.<br>
+→ The same amendment cut the takedown window from 36 hours to 3.<br>
+→ Under Rule 7, a platform that fails to comply can lose its safe harbour. For a platform, over-blocking is the safe option.</p>
+<p>The numbers are striking. Meta restricted more than 5.4 million items in India in January–June 2026, against a little over 41,000 in the previous six months.</p>
+<p>What is missing, according to the petition:<br>
+1. No notice to the publisher. Rule 4(4) only requires a notice to users trying to view the content.<br>
+2. Human review is mentioned, but nothing follows if it is skipped.<br>
+3. No order or request is shown to the person whose content is blocked.<br>
+4. The grievance route takes weeks. A news report is stale in hours.</p>
+<p>LiveLaw asks the Court to strike down or read down the &quot;exactly identical&quot; requirement so it excludes news and court reporting, quash two unpublished MeitY advisories of 8 and 10 October 2026, and direct disclosure of the &quot;legal requests&quot; behind the restrictions.</p>
+<p>The Union and Meta have four weeks to reply. The next hearing is on 18 January 2027.</p>
+<p>My view: automated matching makes sense for child sexual abuse material. But when the same machinery restricts journalism and court reporting, it decides what citizens can know without telling anyone why. In Shreya Singhal, the Supreme Court upheld blocking under Section 69A because it came with reasons and a hearing. The question now is whether a mandatory filter can skip both.</p>
+<p>If your own post or page is restricted, ask the platform in writing whether it acted on a government request or on its own systems, and keep screenshots of every notice.</p>
+<p>Should a machine ever restrict a news report before a person has looked at it?</p>
+<p>Views are personal and for general information only; not legal advice. The petition&#x27;s claims are yet to be answered by the Union and Meta.</p>]]></content:encoded>
+</item>
 <item>
 <title>Human in the loop, or human rubber stamp?</title>
 <link>https://kumarashwani-law.github.io/posts/human-in-the-loop-or-human-rubber-stamp.html</link>
@@ -771,37 +799,6 @@ Section 69A and the 2009 Blocking Rules give the originator notice and a hearing
 <p>Should every user get a copy of the order that blocks their content?</p>
 <p>Views are personal; for general information only.</p>
 <p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7520732308228689920/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
-</item>
-<item>
-<title>Can a privacy law stop journalists from doing their job? India&#x27;s biggest media houses have asked the Supreme Court.</title>
-<link>https://kumarashwani-law.github.io/posts/can-a-privacy-law-stop-journalists-from-doing-their-job.html</link>
-<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/can-a-privacy-law-stop-journalists-from-doing-their-job.html</guid>
-<pubDate>Mon, 26 Oct 2026 09:00:00 +0530</pubDate>
-<category>Data Protection</category>
-<description>Reuters reported on 26 October that 21 news publishers, acting through the Digital News Publishers Association (DNPA), have challenged the Digital Personal Data Protection Act. DNPA members…</description>
-<content:encoded><![CDATA[<p>Reuters reported on 26 October that 21 news publishers, acting through the Digital News Publishers Association (DNPA), have challenged the Digital Personal Data Protection Act. DNPA members include Network18, NDTV, the Indian Express and Times Internet. The case is listed for hearing on 27 October. They want key provisions struck down before they take effect in May 2027.</p>
-<p>Their four concerns:<br>
-🔹 Notice and consent (ss. 5–6): journalists may need consent from the very people they investigate<br>
-🔹 Erasure (ss. 8(7), 12): withdrawal of consent and erasure with no public-interest safeguard could force stories off the record<br>
-🔹 Information demands (s. 36 with Rule 23): the Centre can call for information from any data fiduciary, risking exposure of sources<br>
-🔹 Blocking (s. 37): access can be blocked &quot;in the interests of the general public&quot;</p>
-<p>Underneath it all: there is no exemption for journalism. The 2018 draft, the 2019 Bill and the 2021 JPC version all had one. It was dropped in 2022. The State gets wide exemptions under s. 17; the press gets none.</p>
-<p>The government&#x27;s position: in July 2025, MeitY told media bodies no exemption was needed, said journalists aren&#x27;t data fiduciaries, and offered FAQs. Separate petitions by Venkatesh Nayak, The Reporters&#x27; Collective and NCPRI (on the RTI amendment and s. 36) were referred to a larger bench in February 2026, without a stay.</p>
-<p>Today, a journalist&#x27;s only clear relief is s. 3(c)(ii): data the person (or a legal duty) made public falls outside the Act. Most investigative material doesn&#x27;t fit.</p>
-<p>My take: fix it, don&#x27;t scrap it.<br>
-1️⃣ Put the exemption in the law; an FAQ can&#x27;t override the text<br>
-2️⃣ Base it on purpose (journalism in the public interest), not status, so freelancers are covered<br>
-3️⃣ Keep security and breach duties; newsrooms hold sensitive data too<br>
-4️⃣ Require independent or judicial approval before s. 36 demands reach journalistic material<br>
-5️⃣ Apply a public-interest test before published reports or archives are erased</p>
-<p>The EU, UK and Singapore all build this balance in (slide 5). Newsroom checklist on slide 7: subscriber and employee data is covered whatever the court decides.</p>
-<p>📎 Resources:<br>
-• Reuters report (via WTVB): <a href="https://lnkd.in/duGFm4Bu" rel="noopener">https://lnkd.in/duGFm4Bu</a><br>
-• SC notice on the earlier petitions (The Wire): <a href="https://lnkd.in/dvqZ9bdR" rel="noopener">https://lnkd.in/dvqZ9bdR</a><br>
-• MeitY–media meeting (The Tech Trace): <a href="https://lnkd.in/djkpitie" rel="noopener">https://lnkd.in/djkpitie</a></p>
-<p>Should India&#x27;s privacy law have a journalism exemption?</p>
-<p>Views are personal; for general information only.</p>
-<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7520472392926916609/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
 </item>
 </channel>
 </rss>
