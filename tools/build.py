@@ -23,7 +23,7 @@ TOPIC = {
     "7": "deepfakes", "8": "deepfakes", "13": "deepfakes", "27": "deepfakes", "33": "deepfakes",
     "9": "platforms", "16": "platforms", "18": "platforms", "19": "platforms", "37": "platforms",
     "23": "copyright", "30": "copyright", "31": "copyright", "34": "copyright",
-    "1": "other", "10": "other", "12": "other", "17": "other", "24": "other", "26": "other",
+    "1": "other", "10": "other", "12": "other", "17": "other", "24": "other", "26": "other", "38": "other",
 }
 TOPIC_LABEL = {
     "surveillance": "Surveillance & Privacy",
@@ -35,7 +35,7 @@ TOPIC_LABEL = {
     "other": "Tech Law",
 }
 KICKER = {
-    "1": "Weekly Roundup", "10": "Legal Practice", "12": "Gaming Law", "17": "Cyber Fraud",
+    "38": "Constitution Day", "1": "Weekly Roundup", "10": "Legal Practice", "12": "Gaming Law", "17": "Cyber Fraud",
     "24": "Cybersecurity", "26": "Child Safety Online",
 }
 TOPIC_PAGE = {

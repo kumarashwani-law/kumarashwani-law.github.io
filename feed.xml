@@ -7,7 +7,29 @@
 <description>Commentary on data protection, AI governance, platform regulation and digital free speech in India, by Adv. Ashwani Kumar. For information only; not legal advice.</description>
 <language>en-in</language>
 <copyright>© 2026 Ashwani Kumar</copyright>
-<lastBuildDate>Wed, 25 Nov 2026 09:00:00 +0530</lastBuildDate>
+<lastBuildDate>Thu, 26 Nov 2026 09:00:00 +0530</lastBuildDate>
+<item>
+<title>Old rights, new threats: the Constitution at 77</title>
+<link>https://kumarashwani-law.github.io/posts/old-rights-new-threats-the-constitution-at-77.html</link>
+<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/old-rights-new-threats-the-constitution-at-77.html</guid>
+<pubDate>Thu, 26 Nov 2026 09:00:00 +0530</pubDate>
+<category>Tech Law</category>
+<description>On the eve of Constitution Day, Chief Justice of India Surya Kant said something every lawyer should take seriously:</description>
+<content:encoded><![CDATA[<p>On the eve of Constitution Day, Chief Justice of India Surya Kant said something every lawyer should take seriously:</p>
+<p>&quot;Today, we are dealing with artificial intelligence, technological challenges, and global issues. Geographical boundaries have become increasingly irrelevant.&quot;</p>
+<p>He called digital arrest scams &quot;digital dacoities&quot;, said courts must meet them with innovative technological solutions, and asked whether the judiciary is equipped for AI. He also stressed that justice must stay timely and affordable.</p>
+<p>Our fundamental rights were written for people facing power. In 2026, that power is often a scam network, a content filter or an algorithm. Here is where those rights are being tested this year:</p>
+<p>→ Article 21, life and dignity: digital arrest scams. On 29 October, the Supreme Court said the RBI&#x27;s new rules must make banks compensate victims, at least the amount lost, where a failure of due diligence enabled the fraud.</p>
+<p>→ Article 19(1)(a), free speech: LiveLaw says its Instagram reels on Supreme Court hearings were restricted within about 15 minutes, with no order, notice or reasons. Its challenge to automated filtering under Rule 4(4) of the IT Rules is before the Delhi High Court.</p>
+<p>→ Article 21, privacy: the Supreme Court has issued notice on a petition questioning police use of facial recognition at protest sites without a law authorising it. Puttaswamy requires a law, a legitimate aim and proportionate means.</p>
+<p>→ Article 14, fair process: the Telangana High Court suspended a Collector&#x27;s land order said to have been passed with AI tools without verifying facts. The Supreme Court&#x27;s draft rules propose a complete ban on AI deciding cases.</p>
+<p>The CJI also pointed to Articles 32 and 226, the writ powers of the Supreme Court and High Courts, as the guardians of these rights. In most tech cases, though, the route starts lower down: 1930 and your bank for fraud, the platform&#x27;s grievance officer and the Grievance Appellate Committee for blocked content, and the High Court when the State acts without law or reasons.</p>
+<p>My view: the Constitution doesn&#x27;t need rewriting for AI. It needs applying, quickly and affordably, to harms that move faster than our procedures.</p>
+<p>Which right do you think technology tests most?</p>
+<p>The full article, with links to each case and what to do if you are affected, is on my website (link in the first comment).</p>
+<p>Happy Constitution Day.</p>
+<p>Views are personal and for general information only; not legal advice. CJI quotes are from published translations of a Hindi interview.</p>]]></content:encoded>
+</item>
 <item>
 <title>Blocked in 15 minutes. No order. No reasons.</title>
 <link>https://kumarashwani-law.github.io/posts/blocked-in-15-minutes-no-order-no-reasons.html</link>
@@ -769,37 +791,6 @@ The RBI&#x27;s 2017 circular gives zero liability for &quot;unauthorised&quot; t
 <p>Has a copyright claim ever taken down your content?</p>
 <p>Views are personal; for general information only.</p>
 <p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7521122120731455488/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
-</item>
-<item>
-<title>Your page is blocked. You don&#x27;t know who ordered it, or why. How do you challenge that?</title>
-<link>https://kumarashwani-law.github.io/posts/your-page-is-blocked-you-don-t-know-who-ordered-it-or-why.html</link>
-<guid isPermaLink="true">https://kumarashwani-law.github.io/posts/your-page-is-blocked-you-don-t-know-who-ordered-it-or-why.html</guid>
-<pubDate>Tue, 27 Oct 2026 09:00:00 +0530</pubDate>
-<category>Platforms &amp; Free Speech</category>
-<description>Two High Courts dealt with exactly this in the past week.</description>
-<content:encoded><![CDATA[<p>Two High Courts dealt with exactly this in the past week.</p>
-<p>🔹 Punjab &amp; Haryana HC (Haryana 24 News Network v. Union of India, reported 20 October): a Superintendent of Police sent Meta a notice under Section 79(3)(b) of the IT Act, and a news company&#x27;s Facebook page was blocked. Justice Tribhuvan Dahiya held:<br>
-• The notice was without jurisdiction: Rule 3(1)(d) requires an officer of at least DIG rank, specifically authorised<br>
-• When a notice goes to the platform, a copy must go to the user too<br>
-• The user needn&#x27;t first use Meta&#x27;s grievance process; without the grounds, there&#x27;s nothing to answer<br>
-The page was ordered restored within 24 hours.</p>
-<p>🔹 Kerala HC (Hyder Ali K. v. Union of India, 26 October): Malayalam news outlet NoCap&#x27;s Facebook page was restricted on 28 September after a &quot;government notice&quot; it has never seen. The court asked the Centre and the State whether any order was sent to Meta, and listed the case for 5 November.</p>
-<p>Why this keeps happening:<br>
-Section 69A and the 2009 Blocking Rules give the originator notice and a hearing where possible. That&#x27;s why Shreya Singhal upheld them. But many takedowns now go through Section 79(3)(b): a notice to the platform, which loses safe harbour if it doesn&#x27;t comply. The 2025 amendment to Rule 3(1)(d) added real safeguards (senior officers only, written reasons, exact URLs, monthly review). It still says nothing about telling the user.</p>
-<p>My take: you can&#x27;t challenge an order you can&#x27;t see.<br>
-1️⃣ Write user notice into Rule 3(1)(d), so it applies across India, not just in one High Court&#x27;s territory<br>
-2️⃣ Give the user the reasons, with narrow exceptions recorded in writing<br>
-3️⃣ Where urgency rules out prior notice, give a hearing within a fixed time after the block<br>
-4️⃣ Publish figures from the monthly reviews<br>
-5️⃣ Block the item, not the whole page, wherever possible</p>
-<p>If your page or account is blocked (slide 7): save the platform&#x27;s message, ask for the order (grievance officer, RTI), test it against Rule 3(1)(d), record your losses, and move the High Court early.</p>
-<p>📎 Resources:<br>
-• P&amp;H HC ruling (LiveLaw): <a href="https://lnkd.in/dxeN8VG9" rel="noopener">https://lnkd.in/dxeN8VG9</a><br>
-• Kerala HC on NoCap (LiveLaw): <a href="https://lnkd.in/dBCvN-5E" rel="noopener">https://lnkd.in/dBCvN-5E</a><br>
-• 2025 Rule 3(1)(d) amendment (Nishith Desai Associates): <a href="https://lnkd.in/d5AvjTFs" rel="noopener">https://lnkd.in/d5AvjTFs</a></p>
-<p>Should every user get a copy of the order that blocks their content?</p>
-<p>Views are personal; for general information only.</p>
-<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7520732308228689920/">See the original post on LinkedIn</a>.</p>]]></content:encoded>
 </item>
 </channel>
 </rss>
