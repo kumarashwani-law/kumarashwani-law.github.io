@@ -129,7 +129,7 @@ def nav(prefix, current=""):
 def header(prefix, current=""):
     return f'''<header class="site-header">
 <div class="wrap">
-<a class="brand" href="{prefix}index.html"><b>Ashwani Kumar</b><span>Law · Privacy · AI</span></a>
+<a class="brand" href="{prefix}index.html" aria-label="Custos — by Adv. Ashwani Kumar, home"><b>Custos</b><span>by Adv. Ashwani Kumar</span></a>
 {nav(prefix, current)}
 </div>
 </header>'''
@@ -255,7 +255,7 @@ for i, r in enumerate(records):
     rel_html = "\n".join(
         f'<a class="card" href="{x["slug"]}.html"><span class="kicker">{esc(x["kicker"])}</span>'
         f'<h3>{esc(x["title"])}</h3><span class="meta">{fmt_date(x["date"])}</span></a>' for x in related)
-    page = head(f'{r["title"]} — Ashwani Kumar', r["summary"], "../") + header("../") + f'''
+    page = head(f'{r["title"]} — Custos', r["summary"], "../") + header("../") + f'''
 <main>
 <article class="article">
 {X.crumbs("../", [("Home", "index.html"), ("Writing", "writing.html"), (r["title"], None, "posts/" + r["slug"] + ".html")])}
@@ -367,7 +367,7 @@ chips = "\n".join(
     f'<button type="button" class="chip" data-filter="{f}" aria-pressed="{"true" if f == "all" else "false"}">{FILTER_LABEL[f]}</button>'
     for f in FILTERS)
 items = "\n".join(item_html(r) for r in records)
-writing = head("Writing — Ashwani Kumar",
+writing = head("Writing — Custos",
                "Commentary by advocate Ashwani Kumar on data protection, AI, surveillance, platforms and technology law in India.",
                "") + header("", "writing") + f'''
 <main class="wrap">
@@ -447,7 +447,7 @@ topic_cards = "\n".join(
     f'<span class="meta">{counts[t]} post{"s" if counts[t] != 1 else ""}</span></a>'
     for t, (label, desc) in TOPIC_PAGE.items() if counts[t])
 
-topics_index = head("Topics — Ashwani Kumar",
+topics_index = head("Topics — Custos",
                     "Browse Ashwani Kumar's writing on Indian technology law by topic.", "../") + header("../", "topics") + f'''
 <main class="wrap">
 <section class="page-head">
@@ -466,7 +466,7 @@ for t, (label, desc) in TOPIC_PAGE.items():
     if not rs:
         continue
     others = " · ".join(f'<a href="{o}.html">{esc(TOPIC_PAGE[o][0])}</a>' for o in TOPIC_PAGE if o != t and counts[o])
-    page = head(f"{label} — Ashwani Kumar", f"{desc} Writing by advocate Ashwani Kumar.", "../") + header("../", "topics") + f'''
+    page = head(f"{label} — Custos", f"{desc} Writing by advocate Ashwani Kumar.", "../") + header("../", "topics") + f'''
 <main class="wrap">
 <section class="page-head">
 <a href="index.html" style="font-size:14px;font-weight:500;text-decoration:none">← All topics</a>
@@ -527,7 +527,7 @@ case_names = {c["id"]: c["name"] for c in cases["cases"]}
 watch = "\n".join(
     f'<li><time datetime="{w["date"]}">{fmt_date(w["date"])}</time><a href="#{w["case"]}">{esc(w["label"])}</a></li>'
     for w in sorted(cases["watch"], key=lambda w: w["date"]) if w["date"] >= cases["updated"])
-cases_page = head("Case tracker — Ashwani Kumar",
+cases_page = head("Case tracker — Custos",
                   "Pending Indian court cases on privacy, AI and technology law, with status and next hearing dates, tracked by advocate Ashwani Kumar.",
                   "") + header("", "cases") + f'''
 <main class="wrap">
@@ -666,7 +666,7 @@ for r in records[:25]:
 feed_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>Ashwani Kumar — Law, Privacy &amp; AI</title>
+<title>Custos — Law, Privacy &amp; AI by Ashwani Kumar</title>
 <link>{SITE_URL}/</link>
 <atom:link href="{SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
 <description>Commentary on data protection, AI governance, platform regulation and digital free speech in India, by Adv. Ashwani Kumar. For information only; not legal advice.</description>
@@ -734,7 +734,7 @@ for g in guides:
     src_html = "".join(f'<li><a href="{esc(u)}" rel="noopener">{esc(n)}</a></li>' for n, u in g.get("sources", []))
     others = [o for o in guides if o is not g]
     other_html = "".join(f'<li><a href="{o["slug"]}.html">{esc(o["short"])}</a></li>' for o in others)
-    page = head(f'{g["title"]} — Ashwani Kumar', g["description"], "../") + header("../", "guides") + f'''
+    page = head(f'{g["title"]} — Custos', g["description"], "../") + header("../", "guides") + f'''
 <main>
 <article class="article guide">
 {X.crumbs("../", [("Home", "index.html"), ("Guides", "guides/index.html"), (g["short"], None, "guides/" + g["slug"] + ".html")])}
@@ -797,7 +797,7 @@ def guide_card(g, prefix):
 
 
 if guides:
-    gi = head("Guides — Ashwani Kumar",
+    gi = head("Guides — Custos",
               "Plain-language guides to Indian technology law: blocked accounts, digital arrest scams, CCTV and privacy, and the DPDP Act for businesses.",
               "../") + header("../", "guides") + f'''
 <main class="wrap">
@@ -842,7 +842,7 @@ casepages.build(globals())
 
 
 # ---------------------------------------------------------------- App page and offline page
-app_page = head("Get the app — Ashwani Kumar",
+app_page = head("Get the app — Custos",
                 "Install Ashwani Kumar's writing, guides and case tracker as an app on your phone or computer. Free, no app store needed.",
                 "") + header("", "") + """
 <main class="wrap">
@@ -891,7 +891,7 @@ app_page = head("Get the app — Ashwani Kumar",
 """ + footer("") + "\n</body>\n</html>\n"
 (OUT / "app.html").write_text(app_page, encoding="utf-8")
 
-offline_page = head("You're offline — Ashwani Kumar", "This page isn't available offline yet.", "") + header("", "") + """
+offline_page = head("You're offline — Custos", "This page isn't available offline yet.", "") + header("", "") + """
 <main class="wrap">
 <section class="page-head" style="padding-bottom:96px">
 <h1>You're offline</h1>

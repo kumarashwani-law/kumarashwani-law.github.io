@@ -13,7 +13,7 @@
     gate.setAttribute('aria-labelledby', 'gate-title');
     gate.innerHTML =
       '<div class="gate-box">' +
-      '<b class="serif" style="font-size:20px">Ashwani Kumar</b>' +
+      '<b class="serif" style="font-size:20px">Custos · Adv. Ashwani Kumar</b>' +
       '<h2 id="gate-title">Disclaimer</h2>' +
       '<p>The Bar Council of India does not permit advocates to solicit work or advertise. By clicking “I agree”, you acknowledge that:</p>' +
       '<ul>' +

@@ -100,9 +100,9 @@ def make_image(path, kicker, title):
     d.line([pad, H - 118, W - pad, H - 118], fill=(58, 59, 69), width=2)
     star(d, pad + 14, H - 70, 14, LIME)
     nf = grotesk(30, 700)
-    d.text((pad + 40, H - 90), "Ashwani Kumar", font=nf, fill=INK)
+    d.text((pad + 40, H - 90), "Custos", font=nf, fill=INK)
     sf = grotesk(22, 400)
-    d.text((pad + 40 + d.textlength("Ashwani Kumar", font=nf) + 18, H - 82), "Advocate · Law, Privacy & AI", font=sf, fill=MUTED)
+    d.text((pad + 40 + d.textlength("Custos", font=nf) + 18, H - 82), "by Adv. Ashwani Kumar · Law, Privacy & AI", font=sf, fill=MUTED)
     host = BASE.split("://", 1)[1]
     d.text((W - pad - d.textlength(host, font=sf), H - 82), host, font=sf, fill=LIME)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -148,12 +148,12 @@ for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google
     else:
         img_rel = "images/og/site.png"
         og_title = title
-        img_alt = "Ashwani Kumar — writing on privacy, AI and the law in India"
+        img_alt = "Custos — Ashwani Kumar's writing on privacy, AI and the law in India"
     img_url = f"{BASE}/{img_rel}"
 
     tags = [
         f'<link rel="canonical" href="{url}">',
-        f'<meta property="og:site_name" content="Ashwani Kumar">',
+        f'<meta property="og:site_name" content="Custos">',
         f'<meta property="og:type" content="{"article" if is_post else "website"}">',
         f'<meta property="og:title" content="{html.escape(og_title)}">',
         f'<meta property="og:description" content="{html.escape(desc)}">',
@@ -163,7 +163,7 @@ for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google
         '<meta property="og:image:height" content="630">',
         f'<meta property="og:image:alt" content="{html.escape(img_alt)}">',
         f'<meta property="og:locale" content="{ {"hi": "hi_IN", "te": "te_IN"}.get(lang_m.group(1) if lang_m else "", "en_IN") }">',
-        f'<link rel="alternate" type="application/rss+xml" title="Ashwani Kumar — Law, Privacy & AI" href="{BASE}/feed.xml">',
+        f'<link rel="alternate" type="application/rss+xml" title="Custos — Law, Privacy & AI" href="{BASE}/feed.xml">',
         '<meta name="twitter:card" content="summary_large_image">',
         f'<meta name="twitter:title" content="{html.escape(og_title)}">',
         f'<meta name="twitter:description" content="{html.escape(desc)}">',
@@ -183,7 +183,7 @@ for f in sorted([p for p in SITE.glob("*.html") if not p.name.startswith("google
         '<meta name="theme-color" content="#121319" media="(prefers-color-scheme: dark)">',
         '<meta name="color-scheme" content="light dark">',
         '<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">',
-        '<meta name="apple-mobile-web-app-title" content="Ashwani Kumar">',
+        '<meta name="apple-mobile-web-app-title" content="Custos">',
         '<link rel="icon" href="/favicon.ico" sizes="any">',
         '<link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">',
         '<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">',

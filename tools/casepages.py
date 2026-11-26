@@ -146,7 +146,7 @@ def build(ctx):
         srcs = source_list(list(c.get("sources", [])) + d.get("extra_sources", []))
         url = f"{X.SITE_URL}/cases/{c['id']}.html"
         desc = f'{c["name"]}: {c["issue"]} Status, next hearing date, key issues and timeline.'
-        page = head(f'{c["name"]} — Case tracker — Ashwani Kumar', desc[:300], "../") + header("../", "cases") + f'''
+        page = head(f'{c["name"]} — Case tracker — Custos', desc[:300], "../") + header("../", "cases") + f'''
 <main>
 <article class="article case-page">
 {X.crumbs("../", [("Home", "index.html"), ("Case tracker", "cases.html"), (c["short"], None, f"cases/{c['id']}.html")])}
@@ -186,7 +186,7 @@ def build(ctx):
         lab, val = when_text(c)
         bench = c["d"].get("bench")
         body = "\n".join(f"<p>{esc(p)}</p>" for p in u["body"])
-        page = head(f'{u["title"]} — Ashwani Kumar', u["summary"], "../") + header("../", "cases") + f'''
+        page = head(f'{u["title"]} — Custos', u["summary"], "../") + header("../", "cases") + f'''
 <main>
 <article class="article update">
 {X.crumbs("../", [("Home", "index.html"), ("Case tracker", "cases.html"), (c["short"], f"cases/{c['id']}.html"), ("Update", None, f"updates/{u['slug']}.html")])}
@@ -217,7 +217,7 @@ def build(ctx):
         f'<a class="item" href="{u["slug"]}.html"><span class="date">{fmt_date(u["date"])}</span>'
         f'<span class="body"><span class="t">{esc(u["title"])}</span><span class="s">{esc(u["summary"])}</span></span>'
         f'<span class="tag">{esc(byid[u["case"]]["court"])}</span></a>' for u in updates)
-    page = head("Case updates — Ashwani Kumar", "Short, factual notes on hearings and orders in Indian technology-law cases, newest first.", "../") + header("../", "cases") + f'''
+    page = head("Case updates — Custos", "Short, factual notes on hearings and orders in Indian technology-law cases, newest first.", "../") + header("../", "cases") + f'''
 <main class="wrap">
 <section class="page-head">
 {X.crumbs("../", [("Home", "index.html"), ("Case tracker", "cases.html"), ("Updates", None, "updates/index.html")])}
@@ -238,7 +238,7 @@ def build(ctx):
                 f"<content:encoded>{ctx['cdata'](body)}</content:encoded>\n</item>")
     upd = cases["updated"]
     (OUT / "cases" / "feed.xml").write_text(X.case_feed(
-        "Case tracker — Ashwani Kumar", "Status changes and hearing updates on Indian technology-law cases tracked by Adv. Ashwani Kumar.",
+        "Case tracker — Custos", "Status changes and hearing updates on Indian technology-law cases tracked by Adv. Ashwani Kumar.",
         f"{X.SITE_URL}/cases.html", f"{X.SITE_URL}/cases/feed.xml",
         [upd_item(u) for u in updates] + [X.case_item(c, upd) for c in allcases]), encoding="utf-8")
     for c in allcases:
@@ -275,7 +275,7 @@ def build(ctx):
             f'<a class="small" href="{esc(gcal(e))}" rel="noopener" target="_blank">Add to Google Calendar</a></div></li>' for e in es)
         cal_html += f'<section class="cal-month"><h2 class="h2" style="font-size:24px">{fd(ym)}</h2><ol class="cal-list">{lis}</ol></section>'
     und_html = "".join(f'<li><a href="cases/{c["id"]}.html">{esc(c["name"])}</a> <span class="small">({esc(c["court"])}): {esc(c.get("next_note") or "not yet listed")}</span></li>' for c in undated)
-    page = head("Case calendar — Ashwani Kumar", "Upcoming hearing dates in Indian technology-law cases: data protection, AI, platforms, deepfakes and cyber fraud.", "") + header("", "cases") + f'''
+    page = head("Case calendar — Custos", "Upcoming hearing dates in Indian technology-law cases: data protection, AI, platforms, deepfakes and cyber fraud.", "") + header("", "cases") + f'''
 <main class="wrap" style="max-width:860px">
 <section class="page-head">
 {X.crumbs("", [("Home", "index.html"), ("Case tracker", "cases.html"), ("Calendar", None, "calendar.html")])}
@@ -303,8 +303,8 @@ def build(ctx):
             f"DTSTART;VALUE=DATE:{d0}", f"DTEND;VALUE=DATE:{d1}", f"SUMMARY:{ics_esc(e['label'])}",
             f"DESCRIPTION:{ics_esc('Hearing dates change; check the court cause list. ' + link)}", f"URL:{link}",
             "TRANSP:TRANSPARENT", "END:VEVENT"]))
-    ics = "\r\n".join(["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Ashwani Kumar//Case calendar//EN", "CALSCALE:GREGORIAN",
-                       "METHOD:PUBLISH", "X-WR-CALNAME:Tech-law hearings (Ashwani Kumar)", "X-WR-TIMEZONE:Asia/Kolkata"] + vev + ["END:VCALENDAR"]) + "\r\n"
+    ics = "\r\n".join(["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Custos//Case calendar//EN", "CALSCALE:GREGORIAN",
+                       "METHOD:PUBLISH", "X-WR-CALNAME:Tech-law hearings (Custos)", "X-WR-TIMEZONE:Asia/Kolkata"] + vev + ["END:VCALENDAR"]) + "\r\n"
     (OUT / "calendar.ics").write_text(ics, encoding="utf-8", newline="")
 
     # ---------------------------------------------------------- law pages
@@ -336,7 +336,7 @@ def build(ctx):
             sec += '<section class="case-block"><h2>Analysis</h2><div class="group">' + "".join(
                 f'<a class="item" href="../posts/{r["slug"]}.html"><span class="date">{fmt_date(r["date"])}</span><span class="body"><span class="t">{esc(r["title"])}</span>'
                 f'<span class="s">{esc(r["summary"])}</span></span><span class="tag">{esc(r["kicker"])}</span></a>' for r in ps) + "</div></section>"
-        page = head(f"{name} — Ashwani Kumar", f"{desc} Cases, guides and analysis by advocate Ashwani Kumar.", "../") + header("../", "topics") + f'''
+        page = head(f"{name} — Custos", f"{desc} Cases, guides and analysis by advocate Ashwani Kumar.", "../") + header("../", "topics") + f'''
 <main class="wrap" style="max-width:960px">
 <section class="page-head">
 {X.crumbs("../", [("Home", "index.html"), ("Laws", "law/index.html"), (name, None, f"law/{lid}.html")])}
@@ -353,7 +353,7 @@ def build(ctx):
     for coll in (records, guides, allcases, updates):
         for it in coll:
             it["laws"] = [l for l in it["laws"] if l in built_laws]
-    page = head("Laws — Ashwani Kumar", "Browse cases, guides and analysis by the law involved: DPDP Act, IT Act, IT Rules, Copyright Act, Article 21 and more.", "../") + header("../", "topics") + f'''
+    page = head("Laws — Custos", "Browse cases, guides and analysis by the law involved: DPDP Act, IT Act, IT Rules, Copyright Act, Article 21 and more.", "../") + header("../", "topics") + f'''
 <main class="wrap">
 <section class="page-head">
 {X.crumbs("../", [("Home", "index.html"), ("Laws", None, "law/index.html")])}
@@ -403,7 +403,7 @@ def build(ctx):
         ev_html = "".join(f'<li><time datetime="{d_}">{fmt_date(d_)}</time><span><a href="../cases/{c["id"]}.html">{esc(c["short"])}</a> ({esc(c["court"])}): {esc(txt)}</span></li>' for d_, c, txt in ev)
         ps_html = "".join(f'<a class="item" href="../posts/{r["slug"]}.html"><span class="date">{fmt_date(r["date"])}</span><span class="body"><span class="t">{esc(r["title"])}</span><span class="s">{esc(r["summary"])}</span></span><span class="tag">{esc(r["kicker"])}</span></a>' for r in sorted(ps, key=lambda r: r["date"]))
         nxt_html = "".join(f'<li><time datetime="{e["date"]}">{fmt_date(e["date"])}</time><a href="../{"cases/" + e["case"] + ".html" if e.get("case") else "calendar.html"}">{esc(e["label"])}</a></li>' for e in nxt)
-        page = head(f"{title} — Ashwani Kumar", f"What happened in Indian technology law in {fd(ym)}: court developments, decided cases and analysis.", "../") + header("../", "writing") + f'''
+        page = head(f"{title} — Custos", f"What happened in Indian technology law in {fd(ym)}: court developments, decided cases and analysis.", "../") + header("../", "writing") + f'''
 <main>
 <article class="article review">
 {X.crumbs("../", [("Home", "index.html"), ("Month in review", "reviews/index.html"), (fd(ym), None, f"reviews/{ym}.html")])}
@@ -421,7 +421,7 @@ def build(ctx):
 ''' + footer("../") + "\n</body>\n</html>\n"
         (OUT / "reviews" / f"{ym}.html").write_text(page, encoding="utf-8")
         rev_cards.append(f'<a class="card" href="{ym}.html"><span class="kicker">Review</span><h3>{esc(title)}</h3><p>{len(ev)} court developments, {len(dec)} decided, {len(ps)} posts.</p></a>')
-    page = head("Month in review — Ashwani Kumar", "Monthly round-ups of Indian technology law: court developments, decided cases and analysis.", "../") + header("../", "writing") + f'''
+    page = head("Month in review — Custos", "Monthly round-ups of Indian technology law: court developments, decided cases and analysis.", "../") + header("../", "writing") + f'''
 <main class="wrap">
 <section class="page-head">
 {X.crumbs("../", [("Home", "index.html"), ("Month in review", None, "reviews/index.html")])}
@@ -459,7 +459,7 @@ def build(ctx):
     (OUT / "site-search.json").write_text(json.dumps(ent, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     kinds = ["All", "Analysis", "Case", "Case update", "Guide", "Law", "Glossary", "Tool"]
     chips = "".join(f'<button type="button" class="chip" data-k="{k}" aria-pressed="{"true" if k == "All" else "false"}">{k}</button>' for k in kinds)
-    page = head("Search — Ashwani Kumar", "Search posts, cases, case updates, guides, laws and the glossary.", "") + header("") + f'''
+    page = head("Search — Custos", "Search posts, cases, case updates, guides, laws and the glossary.", "") + header("") + f'''
 <main class="wrap" style="max-width:860px">
 <section class="page-head">
 {X.crumbs("", [("Home", "index.html"), ("Search", None, "search.html")])}

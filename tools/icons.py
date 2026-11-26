@@ -110,8 +110,8 @@ def feature_graphic():
     icon = monogram(300 * ss, radius=66)
     img.paste(icon, (90 * ss, 100 * ss), icon)
     x = 450 * ss
-    d.text((x, 170 * ss), "Ashwani Kumar", font=font(64 * ss), fill=WHITE, anchor="ls")
-    d.text((x, 228 * ss), "Law · Privacy · AI", font=font(40 * ss, "Medium"), fill=LIME, anchor="ls")
+    d.text((x, 170 * ss), "Custos", font=font(64 * ss), fill=WHITE, anchor="ls")
+    d.text((x, 228 * ss), "by Adv. Ashwani Kumar", font=font(40 * ss, "Medium"), fill=LIME, anchor="ls")
     for i, line in enumerate(["Plain-language guides, case tracker", "and commentary on Indian tech law"]):
         d.text((x, (300 + i * 44) * ss), line, font=font(30 * ss, "Regular"), fill=WHITE, anchor="ls")
     return img.resize((W, H), Image.LANCZOS)

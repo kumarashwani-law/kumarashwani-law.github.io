@@ -1,7 +1,7 @@
 // Service worker: lets the installed app open offline and keeps pages fresh.
 // Pages: network first (always the latest), falling back to the saved copy, then the offline page.
 // Styles, scripts, images: served from the saved copy and refreshed in the background.
-const VERSION = 'cf324fd0e1';
+const VERSION = '535ac89c31';
 const CORE = 'core-' + VERSION;
 const RUNTIME = 'runtime-' + VERSION;
 const CORE_FILES = [

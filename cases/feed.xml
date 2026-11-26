@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>Case tracker — Ashwani Kumar</title>
+<title>Case tracker — Custos</title>
 <link>https://kumarashwani-law.github.io/cases.html</link>
 <atom:link href="https://kumarashwani-law.github.io/cases/feed.xml" rel="self" type="application/rss+xml"/>
 <description>Status changes and hearing updates on Indian technology-law cases tracked by Adv. Ashwani Kumar.</description>

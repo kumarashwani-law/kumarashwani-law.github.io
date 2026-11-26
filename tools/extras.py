@@ -189,7 +189,7 @@ def build_case_feeds(out, cases):
     upd = cases["updated"]
     allc = [c for c in cases["cases"]]
     (out / "cases" / "feed.xml").write_text(case_feed(
-        "Case tracker — Ashwani Kumar", "Status updates on Indian technology-law cases tracked by Adv. Ashwani Kumar.",
+        "Case tracker — Custos", "Status updates on Indian technology-law cases tracked by Adv. Ashwani Kumar.",
         f"{SITE_URL}/cases.html", f"{SITE_URL}/cases/feed.xml", [case_item(c, upd) for c in allc]), encoding="utf-8")
     for c in allc:
         (out / "cases" / f"{c['id']}.xml").write_text(case_feed(
@@ -219,7 +219,7 @@ def build_glossary(ctx):
         seen_letters.add(L)
         more = f'<span class="small" style="display:block"><a href="{g["link"]}">Read more</a></span>' if g.get("link") else ""
         rows.append(f'<dt id="{slug(g["term"])}"><span{anchor}></span>{esc(g["term"])}</dt><dd>{esc(g["def"])}{more}</dd>')
-    page = head("Glossary — Ashwani Kumar",
+    page = head("Glossary — Custos",
                 "Plain-language definitions of Indian technology-law terms: data fiduciary, safe harbour, personality rights, blocking orders, digital arrest and more.",
                 "") + header("") + f'''
 <main class="wrap" style="max-width:820px">
@@ -301,7 +301,7 @@ def build_translations(ctx):
             url = f"{SITE_URL}/guides/{l}/{g['slug']}.html"
             toc_html = "".join(f'<li><a href="#{i}">{esc(html.unescape(nm))}</a></li>' for i, nm in toc)
             sw = lang_switch(g["slug"], l, guide_languages(g["slug"]))
-            page = head(f'{g["title"]} — Ashwani Kumar', g["description"], "../../", lang=l) + header("../../", "guides") + f'''
+            page = head(f'{g["title"]} — Custos', g["description"], "../../", lang=l) + header("../../", "guides") + f'''
 <main>
 <article class="article guide" lang="{l}">
 {crumbs("../../", [("Home", "index.html"), (t["all"], "guides/index.html"), (g["short"], None, f"guides/{l}/{g['slug']}.html")])}
@@ -343,7 +343,7 @@ def build_toolkit(ctx):
         body = body.replace('<a href="index.html" style="font-size:14px;font-weight:500;text-decoration:none" class="no-print">← All tools</a>', crumbs("../", trail), 1)
         if name == "index":
             body = body.replace('<section class="page-head">', '<section class="page-head">\n' + crumbs("../", trail), 1)
-        page = head(f"{title} — Ashwani Kumar", desc, "../") + header("../", "tools") + body + footer("../") + "\n</body>\n</html>\n"
+        page = head(f"{title} — Custos", desc, "../") + header("../", "tools") + body + footer("../") + "\n</body>\n</html>\n"
         (OUT / "toolkit" / f"{name}.html").write_text(page, encoding="utf-8")
     print(len(PAGES), "toolkit pages built")
 
