@@ -6,73 +6,73 @@ METHOD:PUBLISH
 X-WR-CALNAME:Tech-law hearings (Custos)
 X-WR-TIMEZONE:Asia/Kolkata
 BEGIN:VEVENT
-UID:rekha-gupta-20261204@kumarashwani-law.github.io
-DTSTAMP:20261126T093736Z
+UID:rekha-gupta-20261204@custoslaw.github.io
+DTSTAMP:20261126T094455Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:Delhi HC: Rekha Gupta v. AAP (AI deepfakes)
-DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/rekha-gupta.html
-URL:https://kumarashwani-law.github.io/cases/rekha-gupta.html
+DESCRIPTION:Hearing dates change\; check the court cause list. https://custoslaw.github.io/cases/rekha-gupta.html
+URL:https://custoslaw.github.io/cases/rekha-gupta.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ani-openai-20261205@kumarashwani-law.github.io
-DTSTAMP:20261126T093736Z
+UID:ani-openai-20261205@custoslaw.github.io
+DTSTAMP:20261126T094455Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Delhi HC Division Bench: ANI v. OpenAI appeal (listed early December)
-DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/ani-openai.html
-URL:https://kumarashwani-law.github.io/cases/ani-openai.html
+DESCRIPTION:Hearing dates change\; check the court cause list. https://custoslaw.github.io/cases/ani-openai.html
+URL:https://custoslaw.github.io/cases/ani-openai.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:kent-amazon-20261208@kumarashwani-law.github.io
-DTSTAMP:20261126T093736Z
+UID:kent-amazon-20261208@custoslaw.github.io
+DTSTAMP:20261126T094455Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Delhi HC: Kent RO v. Amazon (keyword ads)\, interim application
-DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/kent-amazon.html
-URL:https://kumarashwani-law.github.io/cases/kent-amazon.html
+DESCRIPTION:Hearing dates change\; check the court cause list. https://custoslaw.github.io/cases/kent-amazon.html
+URL:https://custoslaw.github.io/cases/kent-amazon.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:dpdp-rti-20261209@kumarashwani-law.github.io
-DTSTAMP:20261126T093736Z
+UID:dpdp-rti-20261209@custoslaw.github.io
+DTSTAMP:20261126T094455Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
 SUMMARY:Supreme Court: DPDP Act and RTI amendment challenge
-DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/dpdp-rti.html
-URL:https://kumarashwani-law.github.io/cases/dpdp-rti.html
+DESCRIPTION:Hearing dates change\; check the court cause list. https://custoslaw.github.io/cases/dpdp-rti.html
+URL:https://custoslaw.github.io/cases/dpdp-rti.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:child-safety-20261210@kumarashwani-law.github.io
-DTSTAMP:20261126T093736Z
+UID:child-safety-20261210@custoslaw.github.io
+DTSTAMP:20261126T094455Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Supreme Court: children's online safety directions
-DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/child-safety.html
-URL:https://kumarashwani-law.github.io/cases/child-safety.html
+DESCRIPTION:Hearing dates change\; check the court cause list. https://custoslaw.github.io/cases/child-safety.html
+URL:https://custoslaw.github.io/cases/child-safety.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:livelaw-rule-4-4-20270118@kumarashwani-law.github.io
-DTSTAMP:20261126T093736Z
+UID:livelaw-rule-4-4-20270118@custoslaw.github.io
+DTSTAMP:20261126T094455Z
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270119
 SUMMARY:Delhi HC: LiveLaw's challenge to automated blocking (Rule 4(4)\, IT Rules)
-DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/livelaw-rule-4-4.html
-URL:https://kumarashwani-law.github.io/cases/livelaw-rule-4-4.html
+DESCRIPTION:Hearing dates change\; check the court cause list. https://custoslaw.github.io/cases/livelaw-rule-4-4.html
+URL:https://custoslaw.github.io/cases/livelaw-rule-4-4.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:dpb-20270513@kumarashwani-law.github.io
-DTSTAMP:20261126T093736Z
+UID:dpb-20270513@custoslaw.github.io
+DTSTAMP:20261126T094455Z
 DTSTART;VALUE=DATE:20270513
 DTEND;VALUE=DATE:20270514
 SUMMARY:Most DPDP Act duties take effect
-DESCRIPTION:Hearing dates change\; check the court cause list. https://kumarashwani-law.github.io/cases/dpb.html
-URL:https://kumarashwani-law.github.io/cases/dpb.html
+DESCRIPTION:Hearing dates change\; check the court cause list. https://custoslaw.github.io/cases/dpb.html
+URL:https://custoslaw.github.io/cases/dpb.html
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR
